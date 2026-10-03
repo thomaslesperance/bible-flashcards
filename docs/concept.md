@@ -10,7 +10,7 @@
 
 ## Learning-Science Card Schemas & Algorithms
 
-To build a cohesive, algorithmic system, define your atomicity levels (e.g., `LEVELS = [Verse, Paragraph, Section, Chapter]`) and apply these schemas based on the node's properties:
+To build a cohesive, algorithmic system, define your atomicity levels (e.g., `LEVELS = [Verse, Paragraph, heading_n, heading_n+1, heading_n+3...]`) and apply these schemas based on the node's properties:
 
 ### 1. Progressive Overload (The Baseline)
 
@@ -65,6 +65,8 @@ Scripture memorization requires different pacing than standard vocabulary flashc
 - **How to preserve settings:** You do not need to teach users how to configure Anki! Create a specific Deck Options Group in your Anki (e.g., "Bible Memorization"), assign it to your master deck, and configure your preferred intervals. When you export the `.apkg`, **Anki automatically packages those exact deck settings into the file** and applies them to the user's app when imported.
 - **Recommended Settings:** Increase `Learning steps` to something like `1m 10m 1d 3d` so users see the verses more frequently in the early stages before the intervals grow too large.
 
+---
+
 # Brainstorm
 
 - Built on open-source Anki?
@@ -89,14 +91,30 @@ The least tech savvy and the least talented person in my church can get set up a
 
 ## Algorithm
 
-Code needs to correspond directly to how hard it is to sit down and memorize a verse.
-What is the largest # of verses that can be memorized at once? Probably a single verse. Therefore:
+Code needs to correspond directly to how hard it is to sit down and memorize a unit of text.
+What is the largest number of verses that can be memorized at once? Probably a single verse. Therefore:
 
 ```
+use_scaffolding = false
+use_anchoring = false
+
+framework = <hierarchy of headings containing verses>
+heading_types = [verse, paragraph, h1, h2, h3, h4, h5, etc.]
+
 for unit in framework:
   if len(unit) > 1:
     use_scaffolding = true
+
+  if len(unit) > 2:
     use_anchoring = true
+
+  ... other tests for other card types ...
+
+  scaffolded_rows = scaffold_unit(unit)
+  anchored_rows = anchor_unit(unit)
+
+  ... other functions for other card types ...
+
 ```
 
 ## In-practice
@@ -121,3 +139,14 @@ Gradually move to the larger groupings.
 ### Level 4
 
 Recite the whole text.
+
+## Project Needs
+
+- Solid research and most effective techniques for memorizing text
+- Solid, concise teaching on benefits and purpose of internalizing Scripture
+- Well-chosen default framework
+- Visually appealing and fun interface/schtick
+  - Framework is the branches
+  - Verses are the leaves
+  - As you go through the book or section, you fill out the branch
+  - You have a visual global map of the whole Bible that shows the parts you've completed
