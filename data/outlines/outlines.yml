@@ -1,0 +1,1481 @@
+# Book outlines, from bsb_book_outlines_corrected.txt by src/outlines_from_text.py -- edit that, not this.
+# Verse ranges are chapter:verse-chapter:verse, relative to the book.
+Genesis:
+  ref: 1:1-50:26
+  sections:
+    God and the World:
+      ref: 1:1-10:32
+      sections:
+        The Creation of the Heavens and the Earth:
+          ref: 1:1-2:3
+        Human Sin and the Ruin of God’s World:
+          ref: 2:4-5:32
+          sections:
+            Adam and Eve in the Garden of Eden:
+              ref: 2:4-2:25
+            The Fall of Man:
+              ref: 3:1-3:24
+            The Descendants of Adam:
+              ref: 4:1-5:32
+        The Universal Flood:
+          ref: 6:1-9:29
+          sections:
+            Corruption on the Earth:
+              ref: 6:1-6:7
+            The Call of Noah:
+              ref: 6:8-7:9
+            The Flood:
+              ref: 7:10-8:19
+            The Noahic Covenant:
+              ref: 8:20-9:17
+            The Descendants of Noah:
+              ref: 9:18-9:29
+        The Table of Nations:
+          ref: 10:1-10:32
+    God and the Nation of Israel:
+      ref: 11:1-50:26
+      sections:
+        The Tower of Babel:
+          ref: 11:1-11:9
+        Abraham:
+          ref: 11:10-25:11
+          sections:
+            The Genealogy of Abram:
+              ref: 11:10-11:32
+            The Call of Abram:
+              ref: 12:1-12:9
+            Abram and Sarai in Egypt:
+              ref: 12:10-12:20
+            Abram and Lot:
+              ref: 13:1-13:18
+            War of the Four Kings vs. the Five Kings:
+              ref: 14:1-14:16
+            Melchizedek Blesses Abram:
+              ref: 14:17-14:24
+            The Covenant Between the Parts:
+              ref: 15:1-15:21
+            Hagar and Ishmael:
+              ref: 16:1-16:16
+            The Covenant of Circumcision:
+              ref: 17:1-17:27
+            The Three Visitors:
+              ref: 18:1-18:15
+            Sodom and Gomorrah:
+              ref: 18:16-19:38
+            Abraham, Sarah, and Abimelech:
+              ref: 20:1-20:18
+            Isaac:
+              ref: 21:1-21:34
+              sections:
+                The Birth of Isaac:
+                  ref: 21:1-21:8
+                The Casting Out of Hagar and Ishmael:
+                  ref: 21:9-21:21
+                The Covenant at Beersheba:
+                  ref: 21:22-21:34
+            The Binding of Isaac:
+              ref: 22:1-22:19
+            The Genealogy of Rebekah:
+              ref: 22:20-22:24
+            The Death and Burial of Sarah:
+              ref: 23:1-23:20
+            Isaac and Rebekah:
+              ref: 24:1-24:67
+              sections:
+                Abraham Sends His Servant:
+                  ref: 24:1-24:14
+                Rebekah is Chosen:
+                  ref: 24:15-24:61
+                Isaac Marries Rebekah:
+                  ref: 24:62-24:67
+            Abraham and Keturah:
+              ref: 25:1-25:6
+            The Death and Burial of Abraham:
+              ref: 25:7-25:11
+        The Descendants of Ishmael:
+          ref: 25:12-25:18
+        Isaac:
+          ref: 25:19-26:35
+          sections:
+            Jacob and Esau:
+              ref: 25:19-25:34
+              sections:
+                Birth of Jacob and Esau:
+                  ref: 25:19-25:28
+                Esau Sells His Birthright:
+                  ref: 25:29-25:34
+            God’s Promise to Isaac:
+              ref: 26:1-26:35
+              sections:
+                Isaac and Abimelech:
+                  ref: 26:1-26:11
+                The Three Wells:
+                  ref: 26:12-26:25
+                The Covenant at Beersheba:
+                  ref: 26:26-26:33
+                Esau’s Wives:
+                  ref: 26:34-26:35
+        Jacob:
+          ref: 27:1-35:29
+          sections:
+            The Deception for the Blessing:
+              ref: 27:1-27:40
+            Jacob and Laban:
+              ref: 27:41-31:55
+              sections:
+                Jacob sent to Laban:
+                  ref: 27:41-28:9
+                Jacob’s Ladder:
+                  ref: 28:10-28:22
+                Jacob, Rachel, and Leah:
+                  ref: 29:1-29:30
+                Eleven Sons of Jacob:
+                  ref: 29:31-30:24
+                Six More Years for Laban’s Flocks:
+                  ref: 30:25-30:43
+                Jacob Leaves Laban:
+                  ref: 31:1-31:55
+                  sections:
+                    Jacob Flees:
+                      ref: 31:1-31:21
+                    Laban Pursues:
+                      ref: 31:22-31:42
+                    Jacob’s Covenant with Laban:
+                      ref: 31:43-31:55
+            Jacob Wrestles with God:
+              ref: 32:1-32:32
+            Jacob’s Reunion with Esau:
+              ref: 33:1-33:17
+            Jacob at Shechem:
+              ref: 33:18-34:31
+              sections:
+                The Purchase of Land:
+                  ref: 33:18-33:20
+                The Defiling of Dinah:
+                  ref: 34:1-34:12
+                The Revenge of Dinah’s Brothers:
+                  ref: 34:13-34:31
+            Jacob Returns to Bethel:
+              ref: 35:1-35:15
+            Benjamin Born, Rachel Dies:
+              ref: 35:16-35:26
+            The Death and Burial of Isaac:
+              ref: 35:27-35:29
+        The Descendants of Esau:
+          ref: 36:1-36:43
+        Joseph:
+          ref: 37:1-50:26
+          sections:
+            Joseph’s Dreams:
+              ref: 37:1-37:11
+            Joseph Sold into Egypt:
+              ref: 37:12-37:36
+            Judah and Tamar:
+              ref: 38:1-38:30
+            Joseph in Egypt:
+              ref: 39:1-41:57
+              sections:
+                Joseph and Potiphar:
+                  ref: 39:1-39:23
+                Joseph in Prison:
+                  ref: 40:1-40:23
+                Pharaoh’s Dreams:
+                  ref: 41:1-41:36
+                Joseph Made Second-in-Command:
+                  ref: 41:37-41:57
+            Joseph’s Reunion with His Brothers:
+              ref: 42:1-45:28
+              sections:
+                The Brothers Go Down to Egypt:
+                  ref: 42:1-42:38
+                Benjamin Goes Down to Egypt:
+                  ref: 43:1-44:17
+                Judah Pleads for Benjamin:
+                  ref: 44:18-44:34
+                Joseph Reveals His Identity:
+                  ref: 45:1-45:15
+                Joseph Sends for Jacob:
+                  ref: 45:16-45:28
+            The Nation of Israel Goes Down to Egypt:
+              ref: 46:1-50:26
+              sections:
+                Jacob Goes Down to Egypt:
+                  ref: 46:1-46:27
+                Israel Settles in Goshen:
+                  ref: 46:28-47:31
+                Jacob Blesses Ephraim and Manasseh:
+                  ref: 48:1-48:22
+                Jacob Blesses His Sons:
+                  ref: 49:1-49:28
+                The Death and Burial of Jacob:
+                  ref: 49:29-50:14
+                The Death of Joseph:
+                  ref: 50:15-50:26
+Isaiah:
+  ref: 1:1-66:24
+  sections:
+    The Judgments:
+      ref: 1:1-35:10
+      sections:
+        Judgment and Hope for Judah:
+          ref: 1:1-12:6
+          sections:
+            Judgement for Sin:
+              ref: 1:1-6:13
+              sections:
+                Judah’s Rebellion:
+                  ref: 1:1-1:31
+                Hope for the Future:
+                  ref: 2:1-4:6
+                  sections:
+                    The Mountain of the House of the LORD:
+                      ref: 2:1-2:5
+                    Judgement on Jerusalem and Judah:
+                      ref: 2:6-3:26
+                    A Remnant in Zion:
+                      ref: 4:1-4:6
+                The Song of the Vineyard:
+                  ref: 5:1-5:30
+                Isaiah's Commission:
+                  ref: 6:1-6:13
+            Prophecies Concerning Political Threats against Judah:
+              ref: 7:1-12:6
+              sections:
+                Message to Ahaz King of Judah:
+                  ref: 7:1-7:25
+                  sections:
+                    Aram and Israel Advance:
+                      ref: 7:1-7:9
+                    The Sign of Immanuel:
+                      ref: 7:10-7:16
+                    Judgement to Come:
+                      ref: 7:17-7:25
+                Assyrian Invasion Prophesied:
+                  ref: 8:1-8:22
+                Unto Us a Child Is Born:
+                  ref: 9:1-9:7
+                Judgement against Israel:
+                  ref: 9:8-9:21
+                  sections:
+                    For Pride:
+                      ref: 9:8-9:12
+                    For Hypocrisy:
+                      ref: 9:13-9:17
+                    For Unrepentance:
+                      ref: 9:18-9:21
+                The Destruction of the Assyrian Empire:
+                  ref: 10:1-10:34
+                Messiah’s Kingdom through the Root of Jesse:
+                  ref: 11:1-11:16
+                Joyful Thanksgiving:
+                  ref: 12:1-12:6
+        Judgment and Hope for the Nations:
+          ref: 13:1-27:13
+          sections:
+            Judgements:
+              ref: 13:1-23:18
+              sections:
+                Against Babylon:
+                  ref: 13:1-14:23
+                Against Assyria:
+                  ref: 14:24-14:27
+                Against Philistia:
+                  ref: 14:28-14:32
+                Against Moab:
+                  ref: 15:1-16:13
+                Against Damascus:
+                  ref: 17:1-17:14
+                Against Cush:
+                  ref: 18:1-18:7
+                Against Egypt:
+                  ref: 19:1-20:6
+                Against Babylon Again:
+                  ref: 21:1-21:10
+                Against Edom:
+                  ref: 21:11-21:12
+                Against Arabia:
+                  ref: 21:13-21:17
+                Against the Valley of Vision:
+                  ref: 22:1-22:25
+                Against Tyre:
+                  ref: 23:1-23:18
+            Judgment and Promise for the Future:
+              ref: 24:1-27:13
+              sections:
+                God’s Judgement on the Earth:
+                  ref: 24:1-24:23
+                Praise to the Victorious God:
+                  ref: 25:1-25:12
+                A Song of Salvation:
+                  ref: 26:1-26:21
+                The LORD’s Vineyard:
+                  ref: 27:1-27:13
+        The Woes:
+          ref: 28:1-33:24
+          sections:
+            Woe to Ephraim:
+              ref: 28:1-28:29
+            Woe to David's City:
+              ref: 29:1-29:14
+            Woe to Those Who Rely on Foreign Alliances:
+              ref: 29:15-29:24
+            Woe to the Rebellious Children:
+              ref: 30:1-30:33
+            Woe to Those Who Rely on Egypt:
+              ref: 31:1-32:20
+            Woe to Assyria:
+              ref: 33:1-33:24
+        Conclusion of Judgments and Hope:
+          ref: 34:1-35:10
+          sections:
+            Judgement on the Nations:
+              ref: 34:1-34:17
+            The Glory of Zion:
+              ref: 35:1-35:10
+    The Nation of Judah from Assyria to Babylon:
+      ref: 36:1-39:8
+      sections:
+        Judah Saved from the Assyrians:
+          ref: 36:1-37:38
+          sections:
+            Sennacherib Threatens Jerusalem:
+              ref: 36:1-36:22
+            The LORD Delivers Jerusalem:
+              ref: 37:1-37:38
+        Hezekiah’s Illness and Recovery:
+          ref: 38:1-38:22
+        Hezekiah’s Error:
+          ref: 39:1-39:8
+          sections:
+            Hezekiah Shows His Treasures to Babylon:
+              ref: 39:1-39:2
+            Isaiah Prophesies the Babylonian Exile:
+              ref: 39:3-39:8
+    The Salvation:
+      ref: 40:1-66:24
+      sections:
+        The Deliverance from Exile:
+          ref: 40:1-48:22
+          sections:
+            Prepare the Way for the LORD:
+              ref: 40:1-40:31
+            God’s Help to Israel:
+              ref: 41:1-41:29
+            God’s Servant:
+              ref: 42:1-42:9
+            A New Song of Praise:
+              ref: 42:10-42:25
+            Israel’s Only Savior:
+              ref: 43:1-43:28
+              sections:
+                The Holy One of Israel, your Savior:
+                  ref: 43:1-43:13
+                A Way in the Wilderness:
+                  ref: 43:14-43:21
+                Israel’s Unfaithfulness:
+                  ref: 43:22-43:28
+            The LORD Has Chosen Israel:
+              ref: 44:1-44:20
+            Jerusalem to Be Restored:
+              ref: 44:21-44:28
+            God Calls Cyrus:
+              ref: 45:1-45:25
+            The Judgement of Babylon:
+              ref: 46:1-47:15
+              sections:
+                Babylon’s Idols:
+                  ref: 46:1-46:13
+                The Humiliation of Babylon:
+                  ref: 47:1-47:15
+            Deliverance Promised to Israel:
+              ref: 48:1-48:22
+        The Servant's Ministry:
+          ref: 49:1-55:8
+          sections:
+            The Servant and Light to the Gentiles:
+              ref: 49:1-49:26
+            Israel's Sin:
+              ref: 50:1-50:3
+            The Servant's Obedience:
+              ref: 50:4-50:11
+            Salvation for Zion:
+              ref: 51:1-51:16
+            God’s Fury Removed:
+              ref: 51:17-51:23
+            Deliverance for Jerusalem:
+              ref: 52:1-52:12
+            The Servant Exalted:
+              ref: 52:13-52:15
+            The Suffering Servant:
+              ref: 53:1-53:12
+            The Future Blessing for Zion:
+              ref: 54:1-54:17
+            Invitation to the Needy:
+              ref: 55:1-55:8
+        The Servants Inherit God’s Kingdom:
+          ref: 56:1-66:24
+          sections:
+            Salvation for the Nations:
+              ref: 56:1-56:8
+            The Wicked and the Servants:
+              ref: 56:9-58:14
+              sections:
+                Israel’s Sinful Leaders:
+                  ref: 56:9-56:12
+                The Blessed Death of the Righteous:
+                  ref: 57:1-57:2
+                God Condemns Idolatry:
+                  ref: 57:3-57:13
+                Healing for the Repentant:
+                  ref: 57:14-57:21
+                True Fasts and Sabbaths:
+                  ref: 58:1-58:14
+            Prayer of Repentance:
+              ref: 59:1-59:21
+              sections:
+                Sin Separates Us from God:
+                  ref: 59:1-59:15
+                Salvation is Only of God:
+                  ref: 59:16-59:19
+                The Covenant of the Redeemer:
+                  ref: 59:20-59:21
+            God’s Kingdom:
+              ref: 60:1-62:12
+              sections:
+                Future Glory for Zion:
+                  ref: 60:1-60:22
+                The Year of the LORD’s Favor:
+                  ref: 61:1-61:11
+                Zion’s Salvation and New Name:
+                  ref: 62:1-62:12
+            Prayer for Mercy:
+              ref: 63:1-64:12
+              sections:
+                God’s Vengeance on the Nations:
+                  ref: 63:1-63:6
+                God’s Mercies Recalled:
+                  ref: 63:7-63:14
+                The People Pray:
+                  ref: 63:15-64:12
+            The Righteous and the Wicked:
+              ref: 65:1-66:17
+              sections:
+                Judgement and Promises:
+                  ref: 65:1-65:16
+                A New Heaven and a New Earth:
+                  ref: 65:17-65:25
+                Heaven Is My Throne:
+                  ref: 66:1-66:6
+                Rejoice with Jerusalem:
+                  ref: 66:7-66:14
+                Final Judgments against the Wicked:
+                  ref: 66:15-66:17
+            Call to the Nations:
+              ref: 66:18-66:24
+John:
+  ref: 1:1-21:25
+  sections:
+    The Beginning of Jesus’ Ministry:
+      ref: 1:1-1:51
+      sections:
+        The Beginning:
+          ref: 1:1-1:5
+        The Witness of John:
+          ref: 1:6-1:13
+        The Word Became Flesh:
+          ref: 1:14-1:18
+        John the Baptist:
+          ref: 1:19-1:34
+          sections:
+            The Mission of John the Baptist:
+              ref: 1:19-1:28
+            Jesus the Lamb of God:
+              ref: 1:29-1:34
+        The Calling of Disciples:
+          ref: 1:35-1:51
+          sections:
+            The First Disciples:
+              ref: 1:35-1:42
+            Jesus Calls Philip and Nathanael:
+              ref: 1:43-1:51
+    Miraculous Signs and Controversies:
+      ref: 2:1-10:42
+      sections:
+        Four Traditions:
+          ref: 2:1-4:54
+          sections:
+            The Wedding at Cana:
+              ref: 2:1-2:11
+            Jesus Cleanses the Temple:
+              ref: 2:12-2:25
+            On Baptism:
+              ref: 3:1-3:36
+              sections:
+                Jesus and Nicodemus:
+                  ref: 3:1-3:21
+                John’s Testimony about Jesus:
+                  ref: 3:22-3:36
+            On Gentiles:
+              ref: 4:1-4:54
+              sections:
+                The Samaritans:
+                  ref: 4:1-4:42
+                  sections:
+                    Jesus and the Samaritan Woman:
+                      ref: 4:1-4:26
+                    The Disciples Return and Marvel:
+                      ref: 4:27-4:38
+                    Many Samaritans Believe:
+                      ref: 4:39-4:42
+                Jesus Heals the Official’s Son:
+                  ref: 4:43-4:54
+        Four Feasts:
+          ref: 5:1-10:42
+          sections:
+            The Sabbath:
+              ref: 5:1-5:47
+              sections:
+                The Pool of Bethesda:
+                  ref: 5:1-5:15
+                The Father and the Son:
+                  ref: 5:16-5:30
+                Testimonies about Jesus:
+                  ref: 5:31-5:38
+                The Witness of Scripture:
+                  ref: 5:39-5:47
+            The Passover:
+              ref: 6:1-6:71
+              sections:
+                The Feeding of the Five Thousand:
+                  ref: 6:1-6:15
+                Jesus Walks on Water:
+                  ref: 6:16-6:21
+                Jesus the Bread of Life:
+                  ref: 6:22-6:58
+                Many Disciples Turn Back:
+                  ref: 6:59-6:65
+                Peter’s Confession of Faith:
+                  ref: 6:66-6:71
+            The Feast of Tabernacles:
+              ref: 7:1-10:21
+              sections:
+                Jesus Teaches at the Feast:
+                  ref: 7:1-7:53
+                  sections:
+                    Jesus Goes to Jerusalem in Secret:
+                      ref: 7:1-7:24
+                    Is Jesus the Christ?:
+                      ref: 7:25-7:36
+                    Living Water:
+                      ref: 7:37-7:39
+                    Division regarding Jesus:
+                      ref: 7:40-7:44
+                    The Unbelief of the Jewish Leaders:
+                      ref: 7:45-7:53
+                The Woman Caught in Adultery:
+                  ref: 8:1-8:11
+                Questions of Paternity:
+                  ref: 8:12-8:59
+                  sections:
+                    Jesus the Light of the World:
+                      ref: 8:12-8:29
+                    The Truth Will Set You Free:
+                      ref: 8:30-8:36
+                    The Children of the Devil:
+                      ref: 8:37-8:47
+                    Before Abraham Was Born, I Am:
+                      ref: 8:48-8:59
+                Physical and Spiritual Blindness:
+                  ref: 9:1-9:41
+                  sections:
+                    Jesus Heals the Man Born:
+                      ref: 9:1-9:12
+                    The Pharisees Investigate the Healing:
+                      ref: 9:13-9:34
+                    Spiritual Blindness:
+                      ref: 9:35-9:41
+                Jesus the Good Shepherd:
+                  ref: 10:1-10:21
+            The Feast of Dedication (Hanukkah):
+              ref: 10:22-10:42
+              sections:
+                Questions of Divinity:
+                  ref: 10:22-10:39
+                John’s Testimony Confirmed:
+                  ref: 10:40-10:42
+    Raising Lazarus:
+      ref: 11:1-12:11
+      sections:
+        The Death of Lazarus:
+          ref: 11:1-11:16
+        Jesus Comforts Martha and Mary:
+          ref: 11:17-11:37
+        Jesus Raises Lazarus:
+          ref: 11:38-11:44
+        The Plot to Kill Jesus:
+          ref: 11:45-11:57
+        Mary Anoints Jesus:
+          ref: 12:1-12:8
+        The Plot to Kill Lazarus:
+          ref: 12:9-12:11
+    Jesus’ Ministry in Jerusalem:
+      ref: 12:12-21:25
+      sections:
+        Jesus Arrives in Jerusalem:
+          ref: 12:12-12:50
+          sections:
+            The Triumphal Entry:
+              ref: 12:12-12:19
+            Jesus Predicts His Death:
+              ref: 12:20-12:36
+            Belief and Unbelief:
+              ref: 12:37-12:50
+        The Last Supper:
+          ref: 13:1-17:26
+          sections:
+            Jesus Washes His Disciples’ Feet:
+              ref: 13:1-13:17
+            Jesus Predicts His Betrayal:
+              ref: 13:18-13:30
+            The Farewell Discourse:
+              ref: 13:31-16:33
+              sections:
+                “Where I Am Going, You Cannot Come”:
+                  ref: 13:31-14:31
+                  sections:
+                    Love One Another:
+                      ref: 13:31-13:35
+                    Jesus Predicts Peter’s Denial:
+                      ref: 13:36-13:38
+                    In My Father’s House Are Many Rooms:
+                      ref: 14:1-14:4
+                    The Way, the Truth, and the Life:
+                      ref: 14:5-14:14
+                    Jesus Promises the Holy Spirit:
+                      ref: 14:15-14:26
+                    Peace I Leave with You:
+                      ref: 14:27-14:31
+                Instructions for the Disciples:
+                  ref: 15:1-16:33
+                  sections:
+                    Jesus the True Vine:
+                      ref: 15:1-15:8
+                    No Greater Love:
+                      ref: 15:9-15:17
+                    The Hatred of the World:
+                      ref: 15:18-15:27
+                    Persecution Foretold:
+                      ref: 16:1-16:4
+                    The Promise of the Holy Spirit:
+                      ref: 16:5-16:16
+                    Grief Will Turn to Joy:
+                      ref: 16:17-16:22
+                    Ask and You Will Receive:
+                      ref: 16:23-16:33
+            Jesus’ Prayer:
+              ref: 17:1-17:26
+              sections:
+                Prayer for the Son:
+                  ref: 17:1-17:5
+                Prayer for the Disciples:
+                  ref: 17:6-17:19
+                Prayer for All Believers:
+                  ref: 17:20-17:26
+        One Long Night:
+          ref: 18:1-19:15
+          sections:
+            The Betrayal of Jesus:
+              ref: 18:1-18:14
+            Peter’s First Denial:
+              ref: 18:15-18:18
+            Jesus before the High Priest:
+              ref: 18:19-18:24
+            Peter’s Second and Third Denials:
+              ref: 18:25-18:27
+            Jesus before Pilate:
+              ref: 18:28-18:40
+            The Soldiers Mock Jesus:
+              ref: 18:41-19:15
+        The Crucifixion:
+          ref: 19:16-19:37
+          sections:
+            The King of the Jews:
+              ref: 19:16-19:27
+            The Death of Jesus:
+              ref: 19:28-19:30
+            Jesus’ Side is Pierced:
+              ref: 19:31-19:37
+        The Burial of Jesus:
+          ref: 19:38-19:42
+        The Resurrection:
+          ref: 20:1-21:25
+          sections:
+            The Empty Tomb:
+              ref: 20:1-20:9
+            Jesus Appears to Mary Magdalene:
+              ref: 20:10-20:18
+            Jesus Appears to the Disciples:
+              ref: 20:19-20:23
+            Jesus Appears to Thomas:
+              ref: 20:24-20:29
+            The Purpose of John’s Book:
+              ref: 20:30-20:31
+            Jesus Appears by the Sea of Tiberias:
+              ref: 21:1-21:14
+            Jesus and Peter:
+              ref: 21:15-21:19
+            Jesus and the Beloved Disciple:
+              ref: 21:20-21:25
+Acts:
+  ref: 1:1-28:31
+  sections:
+    Introduction:
+      ref: 1:1-1:26
+      sections:
+        Dedication to Theophilus:
+          ref: 1:1-1:5
+        The Ascension:
+          ref: 1:6-1:11
+        Matthias Replaces Judas:
+          ref: 1:12-1:26
+    Witnesses in Jerusalem:
+      ref: 2:1-8:3
+      sections:
+        Pentecost:
+          ref: 2:1-2:47
+          sections:
+            The Holy Spirit at Pentecost:
+              ref: 2:1-2:13
+            Peter Addresses the Crowd:
+              ref: 2:14-2:36
+            Three Thousand Believe:
+              ref: 2:37-2:41
+            The Fellowship of Believers:
+              ref: 2:42-2:47
+        The Early Church in Jerusalem:
+          ref: 3:1-8:3
+          sections:
+            First Controversy at the Temple:
+              ref: 3:1-4:31
+              sections:
+                A Lame Man Walks:
+                  ref: 3:1-3:10
+                Peter Speaks in Solomon’s Colonnade:
+                  ref: 3:11-3:26
+                Peter and John before the Sanhedrin:
+                  ref: 4:1-4:12
+                The Name Forbidden:
+                  ref: 4:13-4:22
+                The Believer’s Prayer:
+                  ref: 4:23-4:31
+            The Church Community:
+              ref: 4:32-5:11
+              sections:
+                Sharing among Believers:
+                  ref: 4:32-4:37
+                Ananias and Sapphira:
+                  ref: 5:1-5:11
+            Second Controversy at the Temple:
+              ref: 5:12-5:42
+              sections:
+                The Apostles Heal Many:
+                  ref: 5:12-5:16
+                The Apostles Arrested and Freed:
+                  ref: 5:17-5:23
+                The Apostles before the Sanhedrin:
+                  ref: 5:24-5:32
+                Gamaliel’s Advice:
+                  ref: 5:33-5:42
+            Early Persecutions:
+              ref: 6:1-8:3
+              sections:
+                The Choosing of the Seven:
+                  ref: 6:1-6:7
+                The Arrest of Stephen:
+                  ref: 6:8-6:15
+                Stephen’s Defense:
+                  ref: 7:1-7:53
+                  sections:
+                    Patriarchal Narratives:
+                      ref: 7:1-7:19
+                      sections:
+                        The Call of Abraham:
+                          ref: 7:1-7:8
+                        Joseph Sold into Egypt:
+                          ref: 7:9-7:14
+                        Israel Oppressed in Egypt:
+                          ref: 7:15-7:19
+                    Moses Narrative:
+                      ref: 7:20-7:38
+                      sections:
+                        The Birth and Adoption of Moses:
+                          ref: 7:20-7:22
+                        The Rejection and Flight of Moses:
+                          ref: 7:23-7:29
+                        The Call of Moses:
+                          ref: 7:30-7:38
+                    The Rebellion of Israel:
+                      ref: 7:39-7:43
+                    The Tabernacle of the Testimony:
+                      ref: 7:44-7:50
+                    The Accused becomes the Accuser:
+                      ref: 7:51-7:53
+                The Stoning of Stephen:
+                  ref: 7:54-7:60
+                Saul Persecutes the Church:
+                  ref: 8:1-8:3
+    Witnesses in Judea and Samaria:
+      ref: 8:4-12:25
+      sections:
+        Philip’s Ministry:
+          ref: 8:4-8:40
+          sections:
+            Philip Goes to Samaria:
+              ref: 8:4-8:8
+            Simon the Sorcerer:
+              ref: 8:9-8:25
+            Philip and the Ethiopian:
+              ref: 8:26-8:40
+        Conversion of Saul of Tarsus:
+          ref: 9:1-9:30
+          sections:
+            The Road to Damascus:
+              ref: 9:1-9:9
+            Ananias Baptizes Saul:
+              ref: 9:10-9:19
+            Saul Preaches at Damascus:
+              ref: 9:20-9:22
+            The Escape from Damascus:
+              ref: 9:23-9:25
+            Saul in Jerusalem:
+              ref: 9:26-9:30
+        Peter’s Ministry:
+          ref: 9:31-11:18
+          sections:
+            The Healing of Aeneas:
+              ref: 9:31-9:35
+            The Raising of Tabitha:
+              ref: 9:36-9:43
+            Cornelius, the God-Fearing Gentile:
+              ref: 10:1-11:18
+              sections:
+                Cornelius Sends for Peter:
+                  ref: 10:1-10:8
+                Peter’s Vision:
+                  ref: 10:9-10:16
+                Peter Called to Caesarea:
+                  ref: 10:17-10:23
+                Peter Visits Cornelius:
+                  ref: 10:24-10:33
+                Good News for Gentiles:
+                  ref: 10:34-10:43
+                The Gentiles Receive the Holy Spirit:
+                  ref: 10:44-10:48
+                Peter’s Report at Jerusalem:
+                  ref: 11:1-11:18
+        The Church at Antioch:
+          ref: 11:19-11:30
+        Herod Persecutes the Church:
+          ref: 12:1-12:25
+          sections:
+            James Killed, Peter Imprisoned:
+              ref: 12:1-12:4
+            The Rescue of Peter:
+              ref: 12:5-12:19
+            The Death of Herod:
+              ref: 12:20-12:25
+    Witnesses to the Ends of the Earth:
+      ref: 13:1-28:31
+      sections:
+        Paul’s First Missionary Journey to Asia Minor:
+          ref: 13:1-14:28
+          sections:
+            The Journey Begins:
+              ref: 13:1-13:3
+            On Cyprus:
+              ref: 13:4-13:12
+            In Pisidian Antioch:
+              ref: 13:13-13:52
+            At Iconium:
+              ref: 14:1-14:7
+            In Lystra and Derbe:
+              ref: 14:8-14:20
+            The Return to Pisidian Antioch:
+              ref: 14:21-14:25
+            The Report to the Church at Antioch:
+              ref: 14:26-14:28
+        The Jerusalem Council:
+          ref: 15:1-15:35
+          sections:
+            The Dispute over Circumcision:
+              ref: 15:1-15:6
+            Peter, Barnabas, and Paul Make Their Arguments:
+              ref: 15:7-15:12
+            James, the Brother of Jesus, Makes the Ruling:
+              ref: 15:13-15:29
+              sections:
+                The Fallen Tent of David:
+                  ref: 15:13-15:18
+                The Four Things:
+                  ref: 15:19-15:21
+                The Letter to the Gentile Believers:
+                  ref: 15:22-15:29
+            The Believers at Antioch Rejoice:
+              ref: 15:30-15:35
+        Paul’s Second Missionary Journey to Asia Minor and Greece:
+          ref: 15:36-18:22
+          sections:
+            Division between Paul and Barnabas:
+              ref: 15:36-15:41
+            Timothy Joins Paul and Silas:
+              ref: 16:1-16:5
+            Paul’s Vision of the Macedonian:
+              ref: 16:6-16:10
+            Lydia’s Conversion in Philippi:
+              ref: 16:11-16:15
+            Persecution on the Road:
+              ref: 16:16-16:40
+              sections:
+                The Girl with a Spirit of Divination:
+                  ref: 16:16-16:21
+                Paul and Silas Imprisoned:
+                  ref: 16:22-16:24
+                The Conversion of the Jailer:
+                  ref: 16:25-16:34
+                An Official Apology:
+                  ref: 16:35-16:40
+            The Uproar in Thessalonica:
+              ref: 17:1-17:9
+            The Character of the Bereans:
+              ref: 17:10-17:15
+            In Athens:
+              ref: 17:16-17:34
+              sections:
+                The Epicurean and Stoic Philosophers:
+                  ref: 17:16-17:21
+                Paul’s Address in the Areopagus:
+                  ref: 17:22-17:34
+            In Corinth:
+              ref: 18:1-18:11
+            Paul before Gallio:
+              ref: 18:12-18:17
+            Paul Returns to Antioch:
+              ref: 18:18-18:22
+        Paul’s Third Missionary Journey to Asia Minor and Greece:
+          ref: 18:23-20:38
+          sections:
+            Apollos:
+              ref: 18:23-18:28
+            In Ephesus:
+              ref: 19:1-19:41
+              sections:
+                The Holy Spirit Received:
+                  ref: 19:1-19:7
+                Paul Ministers:
+                  ref: 19:8-19:12
+                The Sons of Sceva:
+                  ref: 19:13-19:20
+                The Riot:
+                  ref: 19:21-19:41
+            Paul in Macedonia and Greece:
+              ref: 20:1-20:6
+            Eutychus Revived at Troas:
+              ref: 20:7-20:12
+            From Troas to Miletus:
+              ref: 20:13-20:16
+            Paul’s Farewell to the Ephesians:
+              ref: 20:17-20:38
+        Paul Travels to Jerusalem:
+          ref: 21:1-22:30
+          sections:
+            The Journey to Jerusalem:
+              ref: 21:1-21:7
+            Paul Visits Philip the Evangelist:
+              ref: 21:8-21:16
+            Paul’s Arrival at Jerusalem:
+              ref: 21:17-21:26
+            Paul Seized at the Temple:
+              ref: 21:27-21:36
+            Paul Addresses the Crowd:
+              ref: 21:37-22:30
+              sections:
+                Permission to Speak:
+                  ref: 21:37-21:40
+                Paul’s Defense to the Crowd:
+                  ref: 22:1-22:21
+                Paul the Roman Citizen:
+                  ref: 22:22-22:30
+        Paul on Trial:
+          ref: 23:1-26:32
+          sections:
+            Paul before the Sanhedrin:
+              ref: 23:1-23:22
+              sections:
+                On Trial for the Hope in the Resurrection of the Dead:
+                  ref: 23:1-23:11
+                The Plot to Kill Paul:
+                  ref: 23:12-23:22
+            Paul before Felix:
+              ref: 23:23-24:27
+              sections:
+                Paul Sent to Felix:
+                  ref: 23:23-23:35
+                Tertullus Prosecutes Paul:
+                  ref: 24:1-24:9
+                Paul’s Defense to Felix:
+                  ref: 24:10-24:21
+                The Verdict Postposed:
+                  ref: 24:22-24:27
+            Paul before Festus:
+              ref: 25:1-25:22
+              sections:
+                Paul’s Trial:
+                  ref: 25:1-25:9
+                Paul Appeals to Caesar:
+                  ref: 25:10-25:12
+                Festus Consults Agrippa:
+                  ref: 25:13-25:22
+            Paul before Agrippa:
+              ref: 25:23-26:32
+              sections:
+                Agrippa and Bernice Arrive:
+                  ref: 25:23-25:27
+                Paul’s Testimony to Agrippa:
+                  ref: 26:1-26:23
+                Festus Interrupts Paul’s Defense:
+                  ref: 26:24-26:32
+        Paul Travels to Rome:
+          ref: 27:1-28:31
+          sections:
+            The Journey:
+              ref: 27:1-28:15
+              sections:
+                Sailing to Rome:
+                  ref: 27:1-27:12
+                The Storm at Sea:
+                  ref: 27:13-27:26
+                The Shipwreck:
+                  ref: 27:27-27:44
+                Ashore on Malta:
+                  ref: 28:1-28:10
+                Paul Arrives in Italy:
+                  ref: 28:11-28:15
+            Paul Preaches at Rome:
+              ref: 28:16-28:31
+Romans:
+  ref: 1:1-16:27
+  sections:
+    'Condemnation: The Need for a Savior':
+      ref: 1:1-3:20
+      sections:
+        Paul Greets the Saints in Rome:
+          ref: 1:1-1:7
+        Unashamed of the Gospel:
+          ref: 1:8-1:17
+        God’s Wrath against Sin:
+          ref: 1:18-3:20
+          sections:
+            Unrighteous Nations:
+              ref: 1:18-1:32
+            Unrighteous Israel:
+              ref: 2:1-3:8
+              sections:
+                God’s Righteous Judgment:
+                  ref: 2:1-2:16
+                The Jews and the Law:
+                  ref: 2:17-2:29
+                God Remains Faithful:
+                  ref: 3:1-3:8
+            There is No One Righteous:
+              ref: 3:9-3:20
+    'Justification: Faith in the Savior':
+      ref: 3:21-5:21
+      sections:
+        Righteousness through Faith in Christ:
+          ref: 3:21-3:31
+        The Faith of Abraham:
+          ref: 4:1-4:25
+          sections:
+            Justification by Faith:
+              ref: 4:1-4:12
+            Abraham Receives the Promise:
+              ref: 4:13-4:25
+        From Death to Life:
+          ref: 5:1-5:21
+          sections:
+            The Triumph of Faith:
+              ref: 5:1-5:5
+            Christ’s Sacrifice for the Ungodly:
+              ref: 5:6-5:11
+            Death in Adam, Life in Christ:
+              ref: 5:12-5:21
+    'Sanctification: How Ought We to Live':
+      ref: 6:1-8:39
+      sections:
+        Dead to Sin, Alive to God:
+          ref: 6:1-6:14
+        The Wages of Sin:
+          ref: 6:15-6:23
+        Function of the Law:
+          ref: 7:1-7:25
+        Walking by the Spirit:
+          ref: 8:1-8:39
+          sections:
+            Flesh vs. Spirit:
+              ref: 8:1-8:11
+            Heirs with Christ:
+              ref: 8:12-8:17
+            Future Glory:
+              ref: 8:18-8:27
+            God Works in All Things:
+              ref: 8:28-8:34
+            More than Conquerors:
+              ref: 8:35-8:39
+    'Restoration: The Plan and Future for Israel':
+      ref: 9:1-11:36
+      sections:
+        Israel In the Past:
+          ref: 9:1-9:33
+          sections:
+            Paul’s Concern for the Jews:
+              ref: 9:1-9:5
+            God’s Sovereign Choice:
+              ref: 9:6-9:29
+            Israel’s Unbelief:
+              ref: 9:30-9:33
+        Israel in the Present:
+          ref: 10:1-10:21
+        Israel in the Future:
+          ref: 11:1-11:36
+          sections:
+            A Remnant Chosen by Grace:
+              ref: 11:1-11:10
+            The Ingrafting of the Gentiles:
+              ref: 11:11-11:24
+            All Israel Will Be Saved:
+              ref: 11:25-11:32
+            A Hymn of Praise:
+              ref: 11:33-11:36
+    'Unification: The Body of Believers':
+      ref: 12:1-15:13
+      sections:
+        Love and Forgiveness:
+          ref: 12:1-13:14
+          sections:
+            Living Sacrifices:
+              ref: 12:1-12:8
+            Love, Zeal, Hope, Hospitality:
+              ref: 12:9-12:13
+            Forgiveness:
+              ref: 12:14-12:21
+            Submission to Authorities:
+              ref: 13:1-13:7
+            Love Fulfills the Law:
+              ref: 13:8-13:10
+            The Day is Near:
+              ref: 13:11-13:14
+        Grace in Jew and Gentile Relationship:
+          ref: 14:1-15:13
+          sections:
+            The Law of Liberty:
+              ref: 14:1-14:12
+            The Law of Love:
+              ref: 14:13-14:23
+            Accept One Another:
+              ref: 15:1-15:6
+            Christ the Servant of Jews and Gentiles:
+              ref: 15:7-15:13
+    Paul’s Salutation:
+      ref: 15:14-16:27
+      sections:
+        Paul the Minister to the Gentiles:
+          ref: 15:14-15:22
+        Paul’s Travel Plans:
+          ref: 15:23-15:33
+        Personal Greetings and Love:
+          ref: 16:1-16:16
+        Avoid Divisions:
+          ref: 16:17-16:20
+        Greetings from Paul’s Fellow Workers:
+          ref: 16:21-16:23
+        Doxology:
+          ref: 16:25-16:27
+Revelation:
+  ref: 1:1-22:21
+  sections:
+    Opening:
+      ref: 1:1-1:20
+      sections:
+        Prologue:
+          ref: 1:1-1:3
+        John Greets the Seven Churches:
+          ref: 1:4-1:8
+        John’s Vision on Patmos:
+          ref: 1:9-1:20
+    The Letters to the Seven Churches:
+      ref: 2:1-3:22
+      sections:
+        Ephesus:
+          ref: 2:1-2:7
+          sections:
+            The Authority:
+              ref: 2:1-2:1
+            The Praise:
+              ref: 2:2-2:3
+            The Grievance:
+              ref: 2:4-2:4
+            The Warning:
+              ref: 2:5-2:5
+            The Second Praise:
+              ref: 2:6-2:6
+            The Promise:
+              ref: 2:7-2:7
+        Smyrna:
+          ref: 2:8-2:11
+          sections:
+            The Authority:
+              ref: 2:8-2:8
+            The Praise:
+              ref: 2:9-2:9
+            The Grievance:
+              ref: 2:9-2:9
+            The Warning:
+              ref: 2:10-2:10
+            The Promise:
+              ref: 2:11-2:11
+        Pergamum:
+          ref: 2:12-2:17
+          sections:
+            The Authority:
+              ref: 2:12-2:12
+            The Praise:
+              ref: 2:13-2:13
+            The Grievance:
+              ref: 2:14-2:15
+            The Warning:
+              ref: 2:16-2:16
+            The Promise:
+              ref: 2:17-2:17
+        Thyatira:
+          ref: 2:18-2:29
+          sections:
+            The Authority:
+              ref: 2:18-2:18
+            The Praise:
+              ref: 2:19-2:19
+            The Grievance:
+              ref: 2:20-2:21
+            The Warning:
+              ref: 2:22-2:23
+            The Promise:
+              ref: 2:24-2:29
+        Sardis:
+          ref: 3:1-3:6
+          sections:
+            The Authority:
+              ref: 3:1-3:1
+            The Grievance:
+              ref: 3:1-3:1
+            The Warning:
+              ref: 3:2-3:3
+            Few Praised:
+              ref: 3:4-3:4
+            The Promise:
+              ref: 3:5-3:6
+        Philadelphia:
+          ref: 3:7-3:13
+          sections:
+            The Authority:
+              ref: 3:7-3:7
+            The Praise:
+              ref: 3:8-3:8
+            The Promise:
+              ref: 3:9-3:13
+        Laodicea:
+          ref: 3:14-3:22
+          sections:
+            The Authority:
+              ref: 3:14-3:14
+            The Grievance:
+              ref: 3:15-3:15
+            The Warning:
+              ref: 3:16-3:17
+            The Counsel:
+              ref: 3:18-3:18
+            The Promise:
+              ref: 3:19-3:22
+    The Throne and the Lamb:
+      ref: 4:1-5:14
+      sections:
+        The Throne in Heaven:
+          ref: 4:1-4:11
+          sections:
+            In the Throne Room:
+              ref: 4:1-4:4
+            Worship of the Creator:
+              ref: 4:5-4:11
+        The Lamb:
+          ref: 5:1-5:14
+          sections:
+            The Lamb Takes the Scroll:
+              ref: 5:1-5:10
+            The Lamb Exalted:
+              ref: 5:11-5:14
+    Three Sets of Seven Divine Judgments:
+      ref: 6:1-16:21
+      sections:
+        The Seven Seals:
+          ref: 6:1-8:5
+          sections:
+            'The First Seal: The White Horse':
+              ref: 6:1-6:2
+            'The Second Seal: War':
+              ref: 6:3-6:4
+            'The Third Seal: Famine':
+              ref: 6:5-6:6
+            'The Fourth Seal: Death':
+              ref: 6:7-6:8
+            'The Fifth Seal: The Martyrs':
+              ref: 6:9-6:11
+            'The Sixth Seal: Terror':
+              ref: 6:12-6:17
+            144,000 Sealed:
+              ref: 7:1-7:8
+            Praise from the Great Multitude:
+              ref: 7:9-7:17
+            'The Seventh Seal: Silence in Heaven':
+              ref: 8:1-8:5
+        The Seven Trumpets:
+          ref: 8:6-11:19
+          sections:
+            'The First Trumpet: Hail and Fire Mixed with Blood':
+              ref: 8:6-8:7
+            'The Second Trumpet: A Mountain Thrown into the Sea':
+              ref: 8:8-8:9
+            'The Third Trumpet: The Star Named Wormwood':
+              ref: 8:10-8:11
+            'The Fourth Trumpet: A Third of the Sun, Moon, and Stars Struck':
+              ref: 8:12-8:13
+            'The Fifth Trumpet: The Locusts':
+              ref: 9:1-9:12
+            'The Sixth Trumpet: Release of the Four Angels':
+              ref: 9:13-9:21
+            The Angel and the Small Scroll:
+              ref: 10:1-10:11
+            The Two Witnesses:
+              ref: 11:1-11:14
+            The Seventh Trumpet:
+              ref: 11:15-11:19
+        The Great Conflict:
+          ref: 12:1-14:20
+          sections:
+            The Woman and the Dragon:
+              ref: 12:1-12:17
+              sections:
+                The Woman, the Dragon, and the Child:
+                  ref: 12:1-12:6
+                The War in Heaven:
+                  ref: 12:7-12:12
+                The Woman Persecuted:
+                  ref: 12:13-12:17
+            The Two Beasts:
+              ref: 13:1-13:18
+              sections:
+                The Beast from the Sea:
+                  ref: 13:1-13:10
+                The Beast from the Earth:
+                  ref: 13:11-13:15
+                The Mark of the Beast:
+                  ref: 13:16-13:18
+            The Lamb and the 144,000:
+              ref: 14:1-14:5
+            Final Justice:
+              ref: 14:6-14:20
+              sections:
+                The Three Angels and Babylon’s Fall:
+                  ref: 14:6-14:13
+                The Harvest of the Earth:
+                  ref: 14:14-14:20
+        The Seven Bowls of Wrath:
+          ref: 15:1-16:21
+          sections:
+            The Song of Moses and the Lamb:
+              ref: 15:1-15:4
+            Preparation for Judgment:
+              ref: 15:5-15:8
+            'The First Bowl: Sores':
+              ref: 16:1-16:2
+            'The Second Bowl: Sea to Blood':
+              ref: 16:3-16:3
+            'The Third Bowl: Rivers to Blood':
+              ref: 16:4-16:7
+            'The Fourth Bowl: Fire':
+              ref: 16:8-16:9
+            'The Fifth Bowl: Darkness':
+              ref: 16:10-16:11
+            'The Sixth Bowl: Battle of Armageddon':
+              ref: 16:12-16:16
+            'The Seventh Bowl: Earthquake and Hail':
+              ref: 16:17-16:21
+    The Fall of Babylon:
+      ref: 17:1-19:10
+      sections:
+        Babylon the Great:
+          ref: 17:1-17:18
+          sections:
+            The Woman on the Beast:
+              ref: 17:1-17:5
+            The Mystery Explained:
+              ref: 17:6-17:13
+            The Victory of the Lamb:
+              ref: 17:14-17:18
+        The Fall of Babylon:
+          ref: 18:1-18:24
+          sections:
+            Babylon is Fallen:
+              ref: 18:1-18:8
+            Lament over Babylon:
+              ref: 18:9-18:20
+            The Doom of Babylon:
+              ref: 18:21-18:24
+        Rejoicing in Heaven:
+          ref: 19:1-19:5
+        The Marriage of the Lamb:
+          ref: 19:6-19:10
+    The Future and Beyond:
+      ref: 19:11-22:5
+      sections:
+        The Return of Jesus:
+          ref: 19:11-19:21
+          sections:
+            The Rider on the White Horse:
+              ref: 19:11-19:16
+            Defeat of the Beast and False Prophet:
+              ref: 19:17-19:21
+        The Millennial Reign:
+          ref: 20:1-20:15
+          sections:
+            Satan Bound:
+              ref: 20:1-20:3
+            The First Resurrection and Reign:
+              ref: 20:4-20:6
+            Satan’s Release and Defeat:
+              ref: 20:7-20:10
+            The Great White Throne Judgment:
+              ref: 20:11-20:15
+        The World to Come:
+          ref: 21:1-22:5
+          sections:
+            A New Heaven and a New Earth:
+              ref: 21:1-21:8
+            The New Jerusalem:
+              ref: 21:9-21:27
+            The River of Life:
+              ref: 22:1-22:5
+    Conclusion:
+      ref: 22:6-22:21
+      sections:
+        Jesus is Coming:
+          ref: 22:6-22:17
+        Nothing May Be Added or Removed:
+          ref: 22:18-22:21

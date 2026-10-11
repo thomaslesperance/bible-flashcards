@@ -6,7 +6,7 @@ from pathlib import Path
 # Paths relative to the script location
 BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DATA_PATH = BASE_DIR / "data" / "raw" / "bible_sample.json"
-OUTLINE_PATH = BASE_DIR / "data" / "outlines" / "sermon_on_the_mount.yaml"
+OUTLINE_PATH = BASE_DIR / "data" / "outlines" / "sermon_on_the_mount.yml"
 OUTPUT_DIR = BASE_DIR / "output"
 
 def load_data():
