@@ -8,3 +8,6 @@
      - as a final difficulty tier or an interwoven drill amongst flashcards
      - open-source stt libraries
 4. Contribute app to community
+
+- For large portions of the OT, such as Kings or Genesis, memorizing the outline would be a reasonable and realistic goal
+- Whereas for certain books or passages, such as the book of Revelation or various Psalms or the epistles,
