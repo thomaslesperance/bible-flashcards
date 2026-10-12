@@ -1,0 +1,109 @@
+/* v2 card styles (notes/sequence_v2_draft.md §8). Anki adds .nightMode in night mode. */
+.card {
+  --bg: #fbfaf7; --fg: #1d1d1f; --muted: #6b6b70; --line: #dddad2;
+  --hl: #fff1c2; --rv: #0b6e4f; --rv-bg: #e3f4ec; --blur: rgba(20, 20, 30, .62);
+  --bad: #b3261e; --st-read: #5b5bd6; --st-outline: #6d4cc2; --st-ladder: #0f7b8a; --st-section: #a15c00;
+  background: var(--bg); color: var(--fg);
+  margin: 0; padding: 14px 16px 24px;
+}
+.card.nightMode, .nightMode .card, .night_mode .card {
+  --bg: #1b1b1f; --fg: #e9e7e2; --muted: #9a98a0; --line: #38363d;
+  --hl: #4a3f12; --rv: #7fd9b4; --rv-bg: #17352a; --blur: rgba(235, 232, 225, .55);
+  --bad: #ff8a80; --st-read: #9d9dff; --st-outline: #b49cff; --st-ladder: #5fd0de; --st-section: #f2b04c;
+}
+
+.v2 { max-width: 40rem; margin: 0 auto; text-align: left;
+      font: 18px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+.v2.st-read    { --accent: var(--st-read); }
+.v2.st-outline { --accent: var(--st-outline); }
+.v2.st-ladder  { --accent: var(--st-ladder); }
+.v2.st-section { --accent: var(--st-section); }
+
+/* One prompt banner, coloured by stage */
+.banner { font: 700 1.05rem/1.3 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .06em;
+          color: var(--accent); border-left: 5px solid var(--accent); padding: .45rem .7rem;
+          background: color-mix(in srgb, var(--accent) 10%, transparent); border-radius: 0 6px 6px 0; }
+.sub { font: .95rem/1.45 system-ui, -apple-system, sans-serif; margin: .6rem 0 .2rem; }
+
+/* Passage: stable layout, poetry indents, small raised verse numbers */
+.passage { margin: .8rem 0; }
+.ln { padding-left: 1.5em; text-indent: -1.5em; }
+.ln.i2 { padding-left: 3em; }
+.ln.st { margin-top: .75em; }
+.ln.dim { opacity: .42; }
+.vn { font: 600 .62em system-ui, sans-serif; color: var(--muted); vertical-align: super; margin-right: .1em; }
+.ph { font: 700 .78rem system-ui, sans-serif; letter-spacing: .05em; text-transform: uppercase;
+      color: var(--accent); margin: 1.1rem 0 .25rem; }
+
+/* Hidden words keep their width; .rv reveals them in place, tinted */
+.mw { color: transparent; border-bottom: 1.5px solid var(--muted); }
+.bl { color: transparent; text-shadow: 0 0 .42em var(--blur); }
+/* Whole lines need a heavier blur than word fragments to stay unreadable */
+.bk { color: transparent; text-shadow: 0 0 .7em var(--blur); background: color-mix(in srgb, var(--blur) 12%, transparent); }
+.mw.rv, .bl.rv, .bk.rv { color: var(--rv); text-shadow: none; background: var(--rv-bg); border-bottom-color: transparent; }
+
+.gap { border: 1.5px dashed var(--accent); border-radius: 8px; padding: .35rem .7rem; margin: .6rem 0; }
+.gap .passage { margin: .3rem 0; }
+.gap-l { font: 700 .75rem system-ui, sans-serif; color: var(--accent); }
+
+/* Outline map */
+.omap { font: .95rem/1.4 system-ui, -apple-system, sans-serif; border: 1px solid var(--line);
+        border-radius: 10px; padding: .5rem .5rem; margin: .8rem 0; }
+.om { display: flex; gap: .45rem; align-items: baseline; padding: .12rem .35rem; border-radius: 5px; }
+.om.d0 { font-weight: 700; }
+.om.d1 { padding-left: 1.1rem; } .om.d2 { padding-left: 2.3rem; } .om.d3 { padding-left: 3.5rem; } .om.d4 { padding-left: 4.7rem; }
+.om-lb { min-width: 1.3em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.om-t { flex: 1; }
+.om-r, .om-more { color: var(--muted); font-size: .78rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.om.hl { background: var(--hl); }
+.blank { display: inline-block; width: 11em; border-bottom: 2px solid var(--accent); }
+.ans { font-weight: 700; color: var(--rv); }
+.om-part { font-size: .75rem; color: var(--accent); font-weight: 600; }
+.hidden-parts .om-t { font-style: italic; color: var(--accent); border: 1px dashed var(--accent);
+                      border-radius: 5px; padding: .1rem .45rem; }
+
+/* Map strip on text cards */
+.strip { font: .8rem/1.4 system-ui, -apple-system, sans-serif; color: var(--muted);
+         border-bottom: 1px solid var(--line); padding: .5rem 0 .45rem; margin-bottom: .3rem; }
+.sibs { display: flex; flex-wrap: wrap; gap: .15rem .9rem; margin-top: .2rem; }
+.sb.cur { color: var(--accent); font-weight: 700; }
+
+/* Text -> header answer */
+.answer { margin: .9rem 0 .2rem; font-family: system-ui, -apple-system, sans-serif; }
+.answer .crumbs { font-size: .85rem; color: var(--muted); }
+.answer .big { font-size: 1.6rem; font-weight: 750; line-height: 1.25; color: var(--accent); }
+.answer .ref { font-size: .9rem; color: var(--muted); }
+
+/* First lines */
+.fl-list { margin: .6rem 0; }
+.fl-row { margin: .55rem 0; }
+.fl-h { font: 600 .85rem system-ui, sans-serif; }
+.fl-q { color: var(--muted); }
+.fl-a { color: var(--rv); font-style: italic; }
+
+/* Rating rubric */
+.rubric { margin-top: 1.4rem; width: 100%; border-top: 1px solid var(--line); padding-top: .4rem;
+          font: .72rem/1.4 system-ui, sans-serif; color: var(--muted); border-collapse: collapse; }
+.rubric td { padding: .08rem .3rem .08rem 0; vertical-align: top; }
+.rubric td:first-child { font-weight: 700; white-space: nowrap; }
+.rubric .note, .rubric.note { font-style: italic; }
+.v2 + .rubric, .rubric.note { max-width: 40rem; margin-left: auto; margin-right: auto; display: block; }
+table.rubric { display: table; max-width: 40rem; margin-left: auto; margin-right: auto; }
+
+.credit { max-width: 40rem; margin: .8rem auto 0; font: .68rem/1.4 system-ui, sans-serif; color: var(--muted); }
+
+/* Type mode (Header -> text) */
+.tm-bar { display: flex; gap: .5rem; margin: .8rem 0; }
+.tm-bar button { font: 600 .9rem system-ui, sans-serif; padding: .45rem .8rem; border-radius: 8px;
+                 border: 1px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
+.tm-in { position: absolute; opacity: 0; width: 1px; height: 1px; left: -9999px; }
+.tm-text, .tm-score { display: none; }
+.tm-on .tm-text, .tm-on .tm-score { display: block; }
+.tw { color: transparent; border-radius: 3px; }
+.tw.next { box-shadow: inset 0 -2px 0 var(--accent); }
+.tw.ok { color: var(--fg); }
+.tw.miss { color: var(--bad); }
+.hint .tw:not(.ok):not(.miss) .tw-f { color: var(--muted); }
+.tm-text.wrong { animation: tm-shake .18s; }
+@keyframes tm-shake { 0%, 100% { transform: none; } 50% { transform: translateX(3px); } }
+.tm-score { font: 600 .9rem system-ui, sans-serif; color: var(--accent); margin-top: .6rem; }

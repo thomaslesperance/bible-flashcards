@@ -3,9 +3,16 @@ import os
 from contextlib import contextmanager
 from typing import List, Dict, Any, Optional
 
-# Compute the path to data/bible.db relative to this file
+# Compute the path to database relative to this file
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-DB_PATH = os.path.join(BASE_DIR, 'data', 'bible.db')
+DEFAULT_DB_PATH = os.path.join(BASE_DIR, 'data', 'bible.eng.db') if os.path.exists(os.path.join(BASE_DIR, 'data', 'bible.eng.db')) else os.path.join(BASE_DIR, 'data', 'bible.db')
+DB_PATH = os.environ.get('DB_PATH', DEFAULT_DB_PATH)
+
+def set_db_path(path: str) -> None:
+    """Sets the database file path."""
+    global DB_PATH
+    DB_PATH = path
+
 
 @contextmanager
 def get_db_connection():
