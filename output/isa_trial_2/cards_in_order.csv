@@ -1,0 +1,437 @@
+pos,day,phase,type,group,key,about
+0,1,1,preview,intro · The Deliverance from Exile (40–44),preview:n01,Preview The Deliverance from Exile (40–44)
+1,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n02,Cloze: Prepare the Way for the LORD
+2,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n06,Cloze: God’s Help to Israel
+3,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n09,Cloze: God’s Servant
+4,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n10,Cloze: A New Song of Praise
+5,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n13,Cloze: Israel’s Only Savior
+6,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n17,Cloze: The LORD Has Chosen Israel
+7,1,1,outline-cloze,intro · The Deliverance from Exile (40–44),outline-cloze:n18,Cloze: Jerusalem to Be Restored
+8,1,1,read-through,intro · Prepare the Way for the LORD,read-through:n02,Read Prepare the Way for the LORD (40:1–31)
+9,1,1,preview,intro · Prepare the Way for the LORD,preview:n02,Preview Prepare the Way for the LORD
+10,1,1,outline-cloze,intro · Prepare the Way for the LORD,outline-cloze:n03,Cloze: Comfort My People
+11,1,1,outline-cloze,intro · Prepare the Way for the LORD,outline-cloze:n04,Cloze: The Enduring Word
+12,2,1,outline-cloze,intro · Prepare the Way for the LORD,outline-cloze:n05,Cloze: Here Is Your God!
+13,2,1,read-through,intro · God’s Help to Israel,read-through:n06,Read God’s Help to Israel (41:1–29)
+14,2,1,preview,intro · God’s Help to Israel,preview:n06,Preview God’s Help to Israel
+15,2,1,outline-cloze,intro · God’s Help to Israel,outline-cloze:n07,Cloze: I Will Help You
+16,2,1,outline-cloze,intro · God’s Help to Israel,outline-cloze:n08,Cloze: Meaningless Idols
+17,2,1,read-through,intro · God’s Servant,read-through:n09,Read God’s Servant (42:1–9)
+18,2,1,read-through,intro · A New Song of Praise,read-through:n10,Read A New Song of Praise (42:10–25)
+19,2,1,preview,intro · A New Song of Praise,preview:n10,Preview A New Song of Praise
+20,2,1,outline-cloze,intro · A New Song of Praise,outline-cloze:n11,Cloze: Sing a New Song
+21,2,1,outline-cloze,intro · A New Song of Praise,outline-cloze:n12,Cloze: Israel Is Deaf and Blind
+22,2,1,list-parts,list the parts · The Deliverance from Exile (40–44),list-parts:n01,List the parts of The Deliverance from Exile (40–44)
+23,2,1,read-through,intro · Israel’s Only Savior,read-through:n13,Read Israel’s Only Savior (43:1–28)
+24,3,1,preview,intro · Israel’s Only Savior,preview:n13,Preview Israel’s Only Savior
+25,3,1,outline-cloze,intro · Israel’s Only Savior,outline-cloze:n14,"Cloze: The Holy One of Israel, your Savior"
+26,3,1,outline-cloze,intro · Israel’s Only Savior,outline-cloze:n15,Cloze: A Way in the Wilderness
+27,3,1,outline-cloze,intro · Israel’s Only Savior,outline-cloze:n16,Cloze: Israel’s Unfaithfulness
+28,3,1,list-parts,list the parts · Prepare the Way for the LORD,list-parts:n02,List the parts of Prepare the Way for the LORD
+29,3,1,list-parts,list the parts · God’s Help to Israel,list-parts:n06,List the parts of God’s Help to Israel
+30,3,1,read-through,intro · The LORD Has Chosen Israel,read-through:n17,Read The LORD Has Chosen Israel (44:1–20)
+31,3,1,read-through,intro · Jerusalem to Be Restored,read-through:n18,Read Jerusalem to Be Restored (44:21–28)
+32,3,2,text-to-header,wave 1 · u01,text-to-header:u01,Where does 40:1–5 belong?
+33,3,2,missing-words,wave 1 · u01,missing-words:u01,Missing words 40:1–5
+34,3,2,first-letters,wave 1 · u01,first-letters:u01,First letters 40:1–5
+35,3,1,list-parts,list the parts · A New Song of Praise,list-parts:n10,List the parts of A New Song of Praise
+36,4,2,text-to-header,wave 1 · u02,text-to-header:u02,Where does 40:6–8 belong?
+37,4,2,missing-words,wave 1 · u02,missing-words:u02,Missing words 40:6–8
+38,4,2,first-letters,wave 1 · u02,first-letters:u02,First letters 40:6–8
+39,4,1,list-parts,list the parts · Israel’s Only Savior,list-parts:n13,List the parts of Israel’s Only Savior
+40,4,2,scaffolded-cloze,wave 2 · u01,scaffolded-cloze:u01:40:1,Recite 40:1 in 40:1–5
+41,4,2,scaffolded-cloze,wave 2 · u01,scaffolded-cloze:u01:40:2,Recite 40:2 in 40:1–5
+42,4,2,scaffolded-cloze,wave 2 · u01,scaffolded-cloze:u01:40:3,Recite 40:3 in 40:1–5
+43,4,2,scaffolded-cloze,wave 2 · u01,scaffolded-cloze:u01:40:4,Recite 40:4 in 40:1–5
+44,4,2,scaffolded-cloze,wave 2 · u01,scaffolded-cloze:u01:40:5,Recite 40:5 in 40:1–5
+45,4,2,anchor-cloze,wave 2 · u01,anchor-cloze:u01,Recite the middle of 40:1–5
+46,4,2,text-to-header,wave 1 · u03,text-to-header:u03,Where does 40:9–11 belong?
+47,4,2,missing-words,wave 1 · u03,missing-words:u03,Missing words 40:9–11
+48,5,2,first-letters,wave 1 · u03,first-letters:u03,First letters 40:9–11
+49,5,2,scaffolded-cloze,wave 2 · u02,scaffolded-cloze:u02:40:6,Recite 40:6 in 40:6–8
+50,5,2,scaffolded-cloze,wave 2 · u02,scaffolded-cloze:u02:40:7,Recite 40:7 in 40:6–8
+51,5,2,scaffolded-cloze,wave 2 · u02,scaffolded-cloze:u02:40:8,Recite 40:8 in 40:6–8
+52,5,1,whole-outline,whole outline · The Deliverance from Exile (40–44),whole-outline:n01,Whole outline of The Deliverance from Exile (40–44)
+53,5,2,text-to-header,wave 1 · u04,text-to-header:u04,Where does 40:12–14 belong?
+54,5,2,missing-words,wave 1 · u04,missing-words:u04,Missing words 40:12–14
+55,5,2,first-letters,wave 1 · u04,first-letters:u04,First letters 40:12–14
+56,5,2,header-to-text,wave 3 · u01,header-to-text:u01,Recite Comfort My People (40:1–5)
+57,5,2,scaffolded-cloze,wave 2 · u03,scaffolded-cloze:u03:40:9,Recite 40:9 in 40:9–11
+58,5,2,scaffolded-cloze,wave 2 · u03,scaffolded-cloze:u03:40:10,Recite 40:10 in 40:9–11
+59,5,2,scaffolded-cloze,wave 2 · u03,scaffolded-cloze:u03:40:11,Recite 40:11 in 40:9–11
+60,6,2,text-to-header,wave 1 · u05,text-to-header:u05,Where does 40:15–20 belong?
+61,6,2,missing-words,wave 1 · u05,missing-words:u05,Missing words 40:15–20
+62,6,2,first-letters,wave 1 · u05,first-letters:u05,First letters 40:15–20
+63,6,2,header-to-text,wave 3 · u02,header-to-text:u02,Recite The Enduring Word (40:6–8)
+64,6,2,scaffolded-cloze,wave 2 · u04,scaffolded-cloze:u04:40:12,Recite 40:12 in 40:12–14
+65,6,2,scaffolded-cloze,wave 2 · u04,scaffolded-cloze:u04:40:13,Recite 40:13 in 40:12–14
+66,6,2,scaffolded-cloze,wave 2 · u04,scaffolded-cloze:u04:40:14,Recite 40:14 in 40:12–14
+67,6,2,text-to-header,wave 1 · u06,text-to-header:u06,Where does 40:21–24 belong?
+68,6,2,missing-words,wave 1 · u06,missing-words:u06,Missing words 40:21–24
+69,6,2,first-letters,wave 1 · u06,first-letters:u06,First letters 40:21–24
+70,6,2,header-to-text,wave 3 · u03,header-to-text:u03,Recite Here Is Your God! · part 1 of 6 (40:9–11)
+71,6,2,scaffolded-cloze,wave 2 · u05,scaffolded-cloze:u05:40:15,Recite 40:15 in 40:15–20
+72,7,2,scaffolded-cloze,wave 2 · u05,scaffolded-cloze:u05:40:16,Recite 40:16 in 40:15–20
+73,7,2,scaffolded-cloze,wave 2 · u05,scaffolded-cloze:u05:40:17,Recite 40:17 in 40:15–20
+74,7,2,scaffolded-cloze,wave 2 · u05,scaffolded-cloze:u05:40:18,Recite 40:18 in 40:15–20
+75,7,2,scaffolded-cloze,wave 2 · u05,scaffolded-cloze:u05:40:19,Recite 40:19 in 40:15–20
+76,7,2,scaffolded-cloze,wave 2 · u05,scaffolded-cloze:u05:40:20,Recite 40:20 in 40:15–20
+77,7,2,anchor-cloze,wave 2 · u05,anchor-cloze:u05,Recite the middle of 40:15–20
+78,7,2,text-to-header,wave 1 · u07,text-to-header:u07,Where does 40:25–26 belong?
+79,7,2,missing-words,wave 1 · u07,missing-words:u07,Missing words 40:25–26
+80,7,2,first-letters,wave 1 · u07,first-letters:u07,First letters 40:25–26
+81,7,2,header-to-text,wave 3 · u04,header-to-text:u04,Recite Here Is Your God! · part 2 of 6 (40:12–14)
+82,7,2,scaffolded-cloze,wave 2 · u06,scaffolded-cloze:u06:40:21,Recite 40:21 in 40:21–24
+83,7,2,scaffolded-cloze,wave 2 · u06,scaffolded-cloze:u06:40:22,Recite 40:22 in 40:21–24
+84,8,2,scaffolded-cloze,wave 2 · u06,scaffolded-cloze:u06:40:23,Recite 40:23 in 40:21–24
+85,8,2,scaffolded-cloze,wave 2 · u06,scaffolded-cloze:u06:40:24,Recite 40:24 in 40:21–24
+86,8,2,anchor-cloze,wave 2 · u06,anchor-cloze:u06,Recite the middle of 40:21–24
+87,8,2,text-to-header,wave 1 · u08,text-to-header:u08,Where does 40:27–31 belong?
+88,8,2,missing-words,wave 1 · u08,missing-words:u08,Missing words 40:27–31
+89,8,2,first-letters,wave 1 · u08,first-letters:u08,First letters 40:27–31
+90,8,2,header-to-text,wave 3 · u05,header-to-text:u05,Recite Here Is Your God! · part 3 of 6 (40:15–20)
+91,8,2,scaffolded-cloze,wave 2 · u07,scaffolded-cloze:u07:40:25,Recite 40:25 in 40:25–26
+92,8,2,scaffolded-cloze,wave 2 · u07,scaffolded-cloze:u07:40:26,Recite 40:26 in 40:25–26
+93,8,2,text-to-header,wave 1 · u09,text-to-header:u09,Where does 41:1–4 belong?
+94,8,2,missing-words,wave 1 · u09,missing-words:u09,Missing words 41:1–4
+95,8,2,first-letters,wave 1 · u09,first-letters:u09,First letters 41:1–4
+96,9,2,header-to-text,wave 3 · u06,header-to-text:u06,Recite Here Is Your God! · part 4 of 6 (40:21–24)
+97,9,2,scaffolded-cloze,wave 2 · u08,scaffolded-cloze:u08:40:27,Recite 40:27 in 40:27–31
+98,9,2,scaffolded-cloze,wave 2 · u08,scaffolded-cloze:u08:40:28,Recite 40:28 in 40:27–31
+99,9,2,scaffolded-cloze,wave 2 · u08,scaffolded-cloze:u08:40:29,Recite 40:29 in 40:27–31
+100,9,2,scaffolded-cloze,wave 2 · u08,scaffolded-cloze:u08:40:30,Recite 40:30 in 40:27–31
+101,9,2,scaffolded-cloze,wave 2 · u08,scaffolded-cloze:u08:40:31,Recite 40:31 in 40:27–31
+102,9,2,anchor-cloze,wave 2 · u08,anchor-cloze:u08,Recite the middle of 40:27–31
+103,9,2,text-to-header,wave 1 · u10,text-to-header:u10,Where does 41:5–7 belong?
+104,9,2,missing-words,wave 1 · u10,missing-words:u10,Missing words 41:5–7
+105,9,2,first-letters,wave 1 · u10,first-letters:u10,First letters 41:5–7
+106,9,2,header-to-text,wave 3 · u07,header-to-text:u07,Recite Here Is Your God! · part 5 of 6 (40:25–26)
+107,9,2,scaffolded-cloze,wave 2 · u09,scaffolded-cloze:u09:41:1,Recite 41:1 in 41:1–4
+108,10,2,scaffolded-cloze,wave 2 · u09,scaffolded-cloze:u09:41:2,Recite 41:2 in 41:1–4
+109,10,2,scaffolded-cloze,wave 2 · u09,scaffolded-cloze:u09:41:3,Recite 41:3 in 41:1–4
+110,10,2,scaffolded-cloze,wave 2 · u09,scaffolded-cloze:u09:41:4,Recite 41:4 in 41:1–4
+111,10,2,anchor-cloze,wave 2 · u09,anchor-cloze:u09,Recite the middle of 41:1–4
+112,10,2,text-to-header,wave 1 · u11,text-to-header:u11,Where does 41:8–10 belong?
+113,10,2,missing-words,wave 1 · u11,missing-words:u11,Missing words 41:8–10
+114,10,2,first-letters,wave 1 · u11,first-letters:u11,First letters 41:8–10
+115,10,2,header-to-text,wave 3 · u08,header-to-text:u08,Recite Here Is Your God! · part 6 of 6 (40:27–31)
+116,10,2,missing-section,closing · Here Is Your God!,missing-section:n05:1,Missing Part 1 of 6 · 40:9–11 · 3 verses in Here Is Your God!
+117,10,2,missing-section,closing · Here Is Your God!,missing-section:n05:2,Missing Part 2 of 6 · 40:12–14 · 3 verses in Here Is Your God!
+118,10,2,missing-section,closing · Here Is Your God!,missing-section:n05:3,Missing Part 3 of 6 · 40:15–20 · 6 verses in Here Is Your God!
+119,10,2,missing-section,closing · Here Is Your God!,missing-section:n05:4,Missing Part 4 of 6 · 40:21–24 · 4 verses in Here Is Your God!
+120,11,2,missing-section,closing · Here Is Your God!,missing-section:n05:5,Missing Part 5 of 6 · 40:25–26 · 2 verses in Here Is Your God!
+121,11,2,missing-section,closing · Here Is Your God!,missing-section:n05:6,Missing Part 6 of 6 · 40:27–31 · 5 verses in Here Is Your God!
+122,11,2,first-lines,closing · Here Is Your God!,first-lines:n05,First lines of Here Is Your God!
+123,11,2,scaffolded-cloze,wave 2 · u10,scaffolded-cloze:u10:41:5,Recite 41:5 in 41:5–7
+124,11,2,scaffolded-cloze,wave 2 · u10,scaffolded-cloze:u10:41:6,Recite 41:6 in 41:5–7
+125,11,2,scaffolded-cloze,wave 2 · u10,scaffolded-cloze:u10:41:7,Recite 41:7 in 41:5–7
+126,11,2,missing-section,closing · Prepare the Way for the LORD,missing-section:n02:1,Missing Comfort My People · 40:1–5 · 5 verses in Prepare the Way for the LORD
+127,11,2,missing-section,closing · Prepare the Way for the LORD,missing-section:n02:2,Missing The Enduring Word · 40:6–8 · 3 verses in Prepare the Way for the LORD
+128,11,2,first-lines,closing · Prepare the Way for the LORD,first-lines:n02,First lines of Prepare the Way for the LORD
+129,11,2,header-to-text,wave 3 · u09,header-to-text:u09,Recite I Will Help You · part 1 of 6 (41:1–4)
+130,11,2,scaffolded-cloze,wave 2 · u11,scaffolded-cloze:u11:41:8,Recite 41:8 in 41:8–10
+131,11,2,scaffolded-cloze,wave 2 · u11,scaffolded-cloze:u11:41:9,Recite 41:9 in 41:8–10
+132,12,2,scaffolded-cloze,wave 2 · u11,scaffolded-cloze:u11:41:10,Recite 41:10 in 41:8–10
+133,12,2,text-to-header,wave 1 · u12,text-to-header:u12,Where does 41:11–13 belong?
+134,12,2,missing-words,wave 1 · u12,missing-words:u12,Missing words 41:11–13
+135,12,2,first-letters,wave 1 · u12,first-letters:u12,First letters 41:11–13
+136,12,2,text-to-header,wave 1 · u13,text-to-header:u13,Where does 41:14–16 belong?
+137,12,2,missing-words,wave 1 · u13,missing-words:u13,Missing words 41:14–16
+138,12,2,first-letters,wave 1 · u13,first-letters:u13,First letters 41:14–16
+139,12,2,header-to-text,wave 3 · u10,header-to-text:u10,Recite I Will Help You · part 2 of 6 (41:5–7)
+140,12,2,header-to-text,wave 3 · u11,header-to-text:u11,Recite I Will Help You · part 3 of 6 (41:8–10)
+141,12,2,scaffolded-cloze,wave 2 · u12,scaffolded-cloze:u12:41:11,Recite 41:11 in 41:11–13
+142,12,2,scaffolded-cloze,wave 2 · u12,scaffolded-cloze:u12:41:12,Recite 41:12 in 41:11–13
+143,12,2,scaffolded-cloze,wave 2 · u12,scaffolded-cloze:u12:41:13,Recite 41:13 in 41:11–13
+144,13,2,text-to-header,wave 1 · u14,text-to-header:u14,Where does 41:17–20 belong?
+145,13,2,missing-words,wave 1 · u14,missing-words:u14,Missing words 41:17–20
+146,13,2,first-letters,wave 1 · u14,first-letters:u14,First letters 41:17–20
+147,13,2,scaffolded-cloze,wave 2 · u13,scaffolded-cloze:u13:41:14,Recite 41:14 in 41:14–16
+148,13,2,scaffolded-cloze,wave 2 · u13,scaffolded-cloze:u13:41:15,Recite 41:15 in 41:14–16
+149,13,2,scaffolded-cloze,wave 2 · u13,scaffolded-cloze:u13:41:16,Recite 41:16 in 41:14–16
+150,13,2,text-to-header,wave 1 · u15,text-to-header:u15,Where does 41:21–24 belong?
+151,13,2,missing-words,wave 1 · u15,missing-words:u15,Missing words 41:21–24
+152,13,2,first-letters,wave 1 · u15,first-letters:u15,First letters 41:21–24
+153,13,2,header-to-text,wave 3 · u12,header-to-text:u12,Recite I Will Help You · part 4 of 6 (41:11–13)
+154,13,2,scaffolded-cloze,wave 2 · u14,scaffolded-cloze:u14:41:17,Recite 41:17 in 41:17–20
+155,13,2,scaffolded-cloze,wave 2 · u14,scaffolded-cloze:u14:41:18,Recite 41:18 in 41:17–20
+156,14,2,scaffolded-cloze,wave 2 · u14,scaffolded-cloze:u14:41:19,Recite 41:19 in 41:17–20
+157,14,2,scaffolded-cloze,wave 2 · u14,scaffolded-cloze:u14:41:20,Recite 41:20 in 41:17–20
+158,14,2,anchor-cloze,wave 2 · u14,anchor-cloze:u14,Recite the middle of 41:17–20
+159,14,2,text-to-header,wave 1 · u16,text-to-header:u16,Where does 41:25–26 belong?
+160,14,2,missing-words,wave 1 · u16,missing-words:u16,Missing words 41:25–26
+161,14,2,first-letters,wave 1 · u16,first-letters:u16,First letters 41:25–26
+162,14,2,header-to-text,wave 3 · u13,header-to-text:u13,Recite I Will Help You · part 5 of 6 (41:14–16)
+163,14,2,scaffolded-cloze,wave 2 · u15,scaffolded-cloze:u15:41:21,Recite 41:21 in 41:21–24
+164,14,2,scaffolded-cloze,wave 2 · u15,scaffolded-cloze:u15:41:22,Recite 41:22 in 41:21–24
+165,14,2,scaffolded-cloze,wave 2 · u15,scaffolded-cloze:u15:41:23,Recite 41:23 in 41:21–24
+166,14,2,scaffolded-cloze,wave 2 · u15,scaffolded-cloze:u15:41:24,Recite 41:24 in 41:21–24
+167,14,2,anchor-cloze,wave 2 · u15,anchor-cloze:u15,Recite the middle of 41:21–24
+168,15,2,text-to-header,wave 1 · u17,text-to-header:u17,Where does 41:27–29 belong?
+169,15,2,missing-words,wave 1 · u17,missing-words:u17,Missing words 41:27–29
+170,15,2,first-letters,wave 1 · u17,first-letters:u17,First letters 41:27–29
+171,15,2,header-to-text,wave 3 · u14,header-to-text:u14,Recite I Will Help You · part 6 of 6 (41:17–20)
+172,15,2,missing-section,closing · I Will Help You,missing-section:n07:1,Missing Part 1 of 6 · 41:1–4 · 4 verses in I Will Help You
+173,15,2,missing-section,closing · I Will Help You,missing-section:n07:2,Missing Part 2 of 6 · 41:5–7 · 3 verses in I Will Help You
+174,15,2,missing-section,closing · I Will Help You,missing-section:n07:3,Missing Part 3 of 6 · 41:8–10 · 3 verses in I Will Help You
+175,15,2,missing-section,closing · I Will Help You,missing-section:n07:4,Missing Part 4 of 6 · 41:11–13 · 3 verses in I Will Help You
+176,15,2,missing-section,closing · I Will Help You,missing-section:n07:5,Missing Part 5 of 6 · 41:14–16 · 3 verses in I Will Help You
+177,15,2,missing-section,closing · I Will Help You,missing-section:n07:6,Missing Part 6 of 6 · 41:17–20 · 4 verses in I Will Help You
+178,15,2,first-lines,closing · I Will Help You,first-lines:n07,First lines of I Will Help You
+179,15,2,scaffolded-cloze,wave 2 · u16,scaffolded-cloze:u16:41:25,Recite 41:25 in 41:25–26
+180,16,2,scaffolded-cloze,wave 2 · u16,scaffolded-cloze:u16:41:26,Recite 41:26 in 41:25–26
+181,16,2,header-to-text,wave 3 · u15,header-to-text:u15,Recite Meaningless Idols · part 1 of 3 (41:21–24)
+182,16,2,text-to-header,wave 1 · u18,text-to-header:u18,Where does 42:1–4 belong?
+183,16,2,missing-words,wave 1 · u18,missing-words:u18,Missing words 42:1–4
+184,16,2,first-letters,wave 1 · u18,first-letters:u18,First letters 42:1–4
+185,16,2,scaffolded-cloze,wave 2 · u17,scaffolded-cloze:u17:41:27,Recite 41:27 in 41:27–29
+186,16,2,scaffolded-cloze,wave 2 · u17,scaffolded-cloze:u17:41:28,Recite 41:28 in 41:27–29
+187,16,2,scaffolded-cloze,wave 2 · u17,scaffolded-cloze:u17:41:29,Recite 41:29 in 41:27–29
+188,16,2,text-to-header,wave 1 · u19,text-to-header:u19,Where does 42:5–7 belong?
+189,16,2,missing-words,wave 1 · u19,missing-words:u19,Missing words 42:5–7
+190,16,2,first-letters,wave 1 · u19,first-letters:u19,First letters 42:5–7
+191,16,2,header-to-text,wave 3 · u16,header-to-text:u16,Recite Meaningless Idols · part 2 of 3 (41:25–26)
+192,17,2,scaffolded-cloze,wave 2 · u18,scaffolded-cloze:u18:42:1,Recite 42:1 in 42:1–4
+193,17,2,scaffolded-cloze,wave 2 · u18,scaffolded-cloze:u18:42:2,Recite 42:2 in 42:1–4
+194,17,2,scaffolded-cloze,wave 2 · u18,scaffolded-cloze:u18:42:3,Recite 42:3 in 42:1–4
+195,17,2,scaffolded-cloze,wave 2 · u18,scaffolded-cloze:u18:42:4,Recite 42:4 in 42:1–4
+196,17,2,anchor-cloze,wave 2 · u18,anchor-cloze:u18,Recite the middle of 42:1–4
+197,17,2,text-to-header,wave 1 · u20,text-to-header:u20,Where does 42:8–9 belong?
+198,17,2,missing-words,wave 1 · u20,missing-words:u20,Missing words 42:8–9
+199,17,2,first-letters,wave 1 · u20,first-letters:u20,First letters 42:8–9
+200,17,2,header-to-text,wave 3 · u17,header-to-text:u17,Recite Meaningless Idols · part 3 of 3 (41:27–29)
+201,17,2,missing-section,closing · Meaningless Idols,missing-section:n08:1,Missing Part 1 of 3 · 41:21–24 · 4 verses in Meaningless Idols
+202,17,2,missing-section,closing · Meaningless Idols,missing-section:n08:2,Missing Part 2 of 3 · 41:25–26 · 2 verses in Meaningless Idols
+203,17,2,missing-section,closing · Meaningless Idols,missing-section:n08:3,Missing Part 3 of 3 · 41:27–29 · 3 verses in Meaningless Idols
+204,18,2,scaffolded-cloze,wave 2 · u19,scaffolded-cloze:u19:42:5,Recite 42:5 in 42:5–7
+205,18,2,scaffolded-cloze,wave 2 · u19,scaffolded-cloze:u19:42:6,Recite 42:6 in 42:5–7
+206,18,2,scaffolded-cloze,wave 2 · u19,scaffolded-cloze:u19:42:7,Recite 42:7 in 42:5–7
+207,18,2,missing-section,closing · God’s Help to Israel,missing-section:n06:2,Missing Meaningless Idols · 41:21–29 · 9 verses in God’s Help to Israel
+208,18,2,first-lines,closing · God’s Help to Israel,first-lines:n06,First lines of God’s Help to Israel
+209,18,2,header-to-text,wave 3 · u18,header-to-text:u18,Recite God’s Servant · part 1 of 3 (42:1–4)
+210,18,2,text-to-header,wave 1 · u21,text-to-header:u21,Where does 42:10–13 belong?
+211,18,2,missing-words,wave 1 · u21,missing-words:u21,Missing words 42:10–13
+212,18,2,first-letters,wave 1 · u21,first-letters:u21,First letters 42:10–13
+213,18,2,scaffolded-cloze,wave 2 · u20,scaffolded-cloze:u20:42:8,Recite 42:8 in 42:8–9
+214,18,2,scaffolded-cloze,wave 2 · u20,scaffolded-cloze:u20:42:9,Recite 42:9 in 42:8–9
+215,18,2,text-to-header,wave 1 · u22,text-to-header:u22,Where does 42:14–17 belong?
+216,19,2,missing-words,wave 1 · u22,missing-words:u22,Missing words 42:14–17
+217,19,2,first-letters,wave 1 · u22,first-letters:u22,First letters 42:14–17
+218,19,2,section-header-to-text,recite · Meaningless Idols,section-header-to-text:n08,Recite Meaningless Idols
+219,19,2,header-to-text,wave 3 · u19,header-to-text:u19,Recite God’s Servant · part 2 of 3 (42:5–7)
+220,19,2,scaffolded-cloze,wave 2 · u21,scaffolded-cloze:u21:42:10,Recite 42:10 in 42:10–13
+221,19,2,scaffolded-cloze,wave 2 · u21,scaffolded-cloze:u21:42:11,Recite 42:11 in 42:10–13
+222,19,2,scaffolded-cloze,wave 2 · u21,scaffolded-cloze:u21:42:12,Recite 42:12 in 42:10–13
+223,19,2,scaffolded-cloze,wave 2 · u21,scaffolded-cloze:u21:42:13,Recite 42:13 in 42:10–13
+224,19,2,anchor-cloze,wave 2 · u21,anchor-cloze:u21,Recite the middle of 42:10–13
+225,19,2,text-to-header,wave 1 · u23,text-to-header:u23,Where does 42:18–20 belong?
+226,19,2,missing-words,wave 1 · u23,missing-words:u23,Missing words 42:18–20
+227,19,2,first-letters,wave 1 · u23,first-letters:u23,First letters 42:18–20
+228,20,2,header-to-text,wave 3 · u20,header-to-text:u20,Recite God’s Servant · part 3 of 3 (42:8–9)
+229,20,2,missing-section,closing · God’s Servant,missing-section:n09:1,Missing Part 1 of 3 · 42:1–4 · 4 verses in God’s Servant
+230,20,2,missing-section,closing · God’s Servant,missing-section:n09:2,Missing Part 2 of 3 · 42:5–7 · 3 verses in God’s Servant
+231,20,2,missing-section,closing · God’s Servant,missing-section:n09:3,Missing Part 3 of 3 · 42:8–9 · 2 verses in God’s Servant
+232,20,2,scaffolded-cloze,wave 2 · u22,scaffolded-cloze:u22:42:14,Recite 42:14 in 42:14–17
+233,20,2,scaffolded-cloze,wave 2 · u22,scaffolded-cloze:u22:42:15,Recite 42:15 in 42:14–17
+234,20,2,scaffolded-cloze,wave 2 · u22,scaffolded-cloze:u22:42:16,Recite 42:16 in 42:14–17
+235,20,2,scaffolded-cloze,wave 2 · u22,scaffolded-cloze:u22:42:17,Recite 42:17 in 42:14–17
+236,20,2,anchor-cloze,wave 2 · u22,anchor-cloze:u22,Recite the middle of 42:14–17
+237,20,2,header-to-text,wave 3 · u21,header-to-text:u21,Recite Sing a New Song · part 1 of 2 (42:10–13)
+238,20,2,text-to-header,wave 1 · u24,text-to-header:u24,Where does 42:21–23 belong?
+239,20,2,missing-words,wave 1 · u24,missing-words:u24,Missing words 42:21–23
+240,21,2,first-letters,wave 1 · u24,first-letters:u24,First letters 42:21–23
+241,21,2,scaffolded-cloze,wave 2 · u23,scaffolded-cloze:u23:42:18,Recite 42:18 in 42:18–20
+242,21,2,scaffolded-cloze,wave 2 · u23,scaffolded-cloze:u23:42:19,Recite 42:19 in 42:18–20
+243,21,2,scaffolded-cloze,wave 2 · u23,scaffolded-cloze:u23:42:20,Recite 42:20 in 42:18–20
+244,21,2,section-header-to-text,recite · God’s Servant,section-header-to-text:n09,Recite God’s Servant
+245,21,2,text-to-header,wave 1 · u25,text-to-header:u25,Where does 42:24–25 belong?
+246,21,2,missing-words,wave 1 · u25,missing-words:u25,Missing words 42:24–25
+247,21,2,first-letters,wave 1 · u25,first-letters:u25,First letters 42:24–25
+248,21,2,header-to-text,wave 3 · u22,header-to-text:u22,Recite Sing a New Song · part 2 of 2 (42:14–17)
+249,21,2,missing-section,closing · Sing a New Song,missing-section:n11:1,Missing Part 1 of 2 · 42:10–13 · 4 verses in Sing a New Song
+250,21,2,missing-section,closing · Sing a New Song,missing-section:n11:2,Missing Part 2 of 2 · 42:14–17 · 4 verses in Sing a New Song
+251,21,2,scaffolded-cloze,wave 2 · u24,scaffolded-cloze:u24:42:21,Recite 42:21 in 42:21–23
+252,22,2,scaffolded-cloze,wave 2 · u24,scaffolded-cloze:u24:42:22,Recite 42:22 in 42:21–23
+253,22,2,scaffolded-cloze,wave 2 · u24,scaffolded-cloze:u24:42:23,Recite 42:23 in 42:21–23
+254,22,2,text-to-header,wave 1 · u26,text-to-header:u26,Where does 43:1–2 belong?
+255,22,2,missing-words,wave 1 · u26,missing-words:u26,Missing words 43:1–2
+256,22,2,first-letters,wave 1 · u26,first-letters:u26,First letters 43:1–2
+257,22,2,header-to-text,wave 3 · u23,header-to-text:u23,Recite Israel Is Deaf and Blind · part 1 of 3 (42:18–20)
+258,22,2,scaffolded-cloze,wave 2 · u25,scaffolded-cloze:u25:42:24,Recite 42:24 in 42:24–25
+259,22,2,scaffolded-cloze,wave 2 · u25,scaffolded-cloze:u25:42:25,Recite 42:25 in 42:24–25
+260,22,2,text-to-header,wave 1 · u27,text-to-header:u27,Where does 43:3–4 belong?
+261,22,2,missing-words,wave 1 · u27,missing-words:u27,Missing words 43:3–4
+262,22,2,first-letters,wave 1 · u27,first-letters:u27,First letters 43:3–4
+263,22,2,section-header-to-text,recite · Sing a New Song,section-header-to-text:n11,Recite Sing a New Song
+264,23,2,header-to-text,wave 3 · u24,header-to-text:u24,Recite Israel Is Deaf and Blind · part 2 of 3 (42:21–23)
+265,23,2,scaffolded-cloze,wave 2 · u26,scaffolded-cloze:u26:43:1,Recite 43:1 in 43:1–2
+266,23,2,scaffolded-cloze,wave 2 · u26,scaffolded-cloze:u26:43:2,Recite 43:2 in 43:1–2
+267,23,2,text-to-header,wave 1 · u28,text-to-header:u28,Where does 43:5–7 belong?
+268,23,2,missing-words,wave 1 · u28,missing-words:u28,Missing words 43:5–7
+269,23,2,first-letters,wave 1 · u28,first-letters:u28,First letters 43:5–7
+270,23,2,header-to-text,wave 3 · u25,header-to-text:u25,Recite Israel Is Deaf and Blind · part 3 of 3 (42:24–25)
+271,23,2,missing-section,closing · Israel Is Deaf and Blind,missing-section:n12:1,Missing Part 1 of 3 · 42:18–20 · 3 verses in Israel Is Deaf and Blind
+272,23,2,missing-section,closing · Israel Is Deaf and Blind,missing-section:n12:2,Missing Part 2 of 3 · 42:21–23 · 3 verses in Israel Is Deaf and Blind
+273,23,2,missing-section,closing · Israel Is Deaf and Blind,missing-section:n12:3,Missing Part 3 of 3 · 42:24–25 · 2 verses in Israel Is Deaf and Blind
+274,23,2,missing-section,closing · A New Song of Praise,missing-section:n10:1,Missing Sing a New Song · 42:10–17 · 8 verses in A New Song of Praise
+275,23,2,missing-section,closing · A New Song of Praise,missing-section:n10:2,Missing Israel Is Deaf and Blind · 42:18–25 · 8 verses in A New Song of Praise
+276,24,2,first-lines,closing · A New Song of Praise,first-lines:n10,First lines of A New Song of Praise
+277,24,2,scaffolded-cloze,wave 2 · u27,scaffolded-cloze:u27:43:3,Recite 43:3 in 43:3–4
+278,24,2,scaffolded-cloze,wave 2 · u27,scaffolded-cloze:u27:43:4,Recite 43:4 in 43:3–4
+279,24,2,header-to-text,wave 3 · u26,header-to-text:u26,"Recite The Holy One of Israel, your Savior · part 1 of 5 (43:1–2)"
+280,24,2,text-to-header,wave 1 · u29,text-to-header:u29,Where does 43:8–9 belong?
+281,24,2,missing-words,wave 1 · u29,missing-words:u29,Missing words 43:8–9
+282,24,2,first-letters,wave 1 · u29,first-letters:u29,First letters 43:8–9
+283,24,2,scaffolded-cloze,wave 2 · u28,scaffolded-cloze:u28:43:5,Recite 43:5 in 43:5–7
+284,24,2,scaffolded-cloze,wave 2 · u28,scaffolded-cloze:u28:43:6,Recite 43:6 in 43:5–7
+285,24,2,scaffolded-cloze,wave 2 · u28,scaffolded-cloze:u28:43:7,Recite 43:7 in 43:5–7
+286,24,2,section-header-to-text,recite · Israel Is Deaf and Blind,section-header-to-text:n12,Recite Israel Is Deaf and Blind
+287,24,2,text-to-header,wave 1 · u30,text-to-header:u30,Where does 43:10–13 belong?
+288,25,2,missing-words,wave 1 · u30,missing-words:u30,Missing words 43:10–13
+289,25,2,first-letters,wave 1 · u30,first-letters:u30,First letters 43:10–13
+290,25,2,section-header-to-text,recite · A New Song of Praise,section-header-to-text:n10,Recite A New Song of Praise
+291,25,2,header-to-text,wave 3 · u27,header-to-text:u27,"Recite The Holy One of Israel, your Savior · part 2 of 5 (43:3–4)"
+292,25,2,scaffolded-cloze,wave 2 · u29,scaffolded-cloze:u29:43:8,Recite 43:8 in 43:8–9
+293,25,2,scaffolded-cloze,wave 2 · u29,scaffolded-cloze:u29:43:9,Recite 43:9 in 43:8–9
+294,25,2,text-to-header,wave 1 · u31,text-to-header:u31,Where does 43:14–17 belong?
+295,25,2,missing-words,wave 1 · u31,missing-words:u31,Missing words 43:14–17
+296,25,2,first-letters,wave 1 · u31,first-letters:u31,First letters 43:14–17
+297,25,2,header-to-text,wave 3 · u28,header-to-text:u28,"Recite The Holy One of Israel, your Savior · part 3 of 5 (43:5–7)"
+298,25,2,scaffolded-cloze,wave 2 · u30,scaffolded-cloze:u30:43:10,Recite 43:10 in 43:10–13
+299,25,2,scaffolded-cloze,wave 2 · u30,scaffolded-cloze:u30:43:11,Recite 43:11 in 43:10–13
+300,26,2,scaffolded-cloze,wave 2 · u30,scaffolded-cloze:u30:43:12,Recite 43:12 in 43:10–13
+301,26,2,scaffolded-cloze,wave 2 · u30,scaffolded-cloze:u30:43:13,Recite 43:13 in 43:10–13
+302,26,2,anchor-cloze,wave 2 · u30,anchor-cloze:u30,Recite the middle of 43:10–13
+303,26,2,text-to-header,wave 1 · u32,text-to-header:u32,Where does 43:18–21 belong?
+304,26,2,missing-words,wave 1 · u32,missing-words:u32,Missing words 43:18–21
+305,26,2,first-letters,wave 1 · u32,first-letters:u32,First letters 43:18–21
+306,26,2,header-to-text,wave 3 · u29,header-to-text:u29,"Recite The Holy One of Israel, your Savior · part 4 of 5 (43:8–9)"
+307,26,2,scaffolded-cloze,wave 2 · u31,scaffolded-cloze:u31:43:14,Recite 43:14 in 43:14–17
+308,26,2,scaffolded-cloze,wave 2 · u31,scaffolded-cloze:u31:43:15,Recite 43:15 in 43:14–17
+309,26,2,scaffolded-cloze,wave 2 · u31,scaffolded-cloze:u31:43:16,Recite 43:16 in 43:14–17
+310,26,2,scaffolded-cloze,wave 2 · u31,scaffolded-cloze:u31:43:17,Recite 43:17 in 43:14–17
+311,26,2,anchor-cloze,wave 2 · u31,anchor-cloze:u31,Recite the middle of 43:14–17
+312,27,2,text-to-header,wave 1 · u33,text-to-header:u33,Where does 43:22–24 belong?
+313,27,2,missing-words,wave 1 · u33,missing-words:u33,Missing words 43:22–24
+314,27,2,first-letters,wave 1 · u33,first-letters:u33,First letters 43:22–24
+315,27,2,header-to-text,wave 3 · u30,header-to-text:u30,"Recite The Holy One of Israel, your Savior · part 5 of 5 (43:10–13)"
+316,27,2,missing-section,"closing · The Holy One of Israel, your Savior",missing-section:n14:1,"Missing Part 1 of 5 · 43:1–2 · 2 verses in The Holy One of Israel, your Savior"
+317,27,2,missing-section,"closing · The Holy One of Israel, your Savior",missing-section:n14:2,"Missing Part 2 of 5 · 43:3–4 · 2 verses in The Holy One of Israel, your Savior"
+318,27,2,missing-section,"closing · The Holy One of Israel, your Savior",missing-section:n14:3,"Missing Part 3 of 5 · 43:5–7 · 3 verses in The Holy One of Israel, your Savior"
+319,27,2,missing-section,"closing · The Holy One of Israel, your Savior",missing-section:n14:4,"Missing Part 4 of 5 · 43:8–9 · 2 verses in The Holy One of Israel, your Savior"
+320,27,2,missing-section,"closing · The Holy One of Israel, your Savior",missing-section:n14:5,"Missing Part 5 of 5 · 43:10–13 · 4 verses in The Holy One of Israel, your Savior"
+321,27,2,first-lines,"closing · The Holy One of Israel, your Savior",first-lines:n14,"First lines of The Holy One of Israel, your Savior"
+322,27,2,scaffolded-cloze,wave 2 · u32,scaffolded-cloze:u32:43:18,Recite 43:18 in 43:18–21
+323,27,2,scaffolded-cloze,wave 2 · u32,scaffolded-cloze:u32:43:19,Recite 43:19 in 43:18–21
+324,28,2,scaffolded-cloze,wave 2 · u32,scaffolded-cloze:u32:43:20,Recite 43:20 in 43:18–21
+325,28,2,scaffolded-cloze,wave 2 · u32,scaffolded-cloze:u32:43:21,Recite 43:21 in 43:18–21
+326,28,2,anchor-cloze,wave 2 · u32,anchor-cloze:u32,Recite the middle of 43:18–21
+327,28,2,header-to-text,wave 3 · u31,header-to-text:u31,Recite A Way in the Wilderness · part 1 of 2 (43:14–17)
+328,28,2,scaffolded-cloze,wave 2 · u33,scaffolded-cloze:u33:43:22,Recite 43:22 in 43:22–24
+329,28,2,scaffolded-cloze,wave 2 · u33,scaffolded-cloze:u33:43:23,Recite 43:23 in 43:22–24
+330,28,2,scaffolded-cloze,wave 2 · u33,scaffolded-cloze:u33:43:24,Recite 43:24 in 43:22–24
+331,28,2,text-to-header,wave 1 · u34,text-to-header:u34,Where does 43:25–28 belong?
+332,28,2,missing-words,wave 1 · u34,missing-words:u34,Missing words 43:25–28
+333,28,2,first-letters,wave 1 · u34,first-letters:u34,First letters 43:25–28
+334,28,2,section-header-to-text,"recite · The Holy One of Israel, your Savior",section-header-to-text:n14,"Recite The Holy One of Israel, your Savior"
+335,28,2,text-to-header,wave 1 · u35,text-to-header:u35,Where does 44:1–5 belong?
+336,29,2,missing-words,wave 1 · u35,missing-words:u35,Missing words 44:1–5
+337,29,2,first-letters,wave 1 · u35,first-letters:u35,First letters 44:1–5
+338,29,2,header-to-text,wave 3 · u32,header-to-text:u32,Recite A Way in the Wilderness · part 2 of 2 (43:18–21)
+339,29,2,missing-section,closing · A Way in the Wilderness,missing-section:n15:1,Missing Part 1 of 2 · 43:14–17 · 4 verses in A Way in the Wilderness
+340,29,2,missing-section,closing · A Way in the Wilderness,missing-section:n15:2,Missing Part 2 of 2 · 43:18–21 · 4 verses in A Way in the Wilderness
+341,29,2,header-to-text,wave 3 · u33,header-to-text:u33,Recite Israel’s Unfaithfulness · part 1 of 2 (43:22–24)
+342,29,2,scaffolded-cloze,wave 2 · u34,scaffolded-cloze:u34:43:25,Recite 43:25 in 43:25–28
+343,29,2,scaffolded-cloze,wave 2 · u34,scaffolded-cloze:u34:43:26,Recite 43:26 in 43:25–28
+344,29,2,scaffolded-cloze,wave 2 · u34,scaffolded-cloze:u34:43:27,Recite 43:27 in 43:25–28
+345,29,2,scaffolded-cloze,wave 2 · u34,scaffolded-cloze:u34:43:28,Recite 43:28 in 43:25–28
+346,29,2,anchor-cloze,wave 2 · u34,anchor-cloze:u34,Recite the middle of 43:25–28
+347,29,2,text-to-header,wave 1 · u36,text-to-header:u36,Where does 44:6–8 belong?
+348,30,2,missing-words,wave 1 · u36,missing-words:u36,Missing words 44:6–8
+349,30,2,first-letters,wave 1 · u36,first-letters:u36,First letters 44:6–8
+350,30,2,scaffolded-cloze,wave 2 · u35,scaffolded-cloze:u35:44:1,Recite 44:1 in 44:1–5
+351,30,2,scaffolded-cloze,wave 2 · u35,scaffolded-cloze:u35:44:2,Recite 44:2 in 44:1–5
+352,30,2,scaffolded-cloze,wave 2 · u35,scaffolded-cloze:u35:44:3,Recite 44:3 in 44:1–5
+353,30,2,scaffolded-cloze,wave 2 · u35,scaffolded-cloze:u35:44:4,Recite 44:4 in 44:1–5
+354,30,2,scaffolded-cloze,wave 2 · u35,scaffolded-cloze:u35:44:5,Recite 44:5 in 44:1–5
+355,30,2,anchor-cloze,wave 2 · u35,anchor-cloze:u35,Recite the middle of 44:1–5
+356,30,2,section-header-to-text,recite · A Way in the Wilderness,section-header-to-text:n15,Recite A Way in the Wilderness
+357,30,2,text-to-header,wave 1 · u37,text-to-header:u37,Where does 44:9–11 belong?
+358,30,2,missing-words,wave 1 · u37,missing-words:u37,Missing words 44:9–11
+359,30,2,first-letters,wave 1 · u37,first-letters:u37,First letters 44:9–11
+360,31,2,header-to-text,wave 3 · u34,header-to-text:u34,Recite Israel’s Unfaithfulness · part 2 of 2 (43:25–28)
+361,31,2,missing-section,closing · Israel’s Unfaithfulness,missing-section:n16:1,Missing Part 1 of 2 · 43:22–24 · 3 verses in Israel’s Unfaithfulness
+362,31,2,missing-section,closing · Israel’s Unfaithfulness,missing-section:n16:2,Missing Part 2 of 2 · 43:25–28 · 4 verses in Israel’s Unfaithfulness
+363,31,2,scaffolded-cloze,wave 2 · u36,scaffolded-cloze:u36:44:6,Recite 44:6 in 44:6–8
+364,31,2,scaffolded-cloze,wave 2 · u36,scaffolded-cloze:u36:44:7,Recite 44:7 in 44:6–8
+365,31,2,scaffolded-cloze,wave 2 · u36,scaffolded-cloze:u36:44:8,Recite 44:8 in 44:6–8
+366,31,2,missing-section,closing · Israel’s Only Savior,missing-section:n13:2,Missing A Way in the Wilderness · 43:14–21 · 8 verses in Israel’s Only Savior
+367,31,2,missing-section,closing · Israel’s Only Savior,missing-section:n13:3,Missing Israel’s Unfaithfulness · 43:22–28 · 7 verses in Israel’s Only Savior
+368,31,2,first-lines,closing · Israel’s Only Savior,first-lines:n13,First lines of Israel’s Only Savior
+369,31,2,header-to-text,wave 3 · u35,header-to-text:u35,Recite The LORD Has Chosen Israel · part 1 of 7 (44:1–5)
+370,31,2,text-to-header,wave 1 · u38,text-to-header:u38,Where does 44:12–13 belong?
+371,31,2,missing-words,wave 1 · u38,missing-words:u38,Missing words 44:12–13
+372,32,2,first-letters,wave 1 · u38,first-letters:u38,First letters 44:12–13
+373,32,2,scaffolded-cloze,wave 2 · u37,scaffolded-cloze:u37:44:9,Recite 44:9 in 44:9–11
+374,32,2,scaffolded-cloze,wave 2 · u37,scaffolded-cloze:u37:44:10,Recite 44:10 in 44:9–11
+375,32,2,scaffolded-cloze,wave 2 · u37,scaffolded-cloze:u37:44:11,Recite 44:11 in 44:9–11
+376,32,2,section-header-to-text,recite · Israel’s Unfaithfulness,section-header-to-text:n16,Recite Israel’s Unfaithfulness
+377,32,2,text-to-header,wave 1 · u39,text-to-header:u39,Where does 44:14–15 belong?
+378,32,2,missing-words,wave 1 · u39,missing-words:u39,Missing words 44:14–15
+379,32,2,first-letters,wave 1 · u39,first-letters:u39,First letters 44:14–15
+380,32,2,header-to-text,wave 3 · u36,header-to-text:u36,Recite The LORD Has Chosen Israel · part 2 of 7 (44:6–8)
+381,32,2,scaffolded-cloze,wave 2 · u38,scaffolded-cloze:u38:44:12,Recite 44:12 in 44:12–13
+382,32,2,scaffolded-cloze,wave 2 · u38,scaffolded-cloze:u38:44:13,Recite 44:13 in 44:12–13
+383,32,2,text-to-header,wave 1 · u40,text-to-header:u40,Where does 44:16–17 belong?
+384,33,2,missing-words,wave 1 · u40,missing-words:u40,Missing words 44:16–17
+385,33,2,first-letters,wave 1 · u40,first-letters:u40,First letters 44:16–17
+386,33,2,header-to-text,wave 3 · u37,header-to-text:u37,Recite The LORD Has Chosen Israel · part 3 of 7 (44:9–11)
+387,33,2,scaffolded-cloze,wave 2 · u39,scaffolded-cloze:u39:44:14,Recite 44:14 in 44:14–15
+388,33,2,scaffolded-cloze,wave 2 · u39,scaffolded-cloze:u39:44:15,Recite 44:15 in 44:14–15
+389,33,2,text-to-header,wave 1 · u41,text-to-header:u41,Where does 44:18–20 belong?
+390,33,2,missing-words,wave 1 · u41,missing-words:u41,Missing words 44:18–20
+391,33,2,first-letters,wave 1 · u41,first-letters:u41,First letters 44:18–20
+392,33,2,header-to-text,wave 3 · u38,header-to-text:u38,Recite The LORD Has Chosen Israel · part 4 of 7 (44:12–13)
+393,33,2,scaffolded-cloze,wave 2 · u40,scaffolded-cloze:u40:44:16,Recite 44:16 in 44:16–17
+394,33,2,scaffolded-cloze,wave 2 · u40,scaffolded-cloze:u40:44:17,Recite 44:17 in 44:16–17
+395,33,2,text-to-header,wave 1 · u42,text-to-header:u42,Where does 44:21–23 belong?
+396,34,2,missing-words,wave 1 · u42,missing-words:u42,Missing words 44:21–23
+397,34,2,first-letters,wave 1 · u42,first-letters:u42,First letters 44:21–23
+398,34,2,header-to-text,wave 3 · u39,header-to-text:u39,Recite The LORD Has Chosen Israel · part 5 of 7 (44:14–15)
+399,34,2,scaffolded-cloze,wave 2 · u41,scaffolded-cloze:u41:44:18,Recite 44:18 in 44:18–20
+400,34,2,scaffolded-cloze,wave 2 · u41,scaffolded-cloze:u41:44:19,Recite 44:19 in 44:18–20
+401,34,2,scaffolded-cloze,wave 2 · u41,scaffolded-cloze:u41:44:20,Recite 44:20 in 44:18–20
+402,34,2,text-to-header,wave 1 · u43,text-to-header:u43,Where does 44:24–25 belong?
+403,34,2,missing-words,wave 1 · u43,missing-words:u43,Missing words 44:24–25
+404,34,2,first-letters,wave 1 · u43,first-letters:u43,First letters 44:24–25
+405,34,2,header-to-text,wave 3 · u40,header-to-text:u40,Recite The LORD Has Chosen Israel · part 6 of 7 (44:16–17)
+406,34,2,scaffolded-cloze,wave 2 · u42,scaffolded-cloze:u42:44:21,Recite 44:21 in 44:21–23
+407,34,2,scaffolded-cloze,wave 2 · u42,scaffolded-cloze:u42:44:22,Recite 44:22 in 44:21–23
+408,35,2,scaffolded-cloze,wave 2 · u42,scaffolded-cloze:u42:44:23,Recite 44:23 in 44:21–23
+409,35,2,text-to-header,wave 1 · u44,text-to-header:u44,Where does 44:26–28 belong?
+410,35,2,missing-words,wave 1 · u44,missing-words:u44,Missing words 44:26–28
+411,35,2,first-letters,wave 1 · u44,first-letters:u44,First letters 44:26–28
+412,35,2,header-to-text,wave 3 · u41,header-to-text:u41,Recite The LORD Has Chosen Israel · part 7 of 7 (44:18–20)
+413,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:1,Missing Part 1 of 7 · 44:1–5 · 5 verses in The LORD Has Chosen Israel
+414,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:2,Missing Part 2 of 7 · 44:6–8 · 3 verses in The LORD Has Chosen Israel
+415,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:3,Missing Part 3 of 7 · 44:9–11 · 3 verses in The LORD Has Chosen Israel
+416,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:4,Missing Part 4 of 7 · 44:12–13 · 2 verses in The LORD Has Chosen Israel
+417,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:5,Missing Part 5 of 7 · 44:14–15 · 2 verses in The LORD Has Chosen Israel
+418,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:6,Missing Part 6 of 7 · 44:16–17 · 2 verses in The LORD Has Chosen Israel
+419,35,2,missing-section,closing · The LORD Has Chosen Israel,missing-section:n17:7,Missing Part 7 of 7 · 44:18–20 · 3 verses in The LORD Has Chosen Israel
+420,36,2,first-lines,closing · The LORD Has Chosen Israel,first-lines:n17,First lines of The LORD Has Chosen Israel
+421,36,2,scaffolded-cloze,wave 2 · u43,scaffolded-cloze:u43:44:24,Recite 44:24 in 44:24–25
+422,36,2,scaffolded-cloze,wave 2 · u43,scaffolded-cloze:u43:44:25,Recite 44:25 in 44:24–25
+423,36,2,header-to-text,wave 3 · u42,header-to-text:u42,Recite Jerusalem to Be Restored · part 1 of 3 (44:21–23)
+424,36,2,scaffolded-cloze,wave 2 · u44,scaffolded-cloze:u44:44:26,Recite 44:26 in 44:26–28
+425,36,2,scaffolded-cloze,wave 2 · u44,scaffolded-cloze:u44:44:27,Recite 44:27 in 44:26–28
+426,36,2,scaffolded-cloze,wave 2 · u44,scaffolded-cloze:u44:44:28,Recite 44:28 in 44:26–28
+427,36,2,header-to-text,wave 3 · u43,header-to-text:u43,Recite Jerusalem to Be Restored · part 2 of 3 (44:24–25)
+428,36,2,header-to-text,wave 3 · u44,header-to-text:u44,Recite Jerusalem to Be Restored · part 3 of 3 (44:26–28)
+429,36,2,missing-section,closing · Jerusalem to Be Restored,missing-section:n18:1,Missing Part 1 of 3 · 44:21–23 · 3 verses in Jerusalem to Be Restored
+430,36,2,missing-section,closing · Jerusalem to Be Restored,missing-section:n18:2,Missing Part 2 of 3 · 44:24–25 · 2 verses in Jerusalem to Be Restored
+431,36,2,missing-section,closing · Jerusalem to Be Restored,missing-section:n18:3,Missing Part 3 of 3 · 44:26–28 · 3 verses in Jerusalem to Be Restored
+432,37,2,missing-section,closing · The Deliverance from Exile (40–44),missing-section:n01:3,Missing God’s Servant · 42:1–9 · 9 verses in The Deliverance from Exile (40–44)
+433,37,2,missing-section,closing · The Deliverance from Exile (40–44),missing-section:n01:7,Missing Jerusalem to Be Restored · 44:21–28 · 8 verses in The Deliverance from Exile (40–44)
+434,37,2,first-lines,closing · The Deliverance from Exile (40–44),first-lines:n01,First lines of The Deliverance from Exile (40–44)
+435,37,2,section-header-to-text,recite · Jerusalem to Be Restored,section-header-to-text:n18,Recite Jerusalem to Be Restored

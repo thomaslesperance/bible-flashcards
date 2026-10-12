@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isaiah 40–44 (trial 2) · card preview</title>
+<style>
+/* v2 card styles (notes/sequence_v2_draft.md §8). Anki adds .nightMode in night mode. */
+.card {
+  --bg: #fbfaf7; --fg: #1d1d1f; --muted: #6b6b70; --line: #dddad2;
+  --hl: #fff1c2; --rv: #0b6e4f; --rv-bg: #e3f4ec; --blur: rgba(20, 20, 30, .62);
+  --bad: #b3261e; --st-read: #5b5bd6; --st-outline: #6d4cc2; --st-ladder: #0f7b8a; --st-section: #a15c00;
+  background: var(--bg); color: var(--fg);
+  margin: 0; padding: 14px 16px 24px;
+}
+.card.nightMode, .nightMode .card, .night_mode .card {
+  --bg: #1b1b1f; --fg: #e9e7e2; --muted: #9a98a0; --line: #38363d;
+  --hl: #4a3f12; --rv: #7fd9b4; --rv-bg: #17352a; --blur: rgba(235, 232, 225, .55);
+  --bad: #ff8a80; --st-read: #9d9dff; --st-outline: #b49cff; --st-ladder: #5fd0de; --st-section: #f2b04c;
+}
+
+.v2 { max-width: 40rem; margin: 0 auto; text-align: left;
+      font: 18px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+.v2.st-read    { --accent: var(--st-read); }
+.v2.st-outline { --accent: var(--st-outline); }
+.v2.st-ladder  { --accent: var(--st-ladder); }
+.v2.st-section { --accent: var(--st-section); }
+
+/* One prompt banner, coloured by stage */
+.banner { font: 700 1.05rem/1.3 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .06em;
+          color: var(--accent); border-left: 5px solid var(--accent); padding: .45rem .7rem;
+          background: color-mix(in srgb, var(--accent) 10%, transparent); border-radius: 0 6px 6px 0; }
+.sub { font: .95rem/1.45 system-ui, -apple-system, sans-serif; margin: .6rem 0 .2rem; }
+
+/* Passage: stable layout, poetry indents, small raised verse numbers */
+.passage { margin: .8rem 0; }
+.ln { padding-left: 1.5em; text-indent: -1.5em; }
+.ln.i2 { padding-left: 3em; }
+.ln.st { margin-top: .75em; }
+.ln.dim { opacity: .42; }
+.vn { font: 600 .62em system-ui, sans-serif; color: var(--muted); vertical-align: super; margin-right: .1em; }
+.ph { font: 700 .78rem system-ui, sans-serif; letter-spacing: .05em; text-transform: uppercase;
+      color: var(--accent); margin: 1.1rem 0 .25rem; }
+
+/* Hidden words keep their width; .rv reveals them in place, tinted */
+.mw { color: transparent; border-bottom: 1.5px solid var(--muted); }
+.bl { color: transparent; text-shadow: 0 0 .42em var(--blur); }
+/* Whole lines need a heavier blur than word fragments to stay unreadable */
+.bk { color: transparent; text-shadow: 0 0 .7em var(--blur); background: color-mix(in srgb, var(--blur) 12%, transparent); }
+.mw.rv, .bl.rv, .bk.rv { color: var(--rv); text-shadow: none; background: var(--rv-bg); border-bottom-color: transparent; }
+
+.gap { border: 1.5px dashed var(--accent); border-radius: 8px; padding: .35rem .7rem; margin: .6rem 0; }
+.gap .passage { margin: .3rem 0; }
+.gap-l { font: 700 .75rem system-ui, sans-serif; color: var(--accent); }
+
+/* Outline map */
+.omap { font: .95rem/1.4 system-ui, -apple-system, sans-serif; border: 1px solid var(--line);
+        border-radius: 10px; padding: .5rem .5rem; margin: .8rem 0; }
+.om { display: flex; gap: .45rem; align-items: baseline; padding: .12rem .35rem; border-radius: 5px; }
+.om.d0 { font-weight: 700; }
+.om.d1 { padding-left: 1.1rem; } .om.d2 { padding-left: 2.3rem; } .om.d3 { padding-left: 3.5rem; } .om.d4 { padding-left: 4.7rem; }
+.om-lb { min-width: 1.3em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.om-t { flex: 1; }
+.om-r, .om-more { color: var(--muted); font-size: .78rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.om.hl { background: var(--hl); }
+.blank { display: inline-block; width: 11em; border-bottom: 2px solid var(--accent); }
+.ans { font-weight: 700; color: var(--rv); }
+.om-part { font-size: .75rem; color: var(--accent); font-weight: 600; }
+.hidden-parts .om-t { font-style: italic; color: var(--accent); border: 1px dashed var(--accent);
+                      border-radius: 5px; padding: .1rem .45rem; }
+
+/* Map strip on text cards */
+.strip { font: .8rem/1.4 system-ui, -apple-system, sans-serif; color: var(--muted);
+         border-bottom: 1px solid var(--line); padding: .5rem 0 .45rem; margin-bottom: .3rem; }
+.sibs { display: flex; flex-wrap: wrap; gap: .15rem .9rem; margin-top: .2rem; }
+.sb.cur { color: var(--accent); font-weight: 700; }
+
+/* Text -> header answer */
+.answer { margin: .9rem 0 .2rem; font-family: system-ui, -apple-system, sans-serif; }
+.answer .crumbs { font-size: .85rem; color: var(--muted); }
+.answer .big { font-size: 1.6rem; font-weight: 750; line-height: 1.25; color: var(--accent); }
+.answer .ref { font-size: .9rem; color: var(--muted); }
+
+/* First lines */
+.fl-list { margin: .6rem 0; }
+.fl-row { margin: .55rem 0; }
+.fl-h { font: 600 .85rem system-ui, sans-serif; }
+.fl-q { color: var(--muted); }
+.fl-a { color: var(--rv); font-style: italic; }
+
+/* Rating rubric */
+.rubric { margin-top: 1.4rem; width: 100%; border-top: 1px solid var(--line); padding-top: .4rem;
+          font: .72rem/1.4 system-ui, sans-serif; color: var(--muted); border-collapse: collapse; }
+.rubric td { padding: .08rem .3rem .08rem 0; vertical-align: top; }
+.rubric td:first-child { font-weight: 700; white-space: nowrap; }
+.rubric .note, .rubric.note { font-style: italic; }
+.v2 + .rubric, .rubric.note { max-width: 40rem; margin-left: auto; margin-right: auto; display: block; }
+table.rubric { display: table; max-width: 40rem; margin-left: auto; margin-right: auto; }
+
+.credit { max-width: 40rem; margin: .8rem auto 0; font: .68rem/1.4 system-ui, sans-serif; color: var(--muted); }
+
+/* Type mode (Header -> text) */
+.tm-bar { display: flex; gap: .5rem; margin: .8rem 0; }
+.tm-bar button { font: 600 .9rem system-ui, sans-serif; padding: .45rem .8rem; border-radius: 8px;
+                 border: 1px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
+.tm-in { position: absolute; opacity: 0; width: 1px; height: 1px; left: -9999px; }
+.tm-text, .tm-score { display: none; }
+.tm-on .tm-text, .tm-on .tm-score { display: block; }
+.tw { color: transparent; border-radius: 3px; }
+.tw.next { box-shadow: inset 0 -2px 0 var(--accent); }
+.tw.ok { color: var(--fg); }
+.tw.miss { color: var(--bad); }
+.hint .tw:not(.ok):not(.miss) .tw-f { color: var(--muted); }
+.tm-text.wrong { animation: tm-shake .18s; }
+@keyframes tm-shake { 0%, 100% { transform: none; } 50% { transform: translateX(3px); } }
+.tm-score { font: 600 .9rem system-ui, sans-serif; color: var(--accent); margin-top: .6rem; }
+
+body { margin: 0; padding: 16px; background: #ecebe6; font-family: system-ui, sans-serif; }
+body.dark { background: #111114; color: #ddd; }
+h1 { font-size: 1.2rem; } h2 { font-size: 1rem; margin: 2rem 0 .5rem; }
+h2 small { font-weight: 400; color: #777; } h3 { font: 600 .75rem system-ui; color: #888; margin: .3rem 0; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.pair .card { border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+</style></head>
+<body>
+<h1>Isaiah 40–44 (trial 2) — one card of each type</h1>
+<p><button onclick="document.body.classList.toggle('dark');document.querySelectorAll('.card').forEach(function(c){c.classList.toggle('nightMode')})">Toggle night mode</button>
+ Type mode works here too: try the Recite card's buttons.</p>
+<section><h2>preview <small>· day 1 · Preview The Deliverance from Exile (40–44)</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-outline"><div class="banner">PREVIEW · The Deliverance from Exile (40–44)</div><div class="sub">Its 7 parts, in order. Read them through.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span><span class="om-more">▸ 3</span></div>
+<div class="om d1 hl"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1 hl"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1 hl"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1 hl"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1 hl"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1 hl"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-outline"><div class="banner">PREVIEW · The Deliverance from Exile (40–44)</div><div class="sub">Its 7 parts, in order. Read them through.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span><span class="om-more">▸ 3</span></div>
+<div class="om d1 hl"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1 hl"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1 hl"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1 hl"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1 hl"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1 hl"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div></div><div class="rubric note">Reading card — press <b>Easy</b>.</div></div></div></div></section><section><h2>outline-cloze <small>· day 1 · Cloze: Prepare the Way for the LORD</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-outline"><div class="banner">OUTLINE · what goes in the blank?</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1"><span class="om-lb">1</span><span class="om-t"><span class="blank"></span></span><span class="om-r">40:1–31</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-outline"><div class="banner">OUTLINE · what goes in the blank?</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t"><span class="ans">Prepare the Way for the LORD</span></span><span class="om-r">40:1–31</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>read-through <small>· day 1 · Read Prepare the Way for the LORD (40:1–31)</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-read"><div class="banner">READ ALOUD · 40:1–31</div><div class="sub"><b>Prepare the Way for the LORD</b> — read it through once, aloud, start to finish.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span></div>
+<div class="om d2"><span class="om-lb">a</span><span class="om-t">Comfort My People</span><span class="om-r">40:1–5</span></div>
+<div class="om d2"><span class="om-lb">b</span><span class="om-t">The Enduring Word</span><span class="om-r">40:6–8</span></div>
+<div class="om d2"><span class="om-lb">c</span><span class="om-t">Here Is Your God!</span><span class="om-r">40:9–31</span></div>
+<div class="om d1"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div><div class="passage">
+<div class="ph">Comfort My People</div>
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+<div class="ph">The Enduring Word</div>
+<div class="ln i1 st"><sup class="vn">6</sup>A voice says, “Cry out!”</div>
+<div class="ln i2">And I asked, “What should I cry out?”</div>
+<div class="ln i1">“All flesh is like grass,</div>
+<div class="ln i2">and all its glory like the flowers of the field.</div>
+<div class="ln i1"><sup class="vn">7</sup>The grass withers and the flowers fall</div>
+<div class="ln i2">when the breath of the LORD blows on them;</div>
+<div class="ln i2">indeed, the people are grass.</div>
+<div class="ln i1"><sup class="vn">8</sup>The grass withers and the flowers fall,</div>
+<div class="ln i2">but the word of our God stands forever.”</div>
+<div class="ph">Here Is Your God!</div>
+<div class="ln i1 st"><sup class="vn">9</sup>Go up on a high mountain,</div>
+<div class="ln i2">O Zion, herald of good news.</div>
+<div class="ln i1">Raise your voice loudly,</div>
+<div class="ln i2">O Jerusalem, herald of good news.</div>
+<div class="ln i1">Lift it up,</div>
+<div class="ln i2">do not be afraid!</div>
+<div class="ln i1">Say to the cities of Judah,</div>
+<div class="ln i2">“Here is your God!”</div>
+<div class="ln i1"><sup class="vn">10</sup>Behold, the Lord GOD comes with might,</div>
+<div class="ln i2">and His arm establishes His rule.</div>
+<div class="ln i1">His reward is with Him,</div>
+<div class="ln i2">and His recompense accompanies Him.</div>
+<div class="ln i1"><sup class="vn">11</sup>He tends His flock like a shepherd;</div>
+<div class="ln i2">He gathers the lambs in His arms</div>
+<div class="ln i1">and carries them close to His heart.</div>
+<div class="ln i2">He gently leads the nursing ewes.</div>
+<div class="ln i1 st"><sup class="vn">12</sup>Who has measured the waters in the hollow of his hand,</div>
+<div class="ln i2">or marked off the heavens with the span of his hand?</div>
+<div class="ln i1">Who has held the dust of the earth in a basket,</div>
+<div class="ln i2">or weighed the mountains on a scale</div>
+<div class="ln i2">and the hills with a balance?</div>
+<div class="ln i1"><sup class="vn">13</sup>Who has directed the Spirit of the LORD,</div>
+<div class="ln i2">or informed Him as His counselor?</div>
+<div class="ln i1"><sup class="vn">14</sup>Whom did He consult to enlighten Him,</div>
+<div class="ln i2">and who taught Him the paths of justice?</div>
+<div class="ln i1">Who imparted knowledge to Him</div>
+<div class="ln i2">and showed Him the way of understanding?</div>
+<div class="ln i1 st"><sup class="vn">15</sup>Surely the nations are like a drop in a bucket;</div>
+<div class="ln i2">they are considered a speck of dust on the scales;</div>
+<div class="ln i2">He lifts up the islands</div>
+<div class="ln i2">like fine dust.</div>
+<div class="ln i1"><sup class="vn">16</sup>Lebanon is not sufficient for fuel,</div>
+<div class="ln i2">nor its animals enough for a burnt offering.</div>
+<div class="ln i1"><sup class="vn">17</sup>All the nations are as nothing before Him;</div>
+<div class="ln i2">He regards them as nothingness and emptiness.</div>
+<div class="ln i1 st"><sup class="vn">18</sup>To whom will you liken God?</div>
+<div class="ln i2">To what image will you compare Him?</div>
+<div class="ln i1"><sup class="vn">19</sup>To an idol that a craftsman casts</div>
+<div class="ln i2">and a metalworker overlays with gold</div>
+<div class="ln i2">and fits with silver chains?</div>
+<div class="ln i1"><sup class="vn">20</sup>One lacking such an offering</div>
+<div class="ln i2">chooses wood that will not rot.</div>
+<div class="ln i1">He seeks a skilled craftsman</div>
+<div class="ln i2">to set up an idol that will not topple.</div>
+<div class="ln i1 st"><sup class="vn">21</sup>Do you not know?</div>
+<div class="ln i2">Have you not heard?</div>
+<div class="ln i1">Has it not been declared to you from the beginning?</div>
+<div class="ln i2">Have you not understood since the foundation of the earth?</div>
+<div class="ln i1"><sup class="vn">22</sup>He sits enthroned above the circle of the earth;</div>
+<div class="ln i2">its dwellers are like grasshoppers.</div>
+<div class="ln i1">He stretches out the heavens like a curtain,</div>
+<div class="ln i2">and spreads them out like a tent to dwell in.</div>
+<div class="ln i1"><sup class="vn">23</sup>He brings the princes to nothing</div>
+<div class="ln i2">and makes the rulers</div>
+<div class="ln i2">of the earth meaningless.</div>
+<div class="ln i1"><sup class="vn">24</sup>No sooner are they planted, no sooner are they sown,</div>
+<div class="ln i2">no sooner have their stems taken root in the ground,</div>
+<div class="ln i1">than He blows on them and they wither,</div>
+<div class="ln i2">and a whirlwind sweeps them away like stubble.</div>
+<div class="ln i1 st"><sup class="vn">25</sup>“To whom will you liken Me,</div>
+<div class="ln i2">or who is My equal?” asks the Holy One.</div>
+<div class="ln i1"><sup class="vn">26</sup>Lift up your eyes on high:</div>
+<div class="ln i2">Who created all these?</div>
+<div class="ln i1">He leads forth the starry host by number;</div>
+<div class="ln i2">He calls each one by name.</div>
+<div class="ln i1">Because of His great power and mighty strength,</div>
+<div class="ln i2">not one of them is missing.</div>
+<div class="ln i1 st"><sup class="vn">27</sup>Why do you say, O Jacob,</div>
+<div class="ln i2">and why do you assert, O Israel,</div>
+<div class="ln i1">“My way is hidden from the LORD,</div>
+<div class="ln i2">and my claim is ignored by my God”?</div>
+<div class="ln i1"><sup class="vn">28</sup>Do you not know?</div>
+<div class="ln i2">Have you not heard?</div>
+<div class="ln i1">The LORD is the everlasting God,</div>
+<div class="ln i2">the Creator of the ends of the earth.</div>
+<div class="ln i1">He will not grow tired or weary;</div>
+<div class="ln i2">His understanding is beyond searching out.</div>
+<div class="ln i1"><sup class="vn">29</sup>He gives power to the faint</div>
+<div class="ln i2">and increases the strength of the weak.</div>
+<div class="ln i1"><sup class="vn">30</sup>Even youths grow tired and weary,</div>
+<div class="ln i2">and young men stumble and fall.</div>
+<div class="ln i1"><sup class="vn">31</sup>But those who wait upon the LORD will renew their strength;</div>
+<div class="ln i2">they will mount up with wings like eagles;</div>
+<div class="ln i1">they will run and not grow weary,</div>
+<div class="ln i2">they will walk and not faint.</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-read"><div class="banner">READ ALOUD · 40:1–31</div><div class="sub"><b>Prepare the Way for the LORD</b> — read it through once, aloud, start to finish.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span></div>
+<div class="om d2"><span class="om-lb">a</span><span class="om-t">Comfort My People</span><span class="om-r">40:1–5</span></div>
+<div class="om d2"><span class="om-lb">b</span><span class="om-t">The Enduring Word</span><span class="om-r">40:6–8</span></div>
+<div class="om d2"><span class="om-lb">c</span><span class="om-t">Here Is Your God!</span><span class="om-r">40:9–31</span></div>
+<div class="om d1"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div><div class="passage">
+<div class="ph">Comfort My People</div>
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+<div class="ph">The Enduring Word</div>
+<div class="ln i1 st"><sup class="vn">6</sup>A voice says, “Cry out!”</div>
+<div class="ln i2">And I asked, “What should I cry out?”</div>
+<div class="ln i1">“All flesh is like grass,</div>
+<div class="ln i2">and all its glory like the flowers of the field.</div>
+<div class="ln i1"><sup class="vn">7</sup>The grass withers and the flowers fall</div>
+<div class="ln i2">when the breath of the LORD blows on them;</div>
+<div class="ln i2">indeed, the people are grass.</div>
+<div class="ln i1"><sup class="vn">8</sup>The grass withers and the flowers fall,</div>
+<div class="ln i2">but the word of our God stands forever.”</div>
+<div class="ph">Here Is Your God!</div>
+<div class="ln i1 st"><sup class="vn">9</sup>Go up on a high mountain,</div>
+<div class="ln i2">O Zion, herald of good news.</div>
+<div class="ln i1">Raise your voice loudly,</div>
+<div class="ln i2">O Jerusalem, herald of good news.</div>
+<div class="ln i1">Lift it up,</div>
+<div class="ln i2">do not be afraid!</div>
+<div class="ln i1">Say to the cities of Judah,</div>
+<div class="ln i2">“Here is your God!”</div>
+<div class="ln i1"><sup class="vn">10</sup>Behold, the Lord GOD comes with might,</div>
+<div class="ln i2">and His arm establishes His rule.</div>
+<div class="ln i1">His reward is with Him,</div>
+<div class="ln i2">and His recompense accompanies Him.</div>
+<div class="ln i1"><sup class="vn">11</sup>He tends His flock like a shepherd;</div>
+<div class="ln i2">He gathers the lambs in His arms</div>
+<div class="ln i1">and carries them close to His heart.</div>
+<div class="ln i2">He gently leads the nursing ewes.</div>
+<div class="ln i1 st"><sup class="vn">12</sup>Who has measured the waters in the hollow of his hand,</div>
+<div class="ln i2">or marked off the heavens with the span of his hand?</div>
+<div class="ln i1">Who has held the dust of the earth in a basket,</div>
+<div class="ln i2">or weighed the mountains on a scale</div>
+<div class="ln i2">and the hills with a balance?</div>
+<div class="ln i1"><sup class="vn">13</sup>Who has directed the Spirit of the LORD,</div>
+<div class="ln i2">or informed Him as His counselor?</div>
+<div class="ln i1"><sup class="vn">14</sup>Whom did He consult to enlighten Him,</div>
+<div class="ln i2">and who taught Him the paths of justice?</div>
+<div class="ln i1">Who imparted knowledge to Him</div>
+<div class="ln i2">and showed Him the way of understanding?</div>
+<div class="ln i1 st"><sup class="vn">15</sup>Surely the nations are like a drop in a bucket;</div>
+<div class="ln i2">they are considered a speck of dust on the scales;</div>
+<div class="ln i2">He lifts up the islands</div>
+<div class="ln i2">like fine dust.</div>
+<div class="ln i1"><sup class="vn">16</sup>Lebanon is not sufficient for fuel,</div>
+<div class="ln i2">nor its animals enough for a burnt offering.</div>
+<div class="ln i1"><sup class="vn">17</sup>All the nations are as nothing before Him;</div>
+<div class="ln i2">He regards them as nothingness and emptiness.</div>
+<div class="ln i1 st"><sup class="vn">18</sup>To whom will you liken God?</div>
+<div class="ln i2">To what image will you compare Him?</div>
+<div class="ln i1"><sup class="vn">19</sup>To an idol that a craftsman casts</div>
+<div class="ln i2">and a metalworker overlays with gold</div>
+<div class="ln i2">and fits with silver chains?</div>
+<div class="ln i1"><sup class="vn">20</sup>One lacking such an offering</div>
+<div class="ln i2">chooses wood that will not rot.</div>
+<div class="ln i1">He seeks a skilled craftsman</div>
+<div class="ln i2">to set up an idol that will not topple.</div>
+<div class="ln i1 st"><sup class="vn">21</sup>Do you not know?</div>
+<div class="ln i2">Have you not heard?</div>
+<div class="ln i1">Has it not been declared to you from the beginning?</div>
+<div class="ln i2">Have you not understood since the foundation of the earth?</div>
+<div class="ln i1"><sup class="vn">22</sup>He sits enthroned above the circle of the earth;</div>
+<div class="ln i2">its dwellers are like grasshoppers.</div>
+<div class="ln i1">He stretches out the heavens like a curtain,</div>
+<div class="ln i2">and spreads them out like a tent to dwell in.</div>
+<div class="ln i1"><sup class="vn">23</sup>He brings the princes to nothing</div>
+<div class="ln i2">and makes the rulers</div>
+<div class="ln i2">of the earth meaningless.</div>
+<div class="ln i1"><sup class="vn">24</sup>No sooner are they planted, no sooner are they sown,</div>
+<div class="ln i2">no sooner have their stems taken root in the ground,</div>
+<div class="ln i1">than He blows on them and they wither,</div>
+<div class="ln i2">and a whirlwind sweeps them away like stubble.</div>
+<div class="ln i1 st"><sup class="vn">25</sup>“To whom will you liken Me,</div>
+<div class="ln i2">or who is My equal?” asks the Holy One.</div>
+<div class="ln i1"><sup class="vn">26</sup>Lift up your eyes on high:</div>
+<div class="ln i2">Who created all these?</div>
+<div class="ln i1">He leads forth the starry host by number;</div>
+<div class="ln i2">He calls each one by name.</div>
+<div class="ln i1">Because of His great power and mighty strength,</div>
+<div class="ln i2">not one of them is missing.</div>
+<div class="ln i1 st"><sup class="vn">27</sup>Why do you say, O Jacob,</div>
+<div class="ln i2">and why do you assert, O Israel,</div>
+<div class="ln i1">“My way is hidden from the LORD,</div>
+<div class="ln i2">and my claim is ignored by my God”?</div>
+<div class="ln i1"><sup class="vn">28</sup>Do you not know?</div>
+<div class="ln i2">Have you not heard?</div>
+<div class="ln i1">The LORD is the everlasting God,</div>
+<div class="ln i2">the Creator of the ends of the earth.</div>
+<div class="ln i1">He will not grow tired or weary;</div>
+<div class="ln i2">His understanding is beyond searching out.</div>
+<div class="ln i1"><sup class="vn">29</sup>He gives power to the faint</div>
+<div class="ln i2">and increases the strength of the weak.</div>
+<div class="ln i1"><sup class="vn">30</sup>Even youths grow tired and weary,</div>
+<div class="ln i2">and young men stumble and fall.</div>
+<div class="ln i1"><sup class="vn">31</sup>But those who wait upon the LORD will renew their strength;</div>
+<div class="ln i2">they will mount up with wings like eagles;</div>
+<div class="ln i1">they will run and not grow weary,</div>
+<div class="ln i2">they will walk and not faint.</div>
+</div></div><div class="rubric note">Reading card — press <b>Easy</b>.</div><div class="credit">Scripture: Berean Standard Bible (BSB).</div></div></div></div></section><section><h2>list-parts <small>· day 2 · List the parts of The Deliverance from Exile (40–44)</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-outline"><div class="banner">OUTLINE · list the parts</div><div class="sub">List the 7 parts of <b>The Deliverance from Exile (40–44)</b>, in order.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hidden-parts"><span class="om-t">7 parts — list them in order</span></div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-outline"><div class="banner">OUTLINE · list the parts</div><div class="sub">List the 7 parts of <b>The Deliverance from Exile (40–44)</b>, in order.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span><span class="om-more">▸ 3</span></div>
+<div class="om d1 hl"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1 hl"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1 hl"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1 hl"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1 hl"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1 hl"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>text-to-header <small>· day 3 · Where does 40:1–5 belong?</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-ladder"><div class="banner">WHERE DOES THIS BELONG?</div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-ladder"><div class="banner">WHERE DOES THIS BELONG?</div><div class="answer"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="big">Comfort My People</div><div class="ref">40:1–5</div></div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span></div>
+<div class="om d2 hl"><span class="om-lb">a</span><span class="om-t">Comfort My People</span><span class="om-r">40:1–5</span></div>
+<div class="om d2"><span class="om-lb">b</span><span class="om-t">The Enduring Word</span><span class="om-r">40:6–8</span></div>
+<div class="om d2"><span class="om-lb">c</span><span class="om-t">Here Is Your God!</span><span class="om-r">40:9–31</span></div>
+<div class="om d1"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span><span class="om-more">▸ 2</span></div>
+<div class="om d1"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span><span class="om-more">▸ 3</span></div>
+<div class="om d1"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>missing-words <small>· day 3 · Missing words 40:1–5</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-ladder"><div class="banner">MISSING WORDS · 40:1–5</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, <span class="mw">comfort</span> <span class="mw">My</span> people,”</div>
+<div class="ln i2"><span class="mw">says</span> <span class="mw">your</span> God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“<span class="mw">Speak</span> <span class="mw">tenderly</span> to <span class="mw">Jerusalem</span>,</div>
+<div class="ln i2"><span class="mw">and</span> proclaim <span class="mw">to</span> <span class="mw">her</span></div>
+<div class="ln i1">that <span class="mw">her</span> <span class="mw">forced</span> labor <span class="mw">has</span> <span class="mw">been</span> completed;</div>
+<div class="ln i2"><span class="mw">her</span> <span class="mw">iniquity</span> has <span class="mw">been</span> <span class="mw">pardoned</span>.</div>
+<div class="ln i1">For <span class="mw">she</span> <span class="mw">has</span> received <span class="mw">from</span> <span class="mw">the</span> hand <span class="mw">of</span> <span class="mw">the</span> LORD</div>
+<div class="ln i2"><span class="mw">double</span> <span class="mw">for</span> all <span class="mw">her</span> <span class="mw">sins</span>.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A <span class="mw">voice</span> <span class="mw">of</span> one <span class="mw">calling</span>:</div>
+<div class="ln i1">“<span class="mw">Prepare</span> the <span class="mw">way</span> <span class="mw">for</span> the <span class="mw">LORD</span> <span class="mw">in</span> the <span class="mw">wilderness</span>;</div>
+<div class="ln i2"><span class="mw">make</span> a <span class="mw">straight</span> <span class="mw">highway</span> for <span class="mw">our</span> <span class="mw">God</span> in <span class="mw">the</span> <span class="mw">desert</span>.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every <span class="mw">valley</span> <span class="mw">shall</span> be <span class="mw">lifted</span> <span class="mw">up</span>,</div>
+<div class="ln i2">and <span class="mw">every</span> <span class="mw">mountain</span> and <span class="mw">hill</span> <span class="mw">made</span> low;</div>
+<div class="ln i1"><span class="mw">the</span> <span class="mw">uneven</span> ground <span class="mw">will</span> <span class="mw">become</span> smooth,</div>
+<div class="ln i2"><span class="mw">and</span> <span class="mw">the</span> rugged <span class="mw">land</span> <span class="mw">a</span> plain.</div>
+<div class="ln i1"><sup class="vn">5</sup><span class="mw">And</span> <span class="mw">the</span> glory <span class="mw">of</span> <span class="mw">the</span> LORD <span class="mw">will</span> <span class="mw">be</span> revealed,</div>
+<div class="ln i2"><span class="mw">and</span> <span class="mw">all</span> humanity <span class="mw">together</span> <span class="mw">will</span> see <span class="mw">it</span>.”</div>
+<div class="ln i0"><span class="mw">For</span> the <span class="mw">mouth</span> <span class="mw">of</span> the <span class="mw">LORD</span> <span class="mw">has</span> spoken.</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-ladder"><div class="banner">MISSING WORDS · 40:1–5</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, <span class="mw rv">comfort</span> <span class="mw rv">My</span> people,”</div>
+<div class="ln i2"><span class="mw rv">says</span> <span class="mw rv">your</span> God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“<span class="mw rv">Speak</span> <span class="mw rv">tenderly</span> to <span class="mw rv">Jerusalem</span>,</div>
+<div class="ln i2"><span class="mw rv">and</span> proclaim <span class="mw rv">to</span> <span class="mw rv">her</span></div>
+<div class="ln i1">that <span class="mw rv">her</span> <span class="mw rv">forced</span> labor <span class="mw rv">has</span> <span class="mw rv">been</span> completed;</div>
+<div class="ln i2"><span class="mw rv">her</span> <span class="mw rv">iniquity</span> has <span class="mw rv">been</span> <span class="mw rv">pardoned</span>.</div>
+<div class="ln i1">For <span class="mw rv">she</span> <span class="mw rv">has</span> received <span class="mw rv">from</span> <span class="mw rv">the</span> hand <span class="mw rv">of</span> <span class="mw rv">the</span> LORD</div>
+<div class="ln i2"><span class="mw rv">double</span> <span class="mw rv">for</span> all <span class="mw rv">her</span> <span class="mw rv">sins</span>.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A <span class="mw rv">voice</span> <span class="mw rv">of</span> one <span class="mw rv">calling</span>:</div>
+<div class="ln i1">“<span class="mw rv">Prepare</span> the <span class="mw rv">way</span> <span class="mw rv">for</span> the <span class="mw rv">LORD</span> <span class="mw rv">in</span> the <span class="mw rv">wilderness</span>;</div>
+<div class="ln i2"><span class="mw rv">make</span> a <span class="mw rv">straight</span> <span class="mw rv">highway</span> for <span class="mw rv">our</span> <span class="mw rv">God</span> in <span class="mw rv">the</span> <span class="mw rv">desert</span>.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every <span class="mw rv">valley</span> <span class="mw rv">shall</span> be <span class="mw rv">lifted</span> <span class="mw rv">up</span>,</div>
+<div class="ln i2">and <span class="mw rv">every</span> <span class="mw rv">mountain</span> and <span class="mw rv">hill</span> <span class="mw rv">made</span> low;</div>
+<div class="ln i1"><span class="mw rv">the</span> <span class="mw rv">uneven</span> ground <span class="mw rv">will</span> <span class="mw rv">become</span> smooth,</div>
+<div class="ln i2"><span class="mw rv">and</span> <span class="mw rv">the</span> rugged <span class="mw rv">land</span> <span class="mw rv">a</span> plain.</div>
+<div class="ln i1"><sup class="vn">5</sup><span class="mw rv">And</span> <span class="mw rv">the</span> glory <span class="mw rv">of</span> <span class="mw rv">the</span> LORD <span class="mw rv">will</span> <span class="mw rv">be</span> revealed,</div>
+<div class="ln i2"><span class="mw rv">and</span> <span class="mw rv">all</span> humanity <span class="mw rv">together</span> <span class="mw rv">will</span> see <span class="mw rv">it</span>.”</div>
+<div class="ln i0"><span class="mw rv">For</span> the <span class="mw rv">mouth</span> <span class="mw rv">of</span> the <span class="mw rv">LORD</span> <span class="mw rv">has</span> spoken.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+<tr><td colspan="2" class="note">Scaffold card: press Easy whenever it felt effortless.</td></tr></table></div></div></div></section><section><h2>first-letters <small>· day 3 · First letters 40:1–5</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-ladder"><div class="banner">FIRST LETTERS · 40:1–5</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“C<span class="bl">omfort</span>, c<span class="bl">omfort</span> M<span class="bl">y</span> p<span class="bl">eople</span>,”</div>
+<div class="ln i2">s<span class="bl">ays</span> y<span class="bl">our</span> G<span class="bl">od</span>.</div>
+<div class="ln i1"><sup class="vn">2</sup>“S<span class="bl">peak</span> t<span class="bl">enderly</span> t<span class="bl">o</span> J<span class="bl">erusalem</span>,</div>
+<div class="ln i2">a<span class="bl">nd</span> p<span class="bl">roclaim</span> t<span class="bl">o</span> h<span class="bl">er</span></div>
+<div class="ln i1">t<span class="bl">hat</span> h<span class="bl">er</span> f<span class="bl">orced</span> l<span class="bl">abor</span> h<span class="bl">as</span> b<span class="bl">een</span> c<span class="bl">ompleted</span>;</div>
+<div class="ln i2">h<span class="bl">er</span> i<span class="bl">niquity</span> h<span class="bl">as</span> b<span class="bl">een</span> p<span class="bl">ardoned</span>.</div>
+<div class="ln i1">F<span class="bl">or</span> s<span class="bl">he</span> h<span class="bl">as</span> r<span class="bl">eceived</span> f<span class="bl">rom</span> t<span class="bl">he</span> h<span class="bl">and</span> o<span class="bl">f</span> t<span class="bl">he</span> L<span class="bl">ORD</span></div>
+<div class="ln i2">d<span class="bl">ouble</span> f<span class="bl">or</span> a<span class="bl">ll</span> h<span class="bl">er</span> s<span class="bl">ins</span>.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A v<span class="bl">oice</span> o<span class="bl">f</span> o<span class="bl">ne</span> c<span class="bl">alling</span>:</div>
+<div class="ln i1">“P<span class="bl">repare</span> t<span class="bl">he</span> w<span class="bl">ay</span> f<span class="bl">or</span> t<span class="bl">he</span> L<span class="bl">ORD</span> i<span class="bl">n</span> t<span class="bl">he</span> w<span class="bl">ilderness</span>;</div>
+<div class="ln i2">m<span class="bl">ake</span> a s<span class="bl">traight</span> h<span class="bl">ighway</span> f<span class="bl">or</span> o<span class="bl">ur</span> G<span class="bl">od</span> i<span class="bl">n</span> t<span class="bl">he</span> d<span class="bl">esert</span>.</div>
+<div class="ln i1"><sup class="vn">4</sup>E<span class="bl">very</span> v<span class="bl">alley</span> s<span class="bl">hall</span> b<span class="bl">e</span> l<span class="bl">ifted</span> u<span class="bl">p</span>,</div>
+<div class="ln i2">a<span class="bl">nd</span> e<span class="bl">very</span> m<span class="bl">ountain</span> a<span class="bl">nd</span> h<span class="bl">ill</span> m<span class="bl">ade</span> l<span class="bl">ow</span>;</div>
+<div class="ln i1">t<span class="bl">he</span> u<span class="bl">neven</span> g<span class="bl">round</span> w<span class="bl">ill</span> b<span class="bl">ecome</span> s<span class="bl">mooth</span>,</div>
+<div class="ln i2">a<span class="bl">nd</span> t<span class="bl">he</span> r<span class="bl">ugged</span> l<span class="bl">and</span> a p<span class="bl">lain</span>.</div>
+<div class="ln i1"><sup class="vn">5</sup>A<span class="bl">nd</span> t<span class="bl">he</span> g<span class="bl">lory</span> o<span class="bl">f</span> t<span class="bl">he</span> L<span class="bl">ORD</span> w<span class="bl">ill</span> b<span class="bl">e</span> r<span class="bl">evealed</span>,</div>
+<div class="ln i2">a<span class="bl">nd</span> a<span class="bl">ll</span> h<span class="bl">umanity</span> t<span class="bl">ogether</span> w<span class="bl">ill</span> s<span class="bl">ee</span> i<span class="bl">t</span>.”</div>
+<div class="ln i0">F<span class="bl">or</span> t<span class="bl">he</span> m<span class="bl">outh</span> o<span class="bl">f</span> t<span class="bl">he</span> L<span class="bl">ORD</span> h<span class="bl">as</span> s<span class="bl">poken</span>.</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-ladder"><div class="banner">FIRST LETTERS · 40:1–5</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“C<span class="bl rv">omfort</span>, c<span class="bl rv">omfort</span> M<span class="bl rv">y</span> p<span class="bl rv">eople</span>,”</div>
+<div class="ln i2">s<span class="bl rv">ays</span> y<span class="bl rv">our</span> G<span class="bl rv">od</span>.</div>
+<div class="ln i1"><sup class="vn">2</sup>“S<span class="bl rv">peak</span> t<span class="bl rv">enderly</span> t<span class="bl rv">o</span> J<span class="bl rv">erusalem</span>,</div>
+<div class="ln i2">a<span class="bl rv">nd</span> p<span class="bl rv">roclaim</span> t<span class="bl rv">o</span> h<span class="bl rv">er</span></div>
+<div class="ln i1">t<span class="bl rv">hat</span> h<span class="bl rv">er</span> f<span class="bl rv">orced</span> l<span class="bl rv">abor</span> h<span class="bl rv">as</span> b<span class="bl rv">een</span> c<span class="bl rv">ompleted</span>;</div>
+<div class="ln i2">h<span class="bl rv">er</span> i<span class="bl rv">niquity</span> h<span class="bl rv">as</span> b<span class="bl rv">een</span> p<span class="bl rv">ardoned</span>.</div>
+<div class="ln i1">F<span class="bl rv">or</span> s<span class="bl rv">he</span> h<span class="bl rv">as</span> r<span class="bl rv">eceived</span> f<span class="bl rv">rom</span> t<span class="bl rv">he</span> h<span class="bl rv">and</span> o<span class="bl rv">f</span> t<span class="bl rv">he</span> L<span class="bl rv">ORD</span></div>
+<div class="ln i2">d<span class="bl rv">ouble</span> f<span class="bl rv">or</span> a<span class="bl rv">ll</span> h<span class="bl rv">er</span> s<span class="bl rv">ins</span>.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A v<span class="bl rv">oice</span> o<span class="bl rv">f</span> o<span class="bl rv">ne</span> c<span class="bl rv">alling</span>:</div>
+<div class="ln i1">“P<span class="bl rv">repare</span> t<span class="bl rv">he</span> w<span class="bl rv">ay</span> f<span class="bl rv">or</span> t<span class="bl rv">he</span> L<span class="bl rv">ORD</span> i<span class="bl rv">n</span> t<span class="bl rv">he</span> w<span class="bl rv">ilderness</span>;</div>
+<div class="ln i2">m<span class="bl rv">ake</span> a s<span class="bl rv">traight</span> h<span class="bl rv">ighway</span> f<span class="bl rv">or</span> o<span class="bl rv">ur</span> G<span class="bl rv">od</span> i<span class="bl rv">n</span> t<span class="bl rv">he</span> d<span class="bl rv">esert</span>.</div>
+<div class="ln i1"><sup class="vn">4</sup>E<span class="bl rv">very</span> v<span class="bl rv">alley</span> s<span class="bl rv">hall</span> b<span class="bl rv">e</span> l<span class="bl rv">ifted</span> u<span class="bl rv">p</span>,</div>
+<div class="ln i2">a<span class="bl rv">nd</span> e<span class="bl rv">very</span> m<span class="bl rv">ountain</span> a<span class="bl rv">nd</span> h<span class="bl rv">ill</span> m<span class="bl rv">ade</span> l<span class="bl rv">ow</span>;</div>
+<div class="ln i1">t<span class="bl rv">he</span> u<span class="bl rv">neven</span> g<span class="bl rv">round</span> w<span class="bl rv">ill</span> b<span class="bl rv">ecome</span> s<span class="bl rv">mooth</span>,</div>
+<div class="ln i2">a<span class="bl rv">nd</span> t<span class="bl rv">he</span> r<span class="bl rv">ugged</span> l<span class="bl rv">and</span> a p<span class="bl rv">lain</span>.</div>
+<div class="ln i1"><sup class="vn">5</sup>A<span class="bl rv">nd</span> t<span class="bl rv">he</span> g<span class="bl rv">lory</span> o<span class="bl rv">f</span> t<span class="bl rv">he</span> L<span class="bl rv">ORD</span> w<span class="bl rv">ill</span> b<span class="bl rv">e</span> r<span class="bl rv">evealed</span>,</div>
+<div class="ln i2">a<span class="bl rv">nd</span> a<span class="bl rv">ll</span> h<span class="bl rv">umanity</span> t<span class="bl rv">ogether</span> w<span class="bl rv">ill</span> s<span class="bl rv">ee</span> i<span class="bl rv">t</span>.”</div>
+<div class="ln i0">F<span class="bl rv">or</span> t<span class="bl rv">he</span> m<span class="bl rv">outh</span> o<span class="bl rv">f</span> t<span class="bl rv">he</span> L<span class="bl rv">ORD</span> h<span class="bl rv">as</span> s<span class="bl rv">poken</span>.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+<tr><td colspan="2" class="note">Scaffold card: press Easy whenever it felt effortless.</td></tr></table></div></div></div></section><section><h2>scaffolded-cloze <small>· day 4 · Recite 40:1 in 40:1–5</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-ladder"><div class="banner">FILL THE GAP · recite 40:1</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup><span class="bk">“Comfort, comfort My people,”</span></div>
+<div class="ln i2"><span class="bk">says your God.</span></div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+<div class="ln i1 st dim"><sup class="vn">6</sup>A voice says, “Cry out!”</div>
+<div class="ln i2 dim">And I asked, “What should I cry out?”</div>
+<div class="ln i1 dim">“All flesh is like grass,</div>
+<div class="ln i2 dim">and all its glory like the flowers of the field.</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-ladder"><div class="banner">FILL THE GAP · recite 40:1</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup><span class="bk rv">“Comfort, comfort My people,”</span></div>
+<div class="ln i2"><span class="bk rv">says your God.</span></div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+<div class="ln i1 st dim"><sup class="vn">6</sup>A voice says, “Cry out!”</div>
+<div class="ln i2 dim">And I asked, “What should I cry out?”</div>
+<div class="ln i1 dim">“All flesh is like grass,</div>
+<div class="ln i2 dim">and all its glory like the flowers of the field.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>anchor-cloze <small>· day 4 · Recite the middle of 40:1–5</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-ladder"><div class="banner">FILL THE MIDDLE · recite 40:2–4</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup><span class="bk">“Speak tenderly to Jerusalem,</span></div>
+<div class="ln i2"><span class="bk">and proclaim to her</span></div>
+<div class="ln i1"><span class="bk">that her forced labor has been completed;</span></div>
+<div class="ln i2"><span class="bk">her iniquity has been pardoned.</span></div>
+<div class="ln i1"><span class="bk">For she has received from the hand of the LORD</span></div>
+<div class="ln i2"><span class="bk">double for all her sins.”</span></div>
+<div class="ln i0 st"><sup class="vn">3</sup><span class="bk">A voice of one calling:</span></div>
+<div class="ln i1"><span class="bk">“Prepare the way for the LORD in the wilderness;</span></div>
+<div class="ln i2"><span class="bk">make a straight highway for our God in the desert.</span></div>
+<div class="ln i1"><sup class="vn">4</sup><span class="bk">Every valley shall be lifted up,</span></div>
+<div class="ln i2"><span class="bk">and every mountain and hill made low;</span></div>
+<div class="ln i1"><span class="bk">the uneven ground will become smooth,</span></div>
+<div class="ln i2"><span class="bk">and the rugged land a plain.</span></div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+<div class="ln i1 st dim"><sup class="vn">6</sup>A voice says, “Cry out!”</div>
+<div class="ln i2 dim">And I asked, “What should I cry out?”</div>
+<div class="ln i1 dim">“All flesh is like grass,</div>
+<div class="ln i2 dim">and all its glory like the flowers of the field.</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-ladder"><div class="banner">FILL THE MIDDLE · recite 40:2–4</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup><span class="bk rv">“Speak tenderly to Jerusalem,</span></div>
+<div class="ln i2"><span class="bk rv">and proclaim to her</span></div>
+<div class="ln i1"><span class="bk rv">that her forced labor has been completed;</span></div>
+<div class="ln i2"><span class="bk rv">her iniquity has been pardoned.</span></div>
+<div class="ln i1"><span class="bk rv">For she has received from the hand of the LORD</span></div>
+<div class="ln i2"><span class="bk rv">double for all her sins.”</span></div>
+<div class="ln i0 st"><sup class="vn">3</sup><span class="bk rv">A voice of one calling:</span></div>
+<div class="ln i1"><span class="bk rv">“Prepare the way for the LORD in the wilderness;</span></div>
+<div class="ln i2"><span class="bk rv">make a straight highway for our God in the desert.</span></div>
+<div class="ln i1"><sup class="vn">4</sup><span class="bk rv">Every valley shall be lifted up,</span></div>
+<div class="ln i2"><span class="bk rv">and every mountain and hill made low;</span></div>
+<div class="ln i1"><span class="bk rv">the uneven ground will become smooth,</span></div>
+<div class="ln i2"><span class="bk rv">and the rugged land a plain.</span></div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+<div class="ln i1 st dim"><sup class="vn">6</sup>A voice says, “Cry out!”</div>
+<div class="ln i2 dim">And I asked, “What should I cry out?”</div>
+<div class="ln i1 dim">“All flesh is like grass,</div>
+<div class="ln i2 dim">and all its glory like the flowers of the field.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>whole-outline <small>· day 5 · Whole outline of The Deliverance from Exile (40–44)</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-outline"><div class="banner">OUTLINE · the whole outline</div><div class="sub">Recite the whole outline of <b>The Deliverance from Exile (40–44)</b> — 17 headers, in order.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hidden-parts"><span class="om-t">17 headers at every level</span></div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-outline"><div class="banner">OUTLINE · the whole outline</div><div class="sub">Recite the whole outline of <b>The Deliverance from Exile (40–44)</b> — 17 headers, in order.</div><div class="omap">
+<div class="om d0"><span class="om-lb"></span><span class="om-t">The Deliverance from Exile (40–44)</span><span class="om-r">40:1–44:28</span></div>
+<div class="om d1 hl"><span class="om-lb">1</span><span class="om-t">Prepare the Way for the LORD</span><span class="om-r">40:1–31</span></div>
+<div class="om d2 hl"><span class="om-lb">a</span><span class="om-t">Comfort My People</span><span class="om-r">40:1–5</span></div>
+<div class="om d2 hl"><span class="om-lb">b</span><span class="om-t">The Enduring Word</span><span class="om-r">40:6–8</span></div>
+<div class="om d2 hl"><span class="om-lb">c</span><span class="om-t">Here Is Your God!</span><span class="om-r">40:9–31</span></div>
+<div class="om d1 hl"><span class="om-lb">2</span><span class="om-t">God’s Help to Israel</span><span class="om-r">41:1–29</span></div>
+<div class="om d2 hl"><span class="om-lb">a</span><span class="om-t">I Will Help You</span><span class="om-r">41:1–20</span></div>
+<div class="om d2 hl"><span class="om-lb">b</span><span class="om-t">Meaningless Idols</span><span class="om-r">41:21–29</span></div>
+<div class="om d1 hl"><span class="om-lb">3</span><span class="om-t">God’s Servant</span><span class="om-r">42:1–9</span></div>
+<div class="om d1 hl"><span class="om-lb">4</span><span class="om-t">A New Song of Praise</span><span class="om-r">42:10–25</span></div>
+<div class="om d2 hl"><span class="om-lb">a</span><span class="om-t">Sing a New Song</span><span class="om-r">42:10–17</span></div>
+<div class="om d2 hl"><span class="om-lb">b</span><span class="om-t">Israel Is Deaf and Blind</span><span class="om-r">42:18–25</span></div>
+<div class="om d1 hl"><span class="om-lb">5</span><span class="om-t">Israel’s Only Savior</span><span class="om-r">43:1–28</span></div>
+<div class="om d2 hl"><span class="om-lb">a</span><span class="om-t">The Holy One of Israel, your Savior</span><span class="om-r">43:1–13</span></div>
+<div class="om d2 hl"><span class="om-lb">b</span><span class="om-t">A Way in the Wilderness</span><span class="om-r">43:14–21</span></div>
+<div class="om d2 hl"><span class="om-lb">c</span><span class="om-t">Israel’s Unfaithfulness</span><span class="om-r">43:22–28</span></div>
+<div class="om d1 hl"><span class="om-lb">6</span><span class="om-t">The LORD Has Chosen Israel</span><span class="om-r">44:1–20</span></div>
+<div class="om d1 hl"><span class="om-lb">7</span><span class="om-t">Jerusalem to Be Restored</span><span class="om-r">44:21–28</span></div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>header-to-text <small>· day 5 · Recite Comfort My People (40:1–5)</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-ladder"><div class="banner">RECITE · 40:1–5</div><div class="sub"><b>Comfort My People</b> — 40:1–5 · 5 verses. Say it aloud, or type first letters.</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="tm-box"><div class="tm-bar"><button type="button" class="tm-go">Type first letters</button><button type="button" class="tm-hint">Hint</button></div><input class="tm-in" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Type the first letter of each word"><div class="tm-text"><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup><span class="tw" data-k="c">“<span class="tw-f">C</span>omfort, </span><span class="tw" data-k="c"><span class="tw-f">c</span>omfort </span><span class="tw" data-k="m"><span class="tw-f">M</span>y </span><span class="tw" data-k="p"><span class="tw-f">p</span>eople,”</span></div>
+<div class="ln i2"><span class="tw" data-k="s"><span class="tw-f">s</span>ays </span><span class="tw" data-k="y"><span class="tw-f">y</span>our </span><span class="tw" data-k="g"><span class="tw-f">G</span>od.</span></div>
+<div class="ln i1"><sup class="vn">2</sup><span class="tw" data-k="s">“<span class="tw-f">S</span>peak </span><span class="tw" data-k="t"><span class="tw-f">t</span>enderly </span><span class="tw" data-k="t"><span class="tw-f">t</span>o </span><span class="tw" data-k="j"><span class="tw-f">J</span>erusalem,</span></div>
+<div class="ln i2"><span class="tw" data-k="a"><span class="tw-f">a</span>nd </span><span class="tw" data-k="p"><span class="tw-f">p</span>roclaim </span><span class="tw" data-k="t"><span class="tw-f">t</span>o </span><span class="tw" data-k="h"><span class="tw-f">h</span>er</span></div>
+<div class="ln i1"><span class="tw" data-k="t"><span class="tw-f">t</span>hat </span><span class="tw" data-k="h"><span class="tw-f">h</span>er </span><span class="tw" data-k="f"><span class="tw-f">f</span>orced </span><span class="tw" data-k="l"><span class="tw-f">l</span>abor </span><span class="tw" data-k="h"><span class="tw-f">h</span>as </span><span class="tw" data-k="b"><span class="tw-f">b</span>een </span><span class="tw" data-k="c"><span class="tw-f">c</span>ompleted;</span></div>
+<div class="ln i2"><span class="tw" data-k="h"><span class="tw-f">h</span>er </span><span class="tw" data-k="i"><span class="tw-f">i</span>niquity </span><span class="tw" data-k="h"><span class="tw-f">h</span>as </span><span class="tw" data-k="b"><span class="tw-f">b</span>een </span><span class="tw" data-k="p"><span class="tw-f">p</span>ardoned.</span></div>
+<div class="ln i1"><span class="tw" data-k="f"><span class="tw-f">F</span>or </span><span class="tw" data-k="s"><span class="tw-f">s</span>he </span><span class="tw" data-k="h"><span class="tw-f">h</span>as </span><span class="tw" data-k="r"><span class="tw-f">r</span>eceived </span><span class="tw" data-k="f"><span class="tw-f">f</span>rom </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="h"><span class="tw-f">h</span>and </span><span class="tw" data-k="o"><span class="tw-f">o</span>f </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="l"><span class="tw-f">L</span>ORD</span></div>
+<div class="ln i2"><span class="tw" data-k="d"><span class="tw-f">d</span>ouble </span><span class="tw" data-k="f"><span class="tw-f">f</span>or </span><span class="tw" data-k="a"><span class="tw-f">a</span>ll </span><span class="tw" data-k="h"><span class="tw-f">h</span>er </span><span class="tw" data-k="s"><span class="tw-f">s</span>ins.”</span></div>
+<div class="ln i0 st"><sup class="vn">3</sup><span class="tw" data-k="a"><span class="tw-f">A</span> </span><span class="tw" data-k="v"><span class="tw-f">v</span>oice </span><span class="tw" data-k="o"><span class="tw-f">o</span>f </span><span class="tw" data-k="o"><span class="tw-f">o</span>ne </span><span class="tw" data-k="c"><span class="tw-f">c</span>alling:</span></div>
+<div class="ln i1"><span class="tw" data-k="p">“<span class="tw-f">P</span>repare </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="w"><span class="tw-f">w</span>ay </span><span class="tw" data-k="f"><span class="tw-f">f</span>or </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="l"><span class="tw-f">L</span>ORD </span><span class="tw" data-k="i"><span class="tw-f">i</span>n </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="w"><span class="tw-f">w</span>ilderness;</span></div>
+<div class="ln i2"><span class="tw" data-k="m"><span class="tw-f">m</span>ake </span><span class="tw" data-k="a"><span class="tw-f">a</span> </span><span class="tw" data-k="s"><span class="tw-f">s</span>traight </span><span class="tw" data-k="h"><span class="tw-f">h</span>ighway </span><span class="tw" data-k="f"><span class="tw-f">f</span>or </span><span class="tw" data-k="o"><span class="tw-f">o</span>ur </span><span class="tw" data-k="g"><span class="tw-f">G</span>od </span><span class="tw" data-k="i"><span class="tw-f">i</span>n </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="d"><span class="tw-f">d</span>esert.</span></div>
+<div class="ln i1"><sup class="vn">4</sup><span class="tw" data-k="e"><span class="tw-f">E</span>very </span><span class="tw" data-k="v"><span class="tw-f">v</span>alley </span><span class="tw" data-k="s"><span class="tw-f">s</span>hall </span><span class="tw" data-k="b"><span class="tw-f">b</span>e </span><span class="tw" data-k="l"><span class="tw-f">l</span>ifted </span><span class="tw" data-k="u"><span class="tw-f">u</span>p,</span></div>
+<div class="ln i2"><span class="tw" data-k="a"><span class="tw-f">a</span>nd </span><span class="tw" data-k="e"><span class="tw-f">e</span>very </span><span class="tw" data-k="m"><span class="tw-f">m</span>ountain </span><span class="tw" data-k="a"><span class="tw-f">a</span>nd </span><span class="tw" data-k="h"><span class="tw-f">h</span>ill </span><span class="tw" data-k="m"><span class="tw-f">m</span>ade </span><span class="tw" data-k="l"><span class="tw-f">l</span>ow;</span></div>
+<div class="ln i1"><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="u"><span class="tw-f">u</span>neven </span><span class="tw" data-k="g"><span class="tw-f">g</span>round </span><span class="tw" data-k="w"><span class="tw-f">w</span>ill </span><span class="tw" data-k="b"><span class="tw-f">b</span>ecome </span><span class="tw" data-k="s"><span class="tw-f">s</span>mooth,</span></div>
+<div class="ln i2"><span class="tw" data-k="a"><span class="tw-f">a</span>nd </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="r"><span class="tw-f">r</span>ugged </span><span class="tw" data-k="l"><span class="tw-f">l</span>and </span><span class="tw" data-k="a"><span class="tw-f">a</span> </span><span class="tw" data-k="p"><span class="tw-f">p</span>lain.</span></div>
+<div class="ln i1"><sup class="vn">5</sup><span class="tw" data-k="a"><span class="tw-f">A</span>nd </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="g"><span class="tw-f">g</span>lory </span><span class="tw" data-k="o"><span class="tw-f">o</span>f </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="l"><span class="tw-f">L</span>ORD </span><span class="tw" data-k="w"><span class="tw-f">w</span>ill </span><span class="tw" data-k="b"><span class="tw-f">b</span>e </span><span class="tw" data-k="r"><span class="tw-f">r</span>evealed,</span></div>
+<div class="ln i2"><span class="tw" data-k="a"><span class="tw-f">a</span>nd </span><span class="tw" data-k="a"><span class="tw-f">a</span>ll </span><span class="tw" data-k="h"><span class="tw-f">h</span>umanity </span><span class="tw" data-k="t"><span class="tw-f">t</span>ogether </span><span class="tw" data-k="w"><span class="tw-f">w</span>ill </span><span class="tw" data-k="s"><span class="tw-f">s</span>ee </span><span class="tw" data-k="i"><span class="tw-f">i</span>t.”</span></div>
+<div class="ln i0"><span class="tw" data-k="f"><span class="tw-f">F</span>or </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="m"><span class="tw-f">m</span>outh </span><span class="tw" data-k="o"><span class="tw-f">o</span>f </span><span class="tw" data-k="t"><span class="tw-f">t</span>he </span><span class="tw" data-k="l"><span class="tw-f">L</span>ORD </span><span class="tw" data-k="h"><span class="tw-f">h</span>as </span><span class="tw" data-k="s"><span class="tw-f">s</span>poken.</span></div>
+</div></div><div class="tm-score"></div></div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-ladder"><div class="banner">RECITE · 40:1–5</div><div class="sub"><b>Comfort My People</b> — 40:1–5 · 5 verses. Say it aloud, or type first letters.</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb cur">● Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb">○ Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1"><sup class="vn">1</sup>“Comfort, comfort My people,”</div>
+<div class="ln i2">says your God.</div>
+<div class="ln i1"><sup class="vn">2</sup>“Speak tenderly to Jerusalem,</div>
+<div class="ln i2">and proclaim to her</div>
+<div class="ln i1">that her forced labor has been completed;</div>
+<div class="ln i2">her iniquity has been pardoned.</div>
+<div class="ln i1">For she has received from the hand of the LORD</div>
+<div class="ln i2">double for all her sins.”</div>
+<div class="ln i0 st"><sup class="vn">3</sup>A voice of one calling:</div>
+<div class="ln i1">“Prepare the way for the LORD in the wilderness;</div>
+<div class="ln i2">make a straight highway for our God in the desert.</div>
+<div class="ln i1"><sup class="vn">4</sup>Every valley shall be lifted up,</div>
+<div class="ln i2">and every mountain and hill made low;</div>
+<div class="ln i1">the uneven ground will become smooth,</div>
+<div class="ln i2">and the rugged land a plain.</div>
+<div class="ln i1"><sup class="vn">5</sup>And the glory of the LORD will be revealed,</div>
+<div class="ln i2">and all humanity together will see it.”</div>
+<div class="ln i0">For the mouth of the LORD has spoken.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>missing-section <small>· day 10 · Missing Part 1 of 6 · 40:9–11 · 3 verses in Here Is Your God!</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-section"><div class="banner">MISSING SECTION · Here Is Your God!</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb">○ Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb cur">● Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1 dim"><sup class="vn">8</sup>The grass withers and the flowers fall,</div>
+<div class="ln i2 dim">but the word of our God stands forever.”</div>
+</div><div class="gap"><div class="gap-l">Part 1 of 6 · 40:9–11 · 3 verses</div><div class="passage">
+<div class="ln i1"><sup class="vn">9</sup><span class="bk">Go up on a high mountain,</span></div>
+<div class="ln i2"><span class="bk">O Zion, herald of good news.</span></div>
+<div class="ln i1"><span class="bk">Raise your voice loudly,</span></div>
+<div class="ln i2"><span class="bk">O Jerusalem, herald of good news.</span></div>
+<div class="ln i1"><span class="bk">Lift it up,</span></div>
+<div class="ln i2"><span class="bk">do not be afraid!</span></div>
+<div class="ln i1"><span class="bk">Say to the cities of Judah,</span></div>
+<div class="ln i2"><span class="bk">“Here is your God!”</span></div>
+<div class="ln i1"><sup class="vn">10</sup><span class="bk">Behold, the Lord GOD comes with might,</span></div>
+<div class="ln i2"><span class="bk">and His arm establishes His rule.</span></div>
+<div class="ln i1"><span class="bk">His reward is with Him,</span></div>
+<div class="ln i2"><span class="bk">and His recompense accompanies Him.</span></div>
+<div class="ln i1"><sup class="vn">11</sup><span class="bk">He tends His flock like a shepherd;</span></div>
+<div class="ln i2"><span class="bk">He gathers the lambs in His arms</span></div>
+<div class="ln i1"><span class="bk">and carries them close to His heart.</span></div>
+<div class="ln i2"><span class="bk">He gently leads the nursing ewes.</span></div>
+</div></div><div class="passage">
+<div class="ln i1 dim"><sup class="vn">12</sup>Who has measured the waters in the hollow of his hand,</div>
+<div class="ln i2 dim">or marked off the heavens with the span of his hand?</div>
+<div class="ln i1 dim">Who has held the dust of the earth in a basket,</div>
+<div class="ln i2 dim">or weighed the mountains on a scale</div>
+<div class="ln i2 dim">and the hills with a balance?</div>
+</div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-section"><div class="banner">MISSING SECTION · Here Is Your God!</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb">○ Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb cur">● Here Is Your God!</span></div></div><div class="passage">
+<div class="ln i1 dim"><sup class="vn">8</sup>The grass withers and the flowers fall,</div>
+<div class="ln i2 dim">but the word of our God stands forever.”</div>
+</div><div class="gap"><div class="gap-l">Part 1 of 6 · 40:9–11 · 3 verses</div><div class="passage">
+<div class="ln i1"><sup class="vn">9</sup><span class="bk rv">Go up on a high mountain,</span></div>
+<div class="ln i2"><span class="bk rv">O Zion, herald of good news.</span></div>
+<div class="ln i1"><span class="bk rv">Raise your voice loudly,</span></div>
+<div class="ln i2"><span class="bk rv">O Jerusalem, herald of good news.</span></div>
+<div class="ln i1"><span class="bk rv">Lift it up,</span></div>
+<div class="ln i2"><span class="bk rv">do not be afraid!</span></div>
+<div class="ln i1"><span class="bk rv">Say to the cities of Judah,</span></div>
+<div class="ln i2"><span class="bk rv">“Here is your God!”</span></div>
+<div class="ln i1"><sup class="vn">10</sup><span class="bk rv">Behold, the Lord GOD comes with might,</span></div>
+<div class="ln i2"><span class="bk rv">and His arm establishes His rule.</span></div>
+<div class="ln i1"><span class="bk rv">His reward is with Him,</span></div>
+<div class="ln i2"><span class="bk rv">and His recompense accompanies Him.</span></div>
+<div class="ln i1"><sup class="vn">11</sup><span class="bk rv">He tends His flock like a shepherd;</span></div>
+<div class="ln i2"><span class="bk rv">He gathers the lambs in His arms</span></div>
+<div class="ln i1"><span class="bk rv">and carries them close to His heart.</span></div>
+<div class="ln i2"><span class="bk rv">He gently leads the nursing ewes.</span></div>
+</div></div><div class="passage">
+<div class="ln i1 dim"><sup class="vn">12</sup>Who has measured the waters in the hollow of his hand,</div>
+<div class="ln i2 dim">or marked off the heavens with the span of his hand?</div>
+<div class="ln i1 dim">Who has held the dust of the earth in a basket,</div>
+<div class="ln i2 dim">or weighed the mountains on a scale</div>
+<div class="ln i2 dim">and the hills with a balance?</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>first-lines <small>· day 11 · First lines of Here Is Your God!</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-section"><div class="banner">FIRST LINES · Here Is Your God!</div><div class="sub">How does each part begin?</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb">○ Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb cur">● Here Is Your God!</span></div></div><div class="fl-list"><div class="fl-row"><div class="fl-h">Part 1 of 6 · 40:9–11 · 3 verses</div><span class="fl-q">…</span></div><div class="fl-row"><div class="fl-h">Part 2 of 6 · 40:12–14 · 3 verses</div><span class="fl-q">…</span></div><div class="fl-row"><div class="fl-h">Part 3 of 6 · 40:15–20 · 6 verses</div><span class="fl-q">…</span></div><div class="fl-row"><div class="fl-h">Part 4 of 6 · 40:21–24 · 4 verses</div><span class="fl-q">…</span></div><div class="fl-row"><div class="fl-h">Part 5 of 6 · 40:25–26 · 2 verses</div><span class="fl-q">…</span></div><div class="fl-row"><div class="fl-h">Part 6 of 6 · 40:27–31 · 5 verses</div><span class="fl-q">…</span></div></div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-section"><div class="banner">FIRST LINES · Here Is Your God!</div><div class="sub">How does each part begin?</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › Prepare the Way for the LORD</div><div class="sibs"><span class="sb">○ Comfort My People</span><span class="sb">○ The Enduring Word</span><span class="sb cur">● Here Is Your God!</span></div></div><div class="fl-list"><div class="fl-row"><div class="fl-h">Part 1 of 6 · 40:9–11 · 3 verses</div><span class="fl-a">Go up on a high mountain,</span></div><div class="fl-row"><div class="fl-h">Part 2 of 6 · 40:12–14 · 3 verses</div><span class="fl-a">Who has measured the waters in the hollow of …</span></div><div class="fl-row"><div class="fl-h">Part 3 of 6 · 40:15–20 · 6 verses</div><span class="fl-a">Surely the nations are like a drop in a …</span></div><div class="fl-row"><div class="fl-h">Part 4 of 6 · 40:21–24 · 4 verses</div><span class="fl-a">Do you not know?</span></div><div class="fl-row"><div class="fl-h">Part 5 of 6 · 40:25–26 · 2 verses</div><span class="fl-a">“To whom will you liken Me,</span></div><div class="fl-row"><div class="fl-h">Part 6 of 6 · 40:27–31 · 5 verses</div><span class="fl-a">Why do you say, O Jacob,</span></div></div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section><section><h2>section-header-to-text <small>· day 19 · Recite Meaningless Idols</small></h2><div class="pair"><div><h3>Front</h3><div class="card"><div class="v2 st-section"><div class="banner">RECITE THE SECTION · 41:21–29</div><div class="sub"><b>Meaningless Idols</b> — 41:21–29 · 9 verses, about 2 min aloud.</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › God’s Help to Israel</div><div class="sibs"><span class="sb">○ I Will Help You</span><span class="sb cur">● Meaningless Idols</span></div></div></div></div></div><div><h3>Back</h3><div class="card"><div class="v2 st-section"><div class="banner">RECITE THE SECTION · 41:21–29</div><div class="sub"><b>Meaningless Idols</b> — 41:21–29 · 9 verses, about 2 min aloud.</div><div class="strip"><div class="crumbs">The Deliverance from Exile (40–44) › God’s Help to Israel</div><div class="sibs"><span class="sb">○ I Will Help You</span><span class="sb cur">● Meaningless Idols</span></div></div><div class="passage">
+<div class="ph">Part 1</div>
+<div class="ln i1"><sup class="vn">21</sup>“Present your case,” says the LORD.</div>
+<div class="ln i2">“Submit your arguments,” says the King of Jacob.</div>
+<div class="ln i1"><sup class="vn">22</sup>“Let them come and tell us what will happen.</div>
+<div class="ln i2">Tell the former things,</div>
+<div class="ln i1">so that we may reflect on them and know the outcome.</div>
+<div class="ln i2">Or announce to us what is coming.</div>
+<div class="ln i1"><sup class="vn">23</sup>Tell us the things that are to come,</div>
+<div class="ln i2">so that we may know that you are gods.</div>
+<div class="ln i1">Yes, do something good or evil,</div>
+<div class="ln i2">that we may look on together in dismay.</div>
+<div class="ln i1"><sup class="vn">24</sup>Behold, you are nothing</div>
+<div class="ln i2">and your work is of no value.</div>
+<div class="ln i2">Anyone who chooses you is detestable.</div>
+<div class="ph">Part 2</div>
+<div class="ln i1 st"><sup class="vn">25</sup>I have raised up one from the north, and he has come—</div>
+<div class="ln i2">one from the east who calls on My name.</div>
+<div class="ln i1">He will march over rulers as if they were mortar,</div>
+<div class="ln i2">like a potter who treads the clay.</div>
+<div class="ln i1"><sup class="vn">26</sup>Who has declared this from the beginning,</div>
+<div class="ln i2">so that we may know,</div>
+<div class="ln i1">and from times past,</div>
+<div class="ln i2">so that we may say: ‘He was right’?</div>
+<div class="ln i1">No one announced it, no one foretold it,</div>
+<div class="ln i2">no one heard your words.</div>
+<div class="ph">Part 3</div>
+<div class="ln i1 st"><sup class="vn">27</sup>I was the first to tell Zion:</div>
+<div class="ln i2">‘Look, here they are!’</div>
+<div class="ln i1">And I gave to Jerusalem</div>
+<div class="ln i2">a herald of good news.</div>
+<div class="ln i1"><sup class="vn">28</sup>When I look, there is no one;</div>
+<div class="ln i2">there is no counselor among them;</div>
+<div class="ln i1">when I ask them,</div>
+<div class="ln i2">they have nothing to say.</div>
+<div class="ln i1"><sup class="vn">29</sup>See, they are all a delusion;</div>
+<div class="ln i2">their works amount to nothing;</div>
+<div class="ln i2">their images are as empty as the wind.</div>
+</div></div><table class="rubric">
+<tr><td>Again</td><td>got stuck, looked, used the hint, or left out a phrase</td></tr>
+<tr><td>Hard</td><td>all there, but long pauses or several small slips</td></tr>
+<tr><td>Good</td><td>all there, at most one small slip</td></tr>
+<tr><td>Easy</td><td>instant and word-perfect</td></tr>
+</table></div></div></div></section>
+<script>
+/* Type mode for Header -> text (notes/sequence_v2_draft.md §7).
+   Type the first letter of each word; the word appears when the letter is right.
+   Two wrong letters on one word reveal it in red and count it as missed.
+   At the end the card suggests a button; you still tap it yourself. */
+(function () {
+  var boxes = document.querySelectorAll('.tm-box');
+  Array.prototype.forEach.call(boxes, function (box) {
+    if (box.getAttribute('data-ready')) return;
+    box.setAttribute('data-ready', '1');
+    var input = box.querySelector('.tm-in');
+    var text = box.querySelector('.tm-text');
+    var score = box.querySelector('.tm-score');
+    var words = Array.prototype.slice.call(box.querySelectorAll('.tw'));
+    var i = 0, wrong = 0, wrongHere = 0, missed = 0, hinted = false;
+
+    function mark() {
+      words.forEach(function (w) { w.classList.remove('next'); });
+      if (i < words.length) words[i].classList.add('next');
+    }
+    function suggestion() {
+      if (hinted || missed >= 2) return 'Again';
+      if (missed === 0 && wrong <= 1) return 'Good';
+      return 'Hard';
+    }
+    function report(done) {
+      var parts = [i + ' of ' + words.length + ' words', wrong + ' wrong letter' + (wrong === 1 ? '' : 's'),
+                   missed + ' missed'];
+      if (hinted) parts.push('hint used');
+      score.textContent = parts.join(' · ') + (done || hinted ? ' → press ' + suggestion() : '');
+    }
+    function advance(cls) {
+      words[i].classList.add(cls);
+      i += 1; wrongHere = 0;
+      mark(); report(i >= words.length);
+    }
+    function key(ch) {
+      if (i >= words.length || !/[a-z0-9]/i.test(ch)) return;
+      if (ch.toLowerCase() === words[i].getAttribute('data-k')) { advance('ok'); return; }
+      wrong += 1; wrongHere += 1;
+      text.classList.remove('wrong'); void text.offsetWidth; text.classList.add('wrong');
+      if (wrongHere >= 2) { missed += 1; advance('miss'); } else { report(false); }
+    }
+    function start() {
+      box.classList.add('tm-on');
+      mark(); report(false);
+      input.focus();
+    }
+
+    box.querySelector('.tm-go').addEventListener('click', start);
+    box.querySelector('.tm-hint').addEventListener('click', function () {
+      hinted = true;
+      text.classList.add('hint');
+      start();
+    });
+    text.addEventListener('click', function () { input.focus(); });
+    // Read what was typed and clear the box, so phone keyboards can't autocorrect it.
+    input.addEventListener('input', function () {
+      var v = input.value; input.value = '';
+      for (var k = 0; k < v.length; k++) key(v.charAt(k));
+    });
+  });
+})();
+
+</script>
+</body></html>

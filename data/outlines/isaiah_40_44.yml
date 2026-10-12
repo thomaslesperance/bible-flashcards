@@ -1,0 +1,61 @@
+# Trial 2: Isaiah 40–44, the first five chapters of "The Deliverance from Exile"
+# (Isaiah 40:1–48:22 in outlines.yml).
+#
+# Built from two BSB sources:
+# - the book outline (outlines.yml): the seven top-level sections, and the three
+#   parts of Israel's Only Savior;
+# - the in-text section headings (Chapter.json in data/bible.eng.db): the parts of
+#   chapters 40, 41, and 42:10–25.
+#
+# Three in-text headings repeat their parent's name. An Outline cloze on one of
+# them would show its own answer one line up, so they get a title taken from
+# their text. `bsb_heading` keeps the original.
+#
+# Paragraph (stanza) breaks are read from the database, so no `paragraphs` lists.
+Isaiah:
+  ref: 40:1-44:28
+  sections:
+    The Deliverance from Exile (40–44):
+      ref: 40:1-44:28
+      sections:
+        Prepare the Way for the LORD:
+          ref: 40:1-40:31
+          sections:
+            Comfort My People:
+              ref: 40:1-40:5
+              bsb_heading: Prepare the Way for the LORD
+            The Enduring Word:
+              ref: 40:6-40:8
+            Here Is Your God!:
+              ref: 40:9-40:31
+        God’s Help to Israel:
+          ref: 41:1-41:29
+          sections:
+            I Will Help You:
+              ref: 41:1-41:20
+              bsb_heading: God’s Help to Israel
+            Meaningless Idols:
+              ref: 41:21-41:29
+        God’s Servant:
+          ref: 42:1-42:9
+        A New Song of Praise:
+          ref: 42:10-42:25
+          sections:
+            Sing a New Song:
+              ref: 42:10-42:17
+              bsb_heading: A New Song of Praise
+            Israel Is Deaf and Blind:
+              ref: 42:18-42:25
+        Israel’s Only Savior:
+          ref: 43:1-43:28
+          sections:
+            The Holy One of Israel, your Savior:
+              ref: 43:1-43:13
+            A Way in the Wilderness:
+              ref: 43:14-43:21
+            Israel’s Unfaithfulness:
+              ref: 43:22-43:28
+        The LORD Has Chosen Israel:
+          ref: 44:1-44:20
+        Jerusalem to Be Restored:
+          ref: 44:21-44:28

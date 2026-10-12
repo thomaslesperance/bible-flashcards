@@ -1,0 +1,8 @@
+# Deck generator (src/deck), simulator (scripts/simulate_fsrs.py), tests
+pyyaml
+genanki
+fsrs>=6
+# One-off data scripts: scripts/parse_book_outlines.py (pymupdf), scripts/xlsx_to_csv.py (pandas, openpyxl)
+pymupdf
+pandas
+openpyxl
