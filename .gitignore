@@ -1,6 +1,7 @@
 /venv
 __pycache__/
 bible.db
+data/bible.eng.db
 
 .DS_Store
 notes/bible_project_som_outline.png

@@ -1,0 +1,930 @@
+database: data/bible.eng.db
+format: SQLite 3
+description: Comprehensive English Bible database containing 51 English translations,
+  7 commentaries, cross-reference datasets, verse-level text, audio links, and concordances.
+total_tables: 18
+tables:
+  Book:
+    description: Books of the Bible associated with specific translations. Contains
+      canonical order, book identifiers (e.g., 'GEN', 'MAT'), titles, chapter counts,
+      apocrypha flags, and denormalized translation metadata.
+    row_count: 2760
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: commonName
+      type: TEXT
+      description: Common English name.
+    - name: title
+      type: TEXT
+      description: Title heading.
+    - name: order
+      type: INT
+      description: Canonical integer order index (1-based).
+    - name: numberOfChapters
+      type: INT
+      description: Total number of chapters in this book.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: isApocryphal
+      type: NUM
+      description: Numeric boolean flag (1 if apocryphal / deuterocanonical, 0 otherwise).
+    - name: id:1
+      type: TEXT
+      description: Denormalized parent entity ID (e.g., joined Translation.id, Commentary.id,
+        or Dataset.id).
+    - name: name:1
+      type: TEXT
+      description: Denormalized parent entity name.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  Chapter:
+    description: Chapter-level scripture containers for each book and translation.
+      Stores complete chapter contents in structured JSON format (headings, verses,
+      paragraph breaks), along with translation metadata.
+    row_count: 48742
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: json
+      type: TEXT
+      description: Serialized JSON containing structured content and formatting.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  ChapterAudioTiming:
+    description: Verse- and phrase-level timestamp markers for spoken Bible narration
+      per chapter, book, reader, and translation. Facilitates synchronized audio playback
+      and read-along highlighting.
+    row_count: 0
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: reader
+      type: TEXT
+      description: Narrator or voice identifier for the audio recording.
+    - name: timingsJson
+      type: TEXT
+      description: Serialized JSON array of audio timing markers and verse offsets.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  ChapterAudioUrl:
+    description: Streaming and download audio URLs for Bible chapters, partitioned
+      by reader/narrator (e.g., 'david'), translation, book, and chapter number. URLs
+      link to audio files hosted on helloao.org.
+    row_count: 8323
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: reader
+      type: TEXT
+      description: Narrator or voice identifier for the audio recording.
+    - name: url
+      type: TEXT
+      description: HTTP URL pointing to the resource (e.g., audio file).
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  ChapterFootnote:
+    description: Footnotes, textual variants (e.g., LXX differences), translation
+      notes, and cross-reference annotations associated with specific chapters and
+      verses across translations.
+    row_count: 135942
+    columns:
+    - name: id
+      type: INT
+      description: Primary identifier or slug.
+    - name: chapterNumber
+      type: INT
+      description: Chapter sequence number within the book.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: text
+      type: TEXT
+      description: Plain text content.
+    - name: verseNumber
+      type: INT
+      description: Verse sequence number within the chapter.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id:1
+      type: TEXT
+      description: Denormalized parent entity ID (e.g., joined Translation.id, Commentary.id,
+        or Dataset.id).
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  ChapterVerse:
+    description: Granular verse-level scripture records. Stores plain text verses,
+      structured JSON payloads ('contentJson') with formatting/markup, and denormalized
+      translation details.
+    row_count: 1289753
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: chapterNumber
+      type: INT
+      description: Chapter sequence number within the book.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: text
+      type: TEXT
+      description: Plain text content.
+    - name: contentJson
+      type: TEXT
+      description: Serialized JSON array or object containing rich text blocks.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  ChapterWords:
+    description: Tokenized word mappings and character-range alignments per chapter
+      ('wordsJson') linking words to start/end character offsets and verse locations
+      for concordances and word tracking.
+    row_count: 25780
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: translationId
+      type: TEXT
+      description: Foreign identifier matching Translation.id (e.g., 'BSB', 'ENGWEBP').
+    - name: wordsJson
+      type: TEXT
+      description: Serialized JSON mapping word tokens and character offsets to verses.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  Commentary:
+    description: Catalog of Bible commentary works available in the database (e.g.,
+      Matthew Henry, Adam Clarke, John Calvin, Keil & Delitzsch, Jamieson-Fausset-Brown,
+      John Gill, and Tyndale Open Study Notes). Stores author/work titles, language,
+      website URLs, and licensing terms.
+    row_count: 7
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  CommentaryBook:
+    description: Book-level introductions, historical prefaces, outlines, and chapter
+      coverage for each commentary work.
+    row_count: 410
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: commentaryId
+      type: TEXT
+      description: Foreign identifier matching Commentary.id (e.g., 'adam-clarke',
+        'matthew-henry').
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: commonName
+      type: TEXT
+      description: Common English name.
+    - name: introduction
+      type: TEXT
+      description: Introductory or preface text.
+    - name: order
+      type: INT
+      description: Canonical integer order index (1-based).
+    - name: numberOfChapters
+      type: INT
+      description: Total number of chapters in this book.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: introductionSummary
+      type: TEXT
+      description: Short summary of the introductory text.
+    - name: id:1
+      type: TEXT
+      description: Denormalized parent entity ID (e.g., joined Translation.id, Commentary.id,
+        or Dataset.id).
+    - name: name:1
+      type: TEXT
+      description: Denormalized parent entity name.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  CommentaryChapter:
+    description: Chapter-level commentary overviews, section outlines, and structured
+      chapter commentary in JSON format.
+    row_count: 7366
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: commentaryId
+      type: TEXT
+      description: Foreign identifier matching Commentary.id (e.g., 'adam-clarke',
+        'matthew-henry').
+    - name: introduction
+      type: TEXT
+      description: Introductory or preface text.
+    - name: json
+      type: TEXT
+      description: Serialized JSON containing structured content and formatting.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  CommentaryChapterVerse:
+    description: Verse-by-verse expository commentary text and structured JSON paragraphs
+      explaining individual verses.
+    row_count: 96723
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: chapterNumber
+      type: INT
+      description: Chapter sequence number within the book.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: commentaryId
+      type: TEXT
+      description: Foreign identifier matching Commentary.id (e.g., 'adam-clarke',
+        'matthew-henry').
+    - name: text
+      type: TEXT
+      description: Plain text content.
+    - name: contentJson
+      type: TEXT
+      description: Serialized JSON array or object containing rich text blocks.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  Dataset:
+    description: Registry of external auxiliary Bible study datasets, such as the
+      OpenBible.info cross-reference dataset ('open-cross-ref'). Stores source URLs,
+      language, and attribution licenses.
+    row_count: 1
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+  DatasetBook:
+    description: Book-level partitioning and coverage statistics for auxiliary study
+      datasets, including canonical order and chapter counts.
+    row_count: 66
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: datasetId
+      type: TEXT
+      description: Foreign identifier matching Dataset.id (e.g., 'open-cross-ref').
+    - name: order
+      type: INT
+      description: Canonical integer order index (1-based).
+    - name: numberOfChapters
+      type: INT
+      description: Total number of chapters in this book.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id:1
+      type: TEXT
+      description: Denormalized parent entity ID (e.g., joined Translation.id, Commentary.id,
+        or Dataset.id).
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+  DatasetChapter:
+    description: Chapter-level data payloads and structured JSON cross-reference collections
+      for auxiliary study datasets.
+    row_count: 1189
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: datasetId
+      type: TEXT
+      description: Foreign identifier matching Dataset.id (e.g., 'open-cross-ref').
+    - name: json
+      type: TEXT
+      description: Serialized JSON containing structured content and formatting.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+  DatasetChapterVerse:
+    description: Verse-level data payloads and structured JSON cross-references for
+      individual verses in auxiliary study datasets.
+    row_count: 29364
+    columns:
+    - name: number
+      type: INT
+      description: Chapter or verse sequence number.
+    - name: chapterNumber
+      type: INT
+      description: Chapter sequence number within the book.
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: datasetId
+      type: TEXT
+      description: Foreign identifier matching Dataset.id (e.g., 'open-cross-ref').
+    - name: contentJson
+      type: TEXT
+      description: Serialized JSON array or object containing rich text blocks.
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256:1
+      type: TEXT
+      description: Denormalized parent entity SHA-256 checksum.
+  DatasetReference:
+    description: Granular scripture cross-reference mappings connecting source verses
+      to referenced verses. Includes source verse coordinates, target reference coordinates
+      (with optional end-verse ranges), and relevance/confidence vote scores.
+    row_count: 344799
+    columns:
+    - name: id
+      type: INT
+      description: Primary identifier or slug.
+    - name: datasetId
+      type: TEXT
+      description: Foreign identifier matching Dataset.id (e.g., 'open-cross-ref').
+    - name: bookId
+      type: TEXT
+      description: Standard book code (e.g., 'GEN', '1CH', 'MAT', 'REV').
+    - name: chapterNumber
+      type: INT
+      description: Chapter sequence number within the book.
+    - name: verseNumber
+      type: INT
+      description: Verse sequence number within the chapter.
+    - name: referenceBookId
+      type: TEXT
+      description: Target cross-reference book code.
+    - name: referenceChapter
+      type: INT
+      description: Target cross-reference chapter number.
+    - name: referenceVerse
+      type: INT
+      description: Target cross-reference starting verse number.
+    - name: endVerseNumber
+      type: INT
+      description: Target cross-reference ending verse number (null if single verse).
+    - name: score
+      type: INT
+      description: Relevance or confidence vote score for the cross-reference.
+    - name: id:1
+      type: TEXT
+      description: Denormalized parent entity ID (e.g., joined Translation.id, Commentary.id,
+        or Dataset.id).
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+  Translation:
+    description: Registry of the 51 English Bible translations present in the database
+      (e.g., Berean Standard Bible 'BSB', World English Bible 'ENGWEBP', King James
+      Version, American Standard Version). Stores translation identifiers, short names,
+      language codes, text direction, websites, and license notices.
+    row_count: 51
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: name
+      type: TEXT
+      description: Standard name or title.
+    - name: website
+      type: TEXT
+      description: Source or publisher website URL.
+    - name: licenseUrl
+      type: TEXT
+      description: URL containing full license and usage terms.
+    - name: shortName
+      type: TEXT
+      description: Abbreviated name or translation acronym.
+    - name: englishName
+      type: TEXT
+      description: Full name in English.
+    - name: language
+      type: TEXT
+      description: ISO language code (e.g., 'eng').
+    - name: textDirection
+      type: TEXT
+      description: Text reading direction ('ltr' for left-to-right, 'rtl' for right-to-left).
+    - name: sha256
+      type: TEXT
+      description: SHA-256 cryptographic checksum of data payload.
+    - name: licenseNotes
+      type: TEXT
+      description: Additional notes regarding licensing or modifications made.
+    - name: licenseNotice
+      type: TEXT
+      description: Legal copyright notice and required attribution statement.
+  _prisma_migrations:
+    description: Internal Prisma ORM schema migration ledger tracking database schema
+      migration history, checksums, execution timestamps, logs, and applied steps.
+    row_count: 23
+    columns:
+    - name: id
+      type: TEXT
+      description: Primary identifier or slug.
+    - name: checksum
+      type: TEXT
+      description: Prisma migration file checksum.
+    - name: finished_at
+      type: NUM
+      description: Timestamp when migration completed execution.
+    - name: migration_name
+      type: TEXT
+      description: Unique migration directory/script name.
+    - name: logs
+      type: TEXT
+      description: Execution logs or error messages during migration.
+    - name: rolled_back_at
+      type: NUM
+      description: Timestamp when migration was rolled back (null if active).
+    - name: started_at
+      type: NUM
+      description: Timestamp when migration execution commenced.
+    - name: applied_steps_count
+      type: INT
+      description: Number of migration operations applied in this migration step.
