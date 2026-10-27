@@ -1,5 +1,5 @@
-**➕ Claude:** Text marked ➕ was added by Claude on 2026-10-14. Thomas's original lines are unchanged, typos included. Claude's text runs from a ➕ line to the next heading without ➕.
-- **Decided** means one of Thomas's decisions (1–12), one of Claude's research resolutions (R1–R16, which stand unless Thomas overrides them), or a verified fact. **Proposed** means Claude's extrapolation, for Thomas to confirm.
+**➕ Claude:** Text marked ➕ was added by Claude on 2026-10-14. Decision 13 and the edits it required were added on 2026-10-27. Thomas's original lines are unchanged, typos included. Claude's text runs from a ➕ line to the next heading without ➕.
+- **Decided** means one of Thomas's decisions (1–13), one of Claude's research resolutions (R1–R16, which stand unless Thomas overrides them), or a verified fact. **Proposed** means Claude's extrapolation, for Thomas to confirm.
 - **Sources.** The `research/` folder next to this file holds the research with its sources and confidence levels: `stt.md`, `stack.md`, `policy.md`, `content.md`, `product.md` and `backend.md`, all snapshots dated 2026-10-14. Citations such as "(research: policy.md)" point there.
 - **Decisions.** The durable record is the "Decisions so far" table below and, from Phase 0 on, `docs/decisions.md`. Open questions are settled at the build gates listed under "Open decisions for Thomas".
 
@@ -27,13 +27,13 @@ Voice scoring and "free" don't set Seedling apart on their own: Bread, ReciteWel
 
 ## ➕ Decisions so far
 
-**Read R1 first: it corrects decision 3.**
+**Read decision 13 first: it replaces decision 3 and retires R1.**
 
 | # | Decision | Source |
 |---|---|---|
 | 1 | Spec: edit this doc in place, keep Thomas's text verbatim, mark Claude's additions; long material goes in sibling files | Thomas |
 | 2 | Donations go to a church / existing 501(c)(3) | Thomas |
-| 3 | Developer accounts: Thomas's Individual accounts now, the church's Organization accounts later (**amended by R1**) | Thomas |
+| 3 | Developer accounts: Thomas's Individual accounts now, the church's Organization accounts later (**replaced by 13**) | Thomas |
 | 4 | Release path: personal dev build on Thomas's iPhone → church beta (TestFlight / Play closed testing) → public launch | Thomas |
 | 5 | Speech-to-text: native on-device recognizers first, behind a swappable interface; open-source engine later | Thomas |
 | 6 | Monorepo in bible-flashcards; the Python generator is the reference implementation and content pipeline | Thomas |
@@ -43,7 +43,8 @@ Voice scoring and "free" don't set Seedling apart on their own: Bread, ReciteWel
 | 10 | Backend: Cloud Run (TypeScript API) + Cloud SQL Postgres + Firebase Auth, managed with Terraform | Thomas |
 | 11 | Pace: 5–10 hours a week | Thomas |
 | 12 | Design: Claude designs in code (Expo + simulator screenshot loop); Figma optional | Thomas |
-| R1 | **Correction to decision 3.** The church's Apple Organization team owns the production app from the *first TestFlight upload*, not from public launch. Thomas's Individual account builds only a separate dev bundle ID. Church paperwork starts now. Why: Technical Specifications → Apple Developer Setup | Claude (research: policy.md) |
+| 13 | Publishing (2026-10-27): Thomas owns the production app on his Individual Apple account and a personal Google Play account. The Give button links to the church's giving page. No church paperwork. Replaces decision 3 and retires R1 | Thomas |
+| R1 | **Retired by decision 13.** Was: a correction to decision 3. The church's Apple Organization team owns the production app from the *first TestFlight upload*, not from public launch. Thomas's Individual account builds only a separate dev bundle ID. Church paperwork starts now. Why: Technical Specifications → Apple Developer Setup | Claude (research: policy.md) |
 | R2 | A "Give" button opens the church's giving page in Safari. It unlocks nothing and isn't pay-what-you-want. Stripe and the Chase account are dropped | Claude |
 | R3 | Local-first: the app works fully with no account and makes no network calls until the user opts in. Accounts (Sign in with Apple + Google) add backup, more devices and groups. Neutral age screen; in-app deletion | Claude |
 | R4 | Client: Expo SDK 57, then 58 before the beta; Uniwind + HeroUI Native in place of Bootstrap; Skia for the plant; ts-fsrs | Claude |
@@ -56,7 +57,7 @@ Voice scoring and "free" don't set Seedling apart on their own: Bread, ReciteWel
 | R11 | Progress plant: one personal plant; passages are limbs shaped by their outlines; verses are leaves; "thirsty", never dead; a group tree with birds | Claude |
 | R12 | Motivation: weekly rhythm with rest days and repair; no leaderboards; capped catch-up; one opt-in reminder | Claude |
 | R13 | Accessibility: Dynamic Type 200%+, verse text ≥ 20 pt, 7:1 contrast, 56 pt buttons, colorblind-safe colors plus shapes, silence timeouts ≥ 6 s | Claude |
-| R14 | Launch compliance: US-only, policy pages on the church site, honest age rating, a privacy label with no audio | Claude |
+| R14 | Launch compliance: US-only, policy pages on Seedling's own site, honest age rating, a privacy label with no audio | Claude |
 | R15 | User content in v1: group name plus leader-authored passage titles and outline headings only; no chat; report and block | Claude |
 | R16 | Repo: `apps/mobile`, `apps/api`, `packages/{engine,recite,plant,shared}`, `infra/`; existing Python stays where it is | Claude |
 
@@ -66,9 +67,9 @@ Each open question is settled at a gate in Build Phases (a gate is a decision Th
 
 | Gate | When | What Thomas decides |
 |---|---|---|
-| 0.1 | Phase 0 | App name: confirm "Seedling" after the store and trademark checks (App Name Ideas) |
+| 0.1 | Phase 0 | App name: confirm "Seedling" after the store and trademark checks (App Name Ideas); the site domain and the production bundle ID |
 | 0.6 | Phase 0 | Public or private repo; confirm there's no web version |
-| 0.9 | Phase 0, church meeting | Publish under the church's name; Apple and Google Account Holder; legal name and EIN; giving URL; long-term GCP billing owner |
+| 0.9 | Phase 0, with the pastor | The giving URL; the church's written approval of the Give wording; whether the pastor reviews outlines and articles |
 | 2.1 | Phase 2 | "Passages" or another word; a custom-branded or platform-native look; import trial 2's Anki history |
 | 3.1 | Phase 3 | Voice grading: may voice give Again without asking? Do "close" words count as correct? Show tentative words live? |
 | 4.2 | Phase 4 | Plant art direction; stage thresholds (50 / 300 / 1,000 rooted verses) |
@@ -109,9 +110,9 @@ The go/no-go gates are 5.19 (open the beta) and 9.16 (launch).
 The rest are weaker product names. "Word", "Tree", "Vine", "Root" and "Branch" are too generic to find in store search or to protect. "Rooted" is the strongest runner-up, but the vocabulary below uses it for a mastered verse, and Christian brands probably already use it (unverified).
 
 **What Thomas checks before committing** (about an hour; gate 0.1):
-1. **App Store and Google Play**: search the name and note look-alikes. Creating an app record reserves the name, so per R1 create that record in the church's team, not Thomas's. A subtitle such as "Bible Memory" can carry the description.
+1. **App Store and Google Play**: search the name and note look-alikes. Creating an app record reserves the name, but it also fixes the bundle ID forever, so create it only once the name and ID are settled (8.3). A subtitle such as "Bible Memory" can carry the description.
 2. **USPTO trademark search** (the US Patent and Trademark Office's free search tool): look for live marks on "Seedling" for software and education, likely Nice classes 9 and 41 (a class is a category of goods or services). A trademark conflict is the real blocker; a store look-alike is only a nuisance.
-3. **Domain**: the policy and support pages live on the church site (R14). Group join links need a site that can host Apple's link file (User Groups → Joining). The church site may do; otherwise a cheap descriptive domain such as `seedlingbible.org`. Decided at gate 7.1.
+3. **Domain**: Seedling's own site hosts the policy and support pages (R14) and the group join links' files (User Groups → Joining). A cheap descriptive domain such as `seedlingbible.org`. Decided at gate 0.1.
 
 **Vocabulary** (Proposed). Metaphor for feedback, plain words for navigation.
 
@@ -162,7 +163,7 @@ How each feature serves that loop:
 | Rhythm and reminders | One opt-in daily reminder; "days this week"; capped catch-up | Weekly goal, rest days, repair, reminder downgrade | | |
 | Help and accessibility | | First-run flow, step help, "Hear it", "Help someone set up" | | |
 | Give | | Link to the church's page (gate 8.1) | Same | In-app Apple Pay |
-| Android | | Play closed test once the church's Play account exists | Yes (gate 10.1) | |
+| Android | | Play closed test from Thomas's Play account (at least 12 testers for 14 days) | Yes (gate 10.1) | |
 
 ## Progress Tracker
 
@@ -343,7 +344,7 @@ The five **bold** articles ship in the church beta; the rest by public launch.
 
 - **Other public-domain translations** (Public launch) download on demand from the helloao API: KJV, WEB, ASV, YLT and others among its 34 English public-domain texts. The KJV matters most, because many older church members learned verses in it. Seedling avoids the 7 non-commercial or no-derivatives texts (e.g. NET): blanking words can count as a derivative, and a donation link muddies "non-commercial." Edited text may not be called BSB or WEB (research: content.md).
 - **Pasted text** (Public launch; **Decided** posture from R9): a per-verse "my own text" field labeled for personal use. It's stored on the device only and excluded from Seedling's sync, account backup and groups; the user's own iCloud device backup and a "Move my progress" export file they choose to make can still carry it. There are no named presets or one-tap imports for NIV, ESV and so on. Outlines and references still come from the app, so the plant and map work as usual. The risk is fairly low only while the text stays on the device. If a server ever holds copies, the church needs a DMCA agent (the contact registered with the US Copyright Office under the Digital Millennium Copyright Act) and a takedown process. This is not legal advice; church counsel reviews it before launch (build 10.5).
-- **Licensed translations** (ESV, NIV, NLT, NASB, CSB) would need a written license held by the church, not Thomas (Crossway licenses only organizations). ESV's free API terms cap local storage at 500 verses, which a local-first app passes quickly.
+- **Licensed translations** (ESV, NIV, NLT, NASB, CSB) would need a written license held by an organization (Crossway licenses only organizations), which Thomas, as an individual publisher, isn't. ESV's free API terms cap local storage at 500 verses, which a local-first app passes quickly.
 
 ### ➕ Group-created passages
 
@@ -627,7 +628,7 @@ Pace, rhythm and reminder can all be changed later in More. Research recommends 
 - **What a group is**: a small group, class or whole congregation. Creating or joining one needs an account (13+, R3); the rest of the app never does.
 - **Joining.** The leader shows a QR code with the 6-character code printed beside it in large type ("ABC123").
   - Members scan it with the iPhone's own **Camera** app, which needs no new permission in Seedling. The QR is a link that opens Seedling straight to "Join the Tuesday Night Group?"
-  - Opening the app from a link needs **Universal Links**: an apple-app-site-association file (a small JSON file on a website that tells iOS which app may open its links) on a domain, plus an Associated Domains setting in the app. The church site can host it if its web host allows that file; otherwise a cheap separate domain. Decided at gate 7.1.
+  - Opening the app from a link needs **Universal Links**: an apple-app-site-association file (a small JSON file on a website that tells iOS which app may open its links) on a domain, plus an Associated Domains setting in the app. Seedling's own site hosts it (domain from gate 0.1).
   - **Without the app** (common during the TestFlight beta), the link opens a web page: "Get Seedling, then enter code ABC123," with the install steps.
   - Typing the code always works too.
   - This is the heart of "Help someone set up": a leader can take a member from install to joined in one sitting.
@@ -733,7 +734,7 @@ Option to give with some kind of promise to dedicate the money to the Great Comm
 ### ➕ Draft wording
 
 > **Give**
-> Seedling is free, with no ads and nothing to unlock. It is a ministry of {Church}.
+> Seedling is free, with no ads and nothing to unlock. It's made by {Developer}, a member of {Church}.
 > If you'd like to give, your gift goes to {Church}, a 501(c)(3), for the Great Commission: making disciples of all nations (Matt 28:19–20).
 > Giving opens {Church}'s giving page in Safari. It doesn't change anything in the app.
 > [ Open giving page ]
@@ -743,12 +744,12 @@ Add "Gifts are tax-deductible as allowed by law" only if the church confirms it 
 ### ➕ The church's role
 
 - Owns the giving page and payment processor, issues receipts, and approves this wording in writing.
-- Decides how gifts are designated (for example missions, or Seedling's costs: about $10 a month of cloud, plus Apple's $99/year unless the nonprofit fee waiver applies) and can say so publicly.
-- Is the publisher (R1): its name appears as the seller, and its site hosts the privacy, terms, support and deletion pages (R14).
+- Decides how gifts are designated (for example missions, or reimbursing Seedling's costs: about $10 a month of cloud, plus Apple's $99/year) and can say so publicly.
+- Isn't the publisher (decision 13): Thomas is the seller, and Seedling's own site hosts the privacy, terms, support and deletion pages (R14).
 
 ### ➕ Later: in-app Apple Pay
 
-Only Apple-approved nonprofits may take donations inside the app, and only with Apple Pay (guideline 3.2.1(vi)). A US nonprofit qualifies by holding any Candid Seal of Transparency; the seal is free and Apple charges no fee. A church not in the IRS's list of exempt organizations must first send IRS documents to get listed. It also needs a payment provider and an Apple Pay build. Optional, and only if the link-out proves to be a real barrier.
+Only Apple-approved nonprofits may take donations inside an app, their own or a third party's like Seedling, and only with Apple Pay (guideline 3.2.1(vi)). A US nonprofit qualifies by holding any Candid Seal of Transparency; the seal is free and Apple charges no fee. A church not in the IRS's list of exempt organizations must first send IRS documents to get listed. It also needs a payment provider and an Apple Pay build. Optional, and only if the link-out proves to be a real barrier.
 
 **Open questions:** gate 0.9 (the giving URL, the church's approval of the wording, tax-deductible receipts) and gate 8.1 (Give in the beta or at launch).
 
@@ -756,7 +757,7 @@ Only Apple-approved nonprofits may take donations inside the app, and only with 
 
 **➕ Claude:** What changed from your lists. Each section below explains its change.
 
-- **Developer accounts (a change to decision 3).** Your Individual Apple account builds only the dev version for your phone; the church's Organization team owns the production app from the first TestFlight upload. Why: Apple Developer Setup.
+- **Developer accounts (decision 13).** You publish Seedling on your Individual Apple account and a personal Google Play account; the church provides only its giving page. Details: Apple Developer Setup.
 - **Donations.** Stripe and the separate Chase account are dropped. A "Give" button opens the church's existing giving page in Safari (R2).
 - **Bootstrap.** Bootstrap only works in web browsers. Uniwind (Tailwind CSS for React Native) plus HeroUI Native components take its place.
 - **Cloud cost.** $0 during personal use, because the app is local-first; about $10/month once the backend is live.
@@ -784,7 +785,7 @@ Only Apple-approved nonprofits may take donations inside the app, and only with 
 
 | Your bullet | Choice (version) | Status | Why |
 |---|---|---|---|
-| Cross-platform (Android and iOS) | One Expo codebase. iPhone first (personal use, then the church TestFlight beta); Android beta later, from the church's Play account | Decided (4, 8, R1) | You have only an iPhone. Until someone lends an Android phone, Android is tested on the Mac's emulator and on Firebase Test Lab (Google's hosted test devices) |
+| Cross-platform (Android and iOS) | One Expo codebase. iPhone first (personal use, then the church TestFlight beta); Android beta later, from your personal Play account | Decided (4, 8, 13) | You have only an iPhone. Until someone lends an Android phone, Android is tested on the Mac's emulator and on Firebase Test Lab (Google's hosted test devices) |
 | leverage ... SDKs | See "Platform features" below | Proposed | |
 | React Native | React Native 0.86.3 + React 19.2.3, pinned by Expo SDK 57. Only the New Architecture (RN's current native layer) and the Hermes V1 engine (Meta's JavaScript engine built for RN) are supported | Decided (R4) | Expo picks the RN version, so never bump RN by hand |
 | Typescript | TypeScript ~6.0.3 | Decided (R4) | TypeScript 7.0 is npm "latest", but Expo's templates still pin 6.0. Don't let tooling bump it |
@@ -820,7 +821,7 @@ Staging is Proposed and matches the Build Phases.
 | Dynamic Type (the iOS text-size setting) | Built into RN `Text`. Keep `allowFontScaling` on; cap `maxFontSizeMultiplier` no lower than 2.0 | Personal | Tested at the largest accessibility size (R13) |
 | Share sheet | RN's built-in `Share` API | Church beta | Shares a group join link (QR codes in person) |
 | Sign in with Apple | expo-apple-authentication ~57.0.2 (+ google-signin 16.1.5 for Google) | Church beta | Accounts arrive with the beta. Tested on the iPhone, because it always errors on the simulator |
-| Age signals (Texas SB2420) | expo-age-range | Before teen accounts exist in Texas | See Apple Developer Setup step 16 |
+| Age signals (Texas SB2420) | expo-age-range | Before teen accounts exist in Texas | See Apple Developer Setup step 12 |
 | Home-screen widget | expo-widgets ~57.0.24 (iOS) | Public launch | A PNG snapshot of the plant plus today's due count. Widget code can't run Skia or read app state, so the app pushes data to it. An Android widget comes with expo-widgets in SDK 58 |
 | App Intents / Siri ("Start my review") | @bacons/apple-targets 5.0.0 (a Swift target) | Later | Needs Swift |
 | Live Activities (progress on the lock screen) | expo-widgets | Maybe | Only if sessions turn out long enough to matter |
@@ -841,9 +842,8 @@ Staging is Proposed and matches the Build Phases.
 | Item | One-time | Yearly | Monthly | Stage | Paid by |
 |---|---|---|---|---|---|
 | Apple Developer Program, your Individual account | | $99 | | Personal | Thomas |
-| Apple Developer Program, church Organization | | $99, or $0 with Apple's nonprofit fee waiver | | Church beta on | Church |
-| D-U-N-S number (the business ID Apple and Google require from organizations) | $0 | | | Now (paperwork) | Church |
-| Google Play Console, church Organization | $25 | | | When the Android beta starts | Church |
+| Google Play Console, your personal account | $25 | | | When the Android beta starts | Thomas |
+| A domain for Seedling's site (policy pages, join links); static hosting free | | Price not researched | | Before the beta | Thomas |
 | GCP in the personal phase | | | $0 | Personal | |
 | GCP prod: Cloud SQL db-f1-micro ≈ $7.67 + 10 GiB SSD ≈ $1.70 + backups ≈ $0.10–0.30. Cloud Run, Identity Platform, Secret Manager, Artifact Registry and logging stay in their free tiers | | | ≈ $10 (10–100 users); ≈ $10.50–12 (1,000 users) | Church beta on | Open (gate 6.1) |
 | Optional: a hosted dev database (a second Cloud SQL instance) | | | +≈ $9.50 | If wanted before the beta (gate 6.1) | Thomas |
@@ -854,20 +854,20 @@ Staging is Proposed and matches the Build Phases.
 | GitHub and GitHub Actions | | | $0 (public repos free; private repos get 2,000 free minutes a month, but lose branch protection on the Free plan: see Development Workflow) | All | |
 | Firebase Test Lab, free Spark plan (10 virtual + 5 physical device runs a day) | | | $0 | Android beta | |
 | Claude subscription (the simulator pane needs Pro, Max, Team or Enterprise) | | | Your existing plan | All | Thomas |
-| Android phone for real-device QA | Borrow ($0) or buy (price not researched) | | | Before the Android beta | Thomas or church |
-| DMCA designated agent (the copyright-takedown contact registered with the US Copyright Office) | $6 per 3 years | | | Only if the server ever stores user-pasted text, which v1 doesn't | Church |
-| Attorney review (privacy policy, COPPA (the US children's online privacy law, under 13), Texas SB2420) | Price not researched | | | Optional, before teen accounts exist in Texas | Church |
+| Android phone for real-device QA | Borrow ($0) or buy (price not researched) | | | Before the Android beta | Thomas |
+| DMCA designated agent (the copyright-takedown contact registered with the US Copyright Office) | $6 per 3 years | | | Only if the server ever stores user-pasted text, which v1 doesn't | Thomas |
+| Attorney review (privacy policy, COPPA (the US children's online privacy law, under 13), Texas SB2420) | Price not researched | | | Optional, before teen accounts exist in Texas | Thomas |
 
 **Totals by stage**
 - **Personal:** $99/yr from you, or $0 with a free Personal Team, whose builds expire every 7 days.
-- **Church beta (iOS):** the church pays $0–99/yr; the cloud costs about $10/mo.
-- **Android beta:** the church adds $25 once, plus a phone if one is bought.
+- **Church beta (iOS):** your $99/yr continues, plus a domain; the cloud costs about $10/mo.
+- **Android beta:** you add $25 once, plus a phone if one is bought.
 - **Public launch:** no new fees. The cloud stays around $10–12/mo up to about 1,000 users.
 - **Gone from your list:** Stripe's fees (2.9% + 30¢ per gift) and the Chase account.
 
 **Budget alerts (Proposed).** A $15 budget on `seedling-dev` and $25 on `seedling-prod`, emailing you at 50%, 90% and 100%. Budgets only alert, sometimes hours late; they never stop spending (foot-guns at build steps 6.3 and 6.5). Managing Identity Platform through Terraform needs Firebase's Blaze plan (pay-as-you-go with a linked billing account), so a billing account exists from the first `terraform apply`; usage at this scale stays free.
 
-**Open question for Thomas:** who pays for GCP long term, your card or a church billing account (gates 0.9 and 6.1)?
+**GCP billing:** your card (decision 13). The church may choose to designate gifts toward these costs (Donation Path → The church's role).
 
 ## Apple Developer Setup
 
@@ -878,64 +878,62 @@ Staging is Proposed and matches the Build Phases.
 
 **➕ Claude:** Your notes as a checklist (research: policy.md). Tags match the Build Phases: **[Claude]**, **[Thomas]**, **[Claude → Thomas]** (Claude drafts, you review or act) and **[Thomas + church]**. Each step names the build step that carries it out; this list holds the detail, the build step holds the schedule.
 
-**Change to decision 3 (R1). Read this first.** "Your Individual account now, the church's later" still holds, but "later" now means *before the first TestFlight upload*, not before public launch. Two Apple rules force it:
-- **Transfers need a released app.** Apple's app-transfer tool only moves an app with at least one version released on the App Store. A TestFlight-only app can't move.
-- **Bundle IDs are permanent.** Once any build is uploaded under a bundle ID (the app's unique ID, e.g. `org.<church>.seedling`), that ID can never be reused, even if the app record is deleted.
-
-So your Individual team only ever builds a dev bundle ID for your own phone, and the church team owns the production bundle ID from day one. That also avoids migrating Sign in with Apple users later, because their IDs belong to one team. Google Play: no personal account; the church's Organization account opens when the Android beta starts. This is the part people get wrong: never upload a production-ID build from your own team.
+**Decision 13 (2026-10-27). Read this first.** You publish Seedling yourself. Your Individual Apple account and a personal Google Play account own the production app, and the Give button links to the church's giving page (R2). This replaces decision 3 and retires R1, so the church paperwork (D-U-N-S, EIN, IRS letter, a signer) is gone. What follows from it:
+- **Your legal name is the public seller** on the App Store. Google Play shows your legal name and country (a street address only if the app earns money, which it doesn't).
+- **You pay the fees:** Apple's $99/yr (individuals can't get the nonprofit fee waiver) and Google Play's $25 once.
+- **You hold the publisher's duties:** the privacy policy, deletion requests, group-content reports and the age laws (R14).
+- **Two bundle IDs, both in your team:** `com.<thomas>.seedling.dev` for development and `com.<thomas>.seedling` for TestFlight and the stores. **Bundle IDs are permanent:** once any build is uploaded under one, it can never be reused, even if the app record is deleted. Settle the production ID once, with the name (gate 0.1).
+- **If the church ever wants to own it:** Apple's transfer tool only moves an app with at least one version released on the App Store, and Sign in with Apple users need a migration step because their IDs belong to the team. Possible later, not planned (Phase 11).
+- `research/policy.md` was written assuming the church would publish. Its facts on transfers, fees and Google's personal-account testing rule still hold.
 
 **About "payments can go to your name... separate account for your actual revenue."** Right instinct for a paid app, but it doesn't apply here. Seedling is free with no in-app purchases, so Apple pays out nothing and you need no banking or tax setup. Gifts go straight to the church through its giving page. Gifts to you personally wouldn't be tax-deductible, and asking people to "support the developer" would fall under Apple's in-app purchase rules. No revenue account means the EIN question doesn't come up for you.
 
-**Now: church paperwork (longest lead time)**
-1. **[Claude → Thomas]** A letter to church leadership explaining the accounts, costs, D-U-N-S, the fee waiver and who signs (build 0.8). **[Thomas + church]** One meeting: approval to publish under the church's name, and the Account Holder, someone with legal signing authority such as the pastor or an administrator, not a volunteer developer. Apple may phone them (0.9).
-2. **[Thomas + church]** Confirm the church is a legal entity (Apple doesn't accept DBAs, "doing business as" trade names) with an EIN (its federal tax ID), a public website and an email on its own domain (0.9).
-3. **[Thomas + church]** Find the church's IRS determination letter or its denomination's group-exemption letter (0.9). **Foot-gun:** churches aren't required to have a determination letter, but Apple's fee waiver needs nonprofit status "officially recognized" by the IRS. One church reported a stalled waiver for exactly this reason. Without a letter, the church pays $99/yr.
-4. **[Thomas + church]** Look up or request a D-U-N-S number with Apple's lookup tool: free, up to 5 business days, plus up to 2 more before Apple sees it (Google says up to 30 days). The name must match the legal entity name exactly (0.10).
-5. **[Thomas]** Check that "Seedling" is free as an App Store and Play name and isn't trademarked (R10; build 0.1).
+**Now**
+1. **[Claude → Thomas]** A short note to the pastor: what Seedling is, that you publish it, and the Give framing (build 0.8). **[Thomas + church]** Get the giving page URL and the church's written approval of the Give wording, and ask whether the pastor will review outlines and articles (gate 0.9).
+2. **[Thomas]** Check that "Seedling" is free as an App Store and Play name and isn't trademarked (R10; build 0.1). Also pick the domain for Seedling's own site, which hosts the policy pages and join links.
 
 **Personal phase: your Individual account**
-6. **[Thomas]** Enroll as an Individual ($99/yr; legal name, street address, an Apple Account with two-factor authentication). A free Personal Team also works, but its builds expire every 7 days (0.2).
-7. **[Thomas]** Turn on Developer Mode on the iPhone and register it; Xcode does this on the first run, or use `eas device:create` (0.4).
-8. **[Claude]** EAS profiles (EAS: Expo's build-and-submit service): `development` (dev bundle ID `com.<thomas>.seedling.dev`, your team), `beta` and `production` (both the church's `org.<church>.seedling`, on separate update channels), plus the `demo` variant on its own dev-team ID (2.3, 5.16, 8.5). Never upload a build with the production ID from your team.
-9. **[Claude]** Data export/import before the switch (8.12). The production app counts as a different app, so the dev build's study data doesn't carry over by itself.
+3. **[Thomas]** Enroll as an Individual ($99/yr; legal name, street address, an Apple Account with two-factor authentication). A free Personal Team also works, but its builds expire every 7 days (0.2).
+4. **[Thomas]** Turn on Developer Mode on the iPhone and register it; Xcode does this on the first run, or use `eas device:create` (0.4).
+5. **[Claude]** EAS profiles (EAS: Expo's build-and-submit service): `development` (dev bundle ID `com.<thomas>.seedling.dev`, your team), `beta` and `production` (both the production ID `com.<thomas>.seedling`, on separate update channels), plus the `demo` variant on its own dev-team ID (2.3, 5.16, 8.5). Upload only `beta` and `production` builds: an uploaded bundle ID is permanent.
+6. **[Claude]** Data export/import before the switch (8.12). The production app counts as a different app, so the dev build's study data doesn't carry over by itself.
 
-**Before the church beta: the church's Organization team**
-10. **[Thomas + church]** Enroll as an Organization with the D-U-N-S, legal name, website and domain email, and take the verification call. Request the fee waiver during enrollment; the church re-confirms eligibility each year, and selling anything ends the waiver. Accept the agreements and invite you as Admin (0.10).
-11. **[Thomas, as Admin]** Create the production bundle ID and the App Store Connect app record in the church team (8.3; the dev-team equivalent is 6.6). Turn on the Sign in with Apple capability, then create:
+**Before the church beta: still your team**
+7. **[Thomas]** Create the production bundle ID and the App Store Connect app record in your team (8.3; the dev-team equivalent is 6.6). Turn on the Sign in with Apple capability, then create:
     - a **Services ID** (Apple's ID for the web-style sign-in flow Firebase uses), and
     - a **Sign in with Apple key** (a .p8 file). Paste it into Identity Platform yourself; Claude never handles it.
     - On Google's side, the **OAuth client IDs** (IDs that tell Google's sign-in page which app is asking) for iOS, Android and web.
-12. **[Thomas]** App Information, from answer sheets Claude prepares (8.8):
+8. **[Thomas]** App Information, from answer sheets Claude prepares (8.8):
     - **Availability:** United States only, which sidesteps the EU's and other countries' rules at first.
     - **DSA trader status** (the EU Digital Services Act asks every developer): "not a trader".
     - **Age rating questionnaire:** required on every submission since September 2026, including the new social-media questions. Answer honestly for Scripture content; expect 9+ or 13+ (YouVersion's Bible app is 13+). Don't choose the Kids category.
     - **App Privacy label** (the store's privacy "nutrition label"): Email Address, User ID, Other User Content, and Product Interaction if review history syncs. All linked to the user, for App Functionality, with no tracking. Audio isn't collected, because recognition is on-device.
-    - **URLs and rights:** privacy policy and support URLs on the church site; content rights note that the BSB is public domain.
-13. **[Claude]** Settings App Review checks, in `app.config.ts` (Expo's app config) (8.5; permission wording 3.6):
+    - **URLs and rights:** privacy policy and support URLs on Seedling's own site; content rights note that the BSB is public domain.
+9. **[Claude]** Settings App Review checks, in `app.config.ts` (Expo's app config) (8.5; permission wording 3.6):
     - `ios.config.usesNonExemptEncryption: false`. Export compliance: the app's only encryption is the OS's HTTPS, so Apple stops asking on every upload.
     - Privacy manifests (`ios.privacyManifests`) with the "required reason" codes for APIs like UserDefaults, copied from each native package's PrivacyInfo file. Apple emails about missing codes within minutes of an upload.
     - Specific microphone and speech-recognition permission messages; the plugin's generic default risks rejection. **[Thomas]** approves the wording.
-14. **[Claude]** Features App Review looks for:
+10. **[Claude]** Features App Review looks for:
     - The app works with no account (Phases 2–5).
     - In-app account deletion: re-authenticate, revoke the Apple token, delete the Firebase user, purge the server rows, backed by a public web deletion page (6.10).
     - In-app links to the privacy policy, terms and support (5.11; the pages themselves 8.6).
     - Report and block tools plus published contact info for group content (guideline 1.2; 7.7).
     - A Give button that opens Safari and unlocks nothing (8.7).
-15. **[Claude → Thomas]** The privacy policy, terms/community guidelines, support page and deletion page as HTML pages (not PDFs) on the church site, under the same entity name as the store listing. **[Thomas + church]** publish them (8.6).
-16. **[Claude → Thomas]** **Texas SB2420** (the App Store Accountability Act, enforced since about June 4, 2026): if any testers are in Texas, add expo-age-range before teen accounts exist. It wraps Apple's Declared Age Range and Google's Play Age Signals. **[Thomas + church]** decide; a short attorney review is optional (gate 6.1; 6.9).
-17. **TestFlight** (Apple's beta distribution service) (8.11):
-    - **Internal testers:** up to 100, no review, but each must be an App Store Connect user on the church team. For you and a co-leader.
+11. **[Claude → Thomas]** The privacy policy, terms/community guidelines, support page and deletion page as HTML pages (not PDFs) on Seedling's own site (the domain from gate 0.1), under your legal name to match the store listing. A static host such as GitHub Pages or Firebase Hosting is free (Proposed; the domain's price isn't researched). The same site serves the join-link files and fallback page (7.5). **[Thomas]** publishes them (8.6).
+12. **[Claude → Thomas]** **Texas SB2420** (the App Store Accountability Act, enforced since about June 4, 2026): if any testers are in Texas, add expo-age-range before teen accounts exist. It wraps Apple's Declared Age Range and Google's Play Age Signals. **[Thomas]** decides; a short attorney review is optional (gate 6.1; 6.9).
+13. **TestFlight** (Apple's beta distribution service) (8.11):
+    - **Internal testers:** up to 100, no review, but each must be an App Store Connect user on your team. For you and a co-leader.
     - **External testers:** up to 10,000, invited by email or public link. The first build added to an external group goes through **Beta App Review**, so allow time. Builds expire after 90 days. **[Claude → Thomas]** Claude drafts the Beta App Description, review notes and screenshots; you provide the feedback email and review contact, submit, and answer review messages.
     - Church members join as external testers. **Foot-gun:** don't use EAS "ad hoc" builds for the church; they're capped at 100 iPhones a year.
 
-**Google Play: the church's Organization account, when the Android beta starts**
-18. **[Thomas + church]** The church creates the Organization Play Console account and invites you: $25 once, with the D-U-N-S, website and phone. Google doesn't accept prepaid cards and doesn't refund the fee if verification fails. The public listing shows the church's legal name, address, email and phone (8.17).
-    - **Why not a personal account:** new personal accounts must verify a physical Android 10+ phone, then run a closed test with at least 12 testers opted in for 14 days straight before going public. Organization accounts are widely reported to be exempt (medium confidence; confirm when creating the account).
-19. **[Thomas]** Play forms (8.18): Data safety (mirror the Apple answers, with "encrypted in transit: yes" and "deletion: yes"); the IARC rating questionnaire (the shared international age-rating system); target audience 13+, which keeps the app out of the Families policy; app access (test credentials for reviewers); ads: none; the account-deletion URL.
-20. **[Thomas]** Testers through Play internal testing (up to 100), then closed testing through a Google Group (testers need Google accounts). Read the automatic pre-launch report after each upload (8.20).
-21. **[Claude]** Keep Play App Signing (EAS's default) and target Android API 36 (SDK 57 already does). Don't lose the upload key. **Foot-gun:** Play re-signs the app with its own certificate, so Google sign-in fails in Play builds until **[Thomas]** adds the Play App Signing SHA-1 (a fingerprint of the signing certificate, which Google checks before allowing sign-in) to the Android OAuth client (8.20).
+**Google Play: your personal account, when the Android beta starts**
+14. **[Thomas]** Create a personal Play Console account: $25 once, identity verification, and proof of access to a physical Android 10+ phone. Google doesn't accept prepaid cards and doesn't refund the fee if verification fails (8.17).
+    - **Foot-gun:** a new personal account must run a closed test with at least 12 testers opted in for 14 days straight before it can apply for production access. The church's Android testers can be those 12, so start the closed test early (8.20, 10.8).
+15. **[Thomas]** Play forms (8.18): Data safety (mirror the Apple answers, with "encrypted in transit: yes" and "deletion: yes"); the IARC rating questionnaire (the shared international age-rating system); target audience 13+, which keeps the app out of the Families policy; app access (test credentials for reviewers); ads: none; the account-deletion URL.
+16. **[Thomas]** Testers through Play internal testing (up to 100), then closed testing through a Google Group (testers need Google accounts). Read the automatic pre-launch report after each upload (8.20).
+17. **[Claude]** Keep Play App Signing (EAS's default) and target Android API 36 (SDK 57 already does). Don't lose the upload key. **Foot-gun:** Play re-signs the app with its own certificate, so Google sign-in fails in Play builds until **[Thomas]** adds the Play App Signing SHA-1 (a fingerprint of the signing certificate, which Google checks before allowing sign-in) to the Android OAuth client (8.20).
 
-**Open questions for Thomas:** the church's EIN, IRS letter and signer (gate 0.9); whether any beta testers are in Texas (gate 6.1).
+**Open questions for Thomas:** the giving URL and the Give wording (gate 0.9); whether any beta testers are in Texas (gate 6.1).
 
 ## Development Workflow
 
@@ -1563,7 +1561,7 @@ reports, blocks
 6. **Second device / new phone.** Sign in → pull everything → rebuild card states → the same plant regrows, because the seed and outline are synced. Pasted text doesn't come back through Seedling's sync, and the user is told so beforehand; an iCloud restore or Quick Start still carries it (§8). If both phones studied offline before signing in, events merge as a union: the keys are deterministic, so reviews of the same card interleave correctly.
 7. **No account at all** (Proposed). More → Account explains in one line that an iCloud backup keeps the plant on a new iPhone, and that an account also covers a lost phone or a deleted app. Once, after about 2 weeks of study and never inside a session, the app asks "Keep your plant safe?" with "Back up" and "Not now". Known under-13 users never see it.
 8. **Sign out.** Sync stops; local data stays. "Erase this phone" is separate and asks for confirmation on its own screen, stating what will be lost.
-9. **Deletion** (Decided: R3; Apple 5.1.1(v)). More → Account → Delete: re-authenticate (for Apple, a fresh sign-in, then Firebase `revokeAccessToken`) → `DELETE /v1/me` → the server cascades every row, hands owned groups to another leader or deletes them, and deletes the Firebase user. For Google Play, a public deletion page on the church site takes requests from people without the app; Thomas runs an admin script for those.
+9. **Deletion** (Decided: R3; Apple 5.1.1(v)). More → Account → Delete: re-authenticate (for Apple, a fresh sign-in, then Firebase `revokeAccessToken`) → `DELETE /v1/me` → the server cascades every row, hands owned groups to another leader or deletes them, and deletes the Firebase user. For Google Play, a public deletion page on Seedling's site takes requests from people without the app; Thomas runs an admin script for those.
 
 ### ➕ 11. App structure
 
@@ -1606,12 +1604,12 @@ Background services in `apps/mobile/src`: sync (outbox pusher/puller), notificat
 | | local | dev | prod |
 |---|---|---|---|
 | App | dev build on the simulator or Thomas's iPhone (`npx expo run:ios --device`) | same dev build | TestFlight / Play testing, then the stores |
-| Bundle ID | `com.<thomas>.seedling.dev` (Thomas's Individual team) | same | `org.<church>.seedling` (church Organization team) |
+| Bundle ID | `com.<thomas>.seedling.dev` (Thomas's Individual team) | same | `com.<thomas>.seedling` (Thomas's Individual team) |
 | API + DB | `pnpm --filter api dev` on the Mac + Postgres.app 18 | Cloud Run + Cloud SQL in `seedling-dev`, only if gate 6.1 says so (+≈$9.50/mo) | `seedling-prod` |
 | Auth | `seedling-dev` Identity Platform | same | `seedling-prod` |
 
-- **Variants.** `app.config.ts` reads `APP_VARIANT` (development, demo, beta, production) to set the name, icon, bundle ID, App Group and widget IDs, Firebase config and API URL. The `demo` variant (Build 5.16) has its own ID in Thomas's team. Bundle IDs follow R1; Apple Developer Setup explains why, and Build 8.3 holds the foot-gun. Local dev uses `seedling-dev`'s real auth rather than prod auth or emulators, which refines your note.
-- **EAS profiles** (EAS = Expo's build-and-submit service; Proposed): `development` (dev client, dev bundle ID, Thomas's team), and `beta` and `production` (both the church's prod bundle ID, prod backend, update channels `beta` and `production`). EAS Free covers 15 iOS + 15 Android builds a month with Submit included. iOS builds made locally on the Mac cost nothing.
+- **Variants.** `app.config.ts` reads `APP_VARIANT` (development, demo, beta, production) to set the name, icon, bundle ID, App Group and widget IDs, Firebase config and API URL. The `demo` variant (Build 5.16) has its own ID in Thomas's team. Bundle IDs follow decision 13; Apple Developer Setup explains why, and Build 8.3 holds the foot-gun. Local dev uses `seedling-dev`'s real auth rather than prod auth or emulators, which refines your note.
+- **EAS profiles** (EAS = Expo's build-and-submit service; Proposed): `development` (dev client, dev bundle ID, Thomas's team), and `beta` and `production` (both the prod bundle ID, prod backend, update channels `beta` and `production`). EAS Free covers 15 iOS + 15 Android builds a month with Submit included. iOS builds made locally on the Mac cost nothing.
 - **CI** (GitHub Actions). `ci.yml` on each PR: install, typecheck, lint, Vitest (packages and API, with a Postgres 18 service container), jest-expo, and a golden freshness check (each golden records a hash of the Python sources and passage files that made it; CI fails if they changed without a re-export). `eas.yml` is started by hand. Auth uses Workload Identity Federation, so there are no key files (§13).
 - **API deploys** (Proposed). `api-deploy.yml` on main: build → Artifact Registry (Google's container image store) → deploy to dev. Prod waits for Thomas's approval in a `production` GitHub Environment, then: an on-demand backup (`gcloud sql backups create`) → migrations as a Cloud Run job under the deployer account → shift traffic to the new revision. **Migrations are additive** (expand/contract: add the new column or table in one release, remove the old one a release later), so the previous revision still runs and a rollback is just `gcloud run services update-traffic --to-revisions=<previous>=100` (runbook in Build 6.15). Foot-gun: on GitHub Free, a private repo gets no branch protection and no required reviewers on Environments, so this approval gate needs a public repo or a paid plan (gate 0.6).
 - **EAS Update (OTA).** An OTA (over-the-air) update swaps the JavaScript and assets without a store release. The free plan has a hard cap of 1,000 monthly active users receiving updates; beyond it, budget EAS Starter ($19/mo, 3,000) or ship through the stores (research: stack.md). Rule (Proposed): an OTA never carries a database migration, because a rollback would leave the schema ahead of the code. A curated outline update can ship by OTA, since the content-upgrade check (§4) runs on the device. Thomas publishes OTAs to `beta` and `production`, or a workflow behind the `production` Environment does; Claude never does.
@@ -1709,7 +1707,7 @@ The check: from Claude's shell, `gcloud auth list` shows only the agent login, A
 - **Crash reporting** (Proposed; gate 10.1). Personal phase: Xcode's device logs. Church beta: TestFlight crash reports and tester feedback, plus Play Console's Android vitals. Both are built in, need no SDK and leave the privacy labels unchanged. A crash SDK comes before public launch only if those weren't enough; it is then declared as Diagnostics on both privacy forms and never starts for known under-13 users.
 - **On-device log.** `app_log` is a ring buffer of about 500 rows: error codes, card keys, engine ids, never verse text or pasted text. It is attached to feedback only when the user chooses.
 - **Server logs.** Cloud Run writes structured JSON to Cloud Logging (free to 50 GiB/month): request id, route, status, latency, user id, never request bodies. `modules/api` creates an uptime check on `/v1/health` and an alert on the 5xx (server error) rate.
-- **Feedback channel.** More → "Send feedback" opens a mail draft to the church support address with app version, device and iOS version filled in. TestFlight's screenshot feedback works during the beta, and the support page on the church site is required for store listings anyway.
+- **Feedback channel.** More → "Send feedback" opens a mail draft to Seedling's support address with app version, device and iOS version filled in. TestFlight's screenshot feedback works during the beta, and the support page on Seedling's site is required for store listings anyway.
 
 ### ➕ 17. Key architecture decisions
 
@@ -1760,7 +1758,7 @@ The check: from Claude's shell, `gcloud auth list` shows only the agent login, A
 | **[Claude]** | Claude alone. It verifies its own work (tests, screenshots, CI) before opening a PR | Code, tests, dev-only Terraform, scripts |
 | **[Thomas]** | Only a human can do it | Accounts, payments, signatures, the physical iPhone, judgment calls |
 | **[Claude → Thomas]** | Claude prepares; Thomas reviews, approves or acts | Drafts, answer sheets, option memos, device test scripts |
-| **[Thomas + church]** | Needs church leadership, the pastor or the church's signer | Publishing, accounts in the church's name, theology, group policy |
+| **[Thomas + church]** | Needs church leadership or the pastor | The giving page, theology, group policy |
 
 **Model tags** on Claude steps (Optimize Claude cost → Model routing):
 - **Opus** (Opus 5.5, high effort): phase plans, gate memos, design, theology-sensitive drafts and reviews.
@@ -1793,7 +1791,7 @@ The check: from Claude's shell, `gcloud auth list` shows only the agent login, A
 
 | Phase | Goal | Release stage | Thomas hours (PR review) | Calendar at 5–10 h/wk | Key dependency |
 |---|---|---|---:|---|---|
-| 0 Groundwork | Accounts, tools, repo rules; spec committed; church paperwork started | Before alpha | 8–14 (≈1) | 1–3 wk (church track runs 2–8 wk alongside) | Thomas's Apple enrollment; one church meeting |
+| 0 Groundwork | Accounts, tools, repo rules; spec committed; giving URL requested | Before alpha | 7–12 (≈1) | 1–3 wk | Thomas's Apple enrollment; a note to the pastor |
 | 1 Engine + content | Python exporter and goldens; TS engine at parity with Python | Personal alpha | 8–15 (≈3) | 1–3 wk | `data/bible.eng.db` on the Mac |
 | 2 Study loop | Thomas studies daily on his iPhone (typing and self-check) | Personal alpha | 15–25 (≈5) | 2–5 wk | Phase 1; iPhone registered |
 | 3 Voice | On-device recitation with the live trail | Personal alpha | 10–18 (≈3) | 2–4 wk | The iPhone (STT doesn't work in current simulators) |
@@ -1801,15 +1799,15 @@ The check: from Claude's shell, `gcloud auth list` shows only the agent login, A
 | 5 Personal-complete | Starter shelf, custom passages, study helps, rhythm, accessibility; beta go/no-go | Personal alpha → beta gate | 14–24 (≈4) | 2–5 wk, plus the dogfood gate | Church content decisions; 3–5 older testers |
 | 6 Backend + accounts | GCP, API, sign-in, sync, deletion, rollback runbooks | Church beta prep | 14–22 (≈4) | 2–4 wk | GCP billing account; an admin macOS user |
 | 7 Groups | Groups, join by code or QR, group tree, report and block; SDK 58 | Church beta prep | 8–14 (≈2) | 1–3 wk | Pastor and elders on group privacy; SDK 58 stable |
-| 8a iOS church beta | TestFlight external beta from the church's Apple team | Church beta | 15–25 (≈3) | 2–5 wk, plus Beta App Review | Church Apple Organization team (0.10) |
-| 8b Android closed test | Play closed test from the church's Play account | Church beta | 8–15 (≈2) | 2–4 wk, alongside Phase 9 | Gate 8.15; a borrowed Android phone |
+| 8a iOS church beta | TestFlight external beta from Thomas's Apple team | Church beta | 15–25 (≈3) | 2–5 wk, plus Beta App Review | The giving URL, if Give is in the beta (8.1) |
+| 8b Android closed test | Play closed test from Thomas's Play account | Church beta | 8–15 (≈2) | 2–4 wk, alongside Phase 9 | Gate 8.15; a borrowed Android phone; 12 testers for 14 days |
 | 9 Beta iteration + launch prep | Fixes, grading calibration, FSRS parameters, R&D; the public-launch features | Church beta | 30–55 (≈8) | 8–12 wk (time-boxed) | Testers and their opt-in log exports |
 | 10 Public launch | Store listings, age signals, final legal review, release | Public launch | 10–20 (≈2) | 1–4 wk, plus store review | Gate 9.16 |
 | 11 Later | SpeechAnalyzer, sherpa-onnx, kids mode, AI questions, … | Later | Per project | — | Launch feedback |
 
 **Totals** (Proposed): about 145–255 Thomas hours to public launch, 95–165 of them before the church beta. At 5–10 hours a week, Thomas studies in the app daily about 1–3 months from now, the church beta opens about 4–8 months out, and public launch lands about 6–12 months out.
 
-**Parallel tracks.** The church paperwork starts in Phase 0 and only has to finish by Phase 8a. Phases 3 and 4 can overlap. The Phase 6 bootstrap can start during Phase 5's dogfood weeks (dogfooding: using your own app daily as a real user). Phase 8b runs alongside Phase 9.
+**Parallel tracks.** Phases 3 and 4 can overlap. The Phase 6 bootstrap can start during Phase 5's dogfood weeks (dogfooding: using your own app daily as a real user). Phase 8b runs alongside Phase 9.
 
 ### ➕ Decision gates
 
@@ -1819,7 +1817,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 |---|---|---|---|
 | 0.1 | App name ("Seedling" after store and trademark checks) | Thomas | Store records (8.3) |
 | 0.6 | Repo visibility (and what it does to branch protection), web version, phase order (voice before plant), tracker | Thomas | 0.13–0.15 |
-| 0.9 | Church: publish under its name, Account Holder, legal entity and EIN, giving URL, long-term GCP billing | Thomas + church | 0.10, 8a |
+| 0.9 | Church: the giving URL, written approval of the Give wording, whether the pastor reviews content | Thomas + church | 8.7 |
 | 2.1 | "Passages" or another word; custom look or platform-native; import trial 2's Anki history | Thomas | Phase 2 UI |
 | 3.1 | Voice grading: suggest-and-confirm or automatic Again; do "close" words count; tentative words live | Thomas | 3.10 |
 | 4.2 | Plant art direction and stage thresholds | Thomas | 4.3–4.6 |
@@ -1828,7 +1826,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 | 5.2 | Product defaults: pace, rhythm, first-run flow, first passage, place a known passage as rooted, outline-only mode, study-help downloads, AI questions | Thomas | 5.6–5.12 |
 | 5.19 | Church beta go/no-go | Thomas | Phase 6 onward |
 | 6.1 | Email-link sign-in, GCP billing, hosted dev backend, trail sync, pasted-text backup, Texas testers | Thomas | Phase 6 |
-| 7.1 | Group privacy, blossom threshold, church rest day, who receives reports, join-link domain | Thomas + church | 7.2–7.7 |
+| 7.1 | Group privacy, blossom threshold, church rest day, who receives reports | Thomas + church | 7.2–7.7 |
 | 8.1 | Beta scope: Give, tester list, Texas testers, always-warm API | Thomas | 8a |
 | 8.15 | Start Android; Android voice floor | Thomas | 8b |
 | 9.7 | Per-unit memory model; which step governs a leaf | Thomas | Phase 11 |
@@ -1837,11 +1835,11 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 ### ➕ Phase 0 — Groundwork
 
-**Status:** Not started · **Thomas time:** 8–14 h, about 1 h of it PR review
+**Status:** Not started · **Thomas time:** 7–12 h, about 1 h of it PR review
 
-**Goal:** Every account, tool and repo rule the build needs exists, the spec and its research are in git, and the church paperwork, which has the longest lead time, has started.
+**Goal:** Every account, tool and repo rule the build needs exists, the spec and its research are in git, and the church has been asked for its giving URL.
 
-**Why the church track starts now:** R1 (Apple Developer Setup → "Change to decision 3"). The church's Apple team must own the production app from the first TestFlight upload.
+**Publishing:** Thomas publishes on his own accounts (decision 13), so there is no church paperwork; Track B is one short note.
 
 **Prerequisites:** None. Do 0.0 first; then Tracks A, B and C run in parallel.
 
@@ -1849,10 +1847,10 @@ Every open decision in this spec is answered at one of these gates. Other sectio
   - The research files are 2026-10-14 snapshots, cited throughout as "(research: X.md)". If `research/` is missing, stop and ask Thomas: the copies Claude worked from were temporary.
 
 **Track A: Thomas's setup**
-- 0.1 **[Thomas]** **Gate: the app name.** Check "Seedling" in the App Store, Google Play and the USPTO trademark search (Nice classes 9 and 41), then confirm it or pick another — *Done when:* the name is in `docs/decisions.md`.
-  - The steps are in App Name Ideas → "What Thomas checks". Don't create an App Store record to reserve the name: it belongs in the church's team (8.3).
+- 0.1 **[Thomas]** **Gate: the app name.** Check "Seedling" in the App Store, Google Play and the USPTO trademark search (Nice classes 9 and 41), then confirm it or pick another, along with the site domain and the production bundle ID `com.<thomas>.seedling` — *Done when:* the name, domain and ID are in `docs/decisions.md`.
+  - The steps are in App Name Ideas → "What Thomas checks". Don't create the App Store record yet: it fixes the bundle ID forever (8.3).
 - 0.2 **[Thomas]** Enroll in the Apple Developer Program as an Individual ($99/yr; legal name, street address, an Apple Account with two-factor authentication) — *Done when:* the membership shows Active.
-  - This team only ever builds the dev bundle ID `com.<thomas>.seedling.dev` (R1).
+  - This team owns both the dev bundle ID `com.<thomas>.seedling.dev` and, from 8.3, the production ID (decision 13).
 - 0.3 **[Thomas]** Install the tools: Xcode 26.4+ with an iOS simulator runtime, Node 22 or 24 LTS, pnpm, the GitHub CLI (`gh`) and eas-cli (`npm install -g eas-cli` puts the `eas` command on your PATH). Approve Claude Code Desktop's one-time iOS Simulator consent — *Done when:* a simulator boots from Claude Code's Simulator pane.
   - Android Studio waits for Phase 8b (8.16).
 - 0.4 **[Thomas]** Prepare the iPhone: turn on Developer Mode, register it (Xcode does this on first run) and turn on Settings > General > Keyboard > Enable Dictation — *Done when:* the iPhone's model and iOS version are in `docs/decisions.md`.
@@ -1869,18 +1867,15 @@ Every open decision in this spec is answered at one of these gates. Other sectio
   - Thomas reviews and merges in the browser. If his own `gh` login exists on this macOS user, he runs `gh auth logout`.
   - Why: Claude's shell can use any credential the macOS user can read, the way any script can read your `.env`. With its own account, GitHub itself (0.14) stops Claude approving or merging its own PRs.
 
-**Track B: the church (start now)**
-- 0.8 **[Claude → Thomas · Opus]** Draft the letter to church leadership — *Done when:* Thomas has sent it.
-  - Contents: what Seedling is; why the church should be the publisher (R1); costs (Apple $99/yr or $0 with the nonprofit fee waiver, Google Play $25 once, about $10/month of cloud from the beta on); the D-U-N-S number (a free business ID Apple and Google require); who must sign (someone with legal authority, not a volunteer developer; Apple may phone them); the Give framing (R2); the privacy posture; a timeline.
-- 0.9 **[Thomas + church]** **Gate: one meeting with leadership** — *Done when:* the answers are in `docs/decisions.md`.
-  - Agenda: approval to publish under the church's name; the Account Holder for Apple and Google; the legal entity name and EIN; the giving page URL; who owns GCP billing long term.
-  - **Foot-gun:** churches aren't required to hold an IRS determination letter, but Apple's fee waiver needs IRS-recognized nonprofit status. Find the letter, or the denomination's group-exemption letter. Without one, the church pays $99/yr.
-- 0.10 **[Thomas + church]** The signer gets the D-U-N-S, enrolls the church as an Apple Organization and invites Thomas as Admin — *Done when:* Thomas can switch to the church team in his Apple Developer account.
-  - D-U-N-S: check Apple's lookup tool first. It takes up to 5 business days, plus 2 before Apple sees it (Google says up to 30 days). The name must match the legal entity exactly.
-  - Enrollment needs the church website and an email on the church's domain. Request the fee waiver during enrollment and accept the agreements. This only has to finish before Phase 8a.
+**Track B: the church's giving page**
+- 0.8 **[Claude → Thomas · Opus]** Draft a short note to the pastor — *Done when:* Thomas has sent it.
+  - Contents: what Seedling is; that Thomas publishes it on his own accounts and pays its costs (decision 13); the Give framing and draft wording (R2); the privacy posture; the content and group questions the pastor may want to weigh in on (gates 5.1 and 7.1); a timeline.
+- 0.9 **[Thomas + church]** **Gate: the giving page** — *Done when:* the answers are in `docs/decisions.md`. Only Give (8.7) waits on it.
+  - The giving URL; written approval of the Give wording; whether gifts are receipted as tax-deductible; whether the pastor reviews outlines and articles (5.4, 5.7).
+- 0.10 **Dropped (decision 13).** Was: the church enrolls as an Apple Organization. The step ID stays so later references don't shift.
 
 **Track C: the repo**
-- 0.11 **[Claude · Sonnet]** Create `docs/decisions.md` seeded with decisions 1–12 and R1–R16 (dated, each linking back here) and an empty `docs/plans/` — *Done when:* merged.
+- 0.11 **[Claude · Sonnet]** Create `docs/decisions.md` seeded with decisions 1–13 and R1–R16 (R1 marked retired) (dated, each linking back here) and an empty `docs/plans/` — *Done when:* merged.
   - This file, not Claude's per-machine project memory, is the durable record of decisions. A cloud session or a new Mac has no project memory.
 - 0.12 **[Claude · Opus]** Write the root `CLAUDE.md`, short `CLAUDE.md` stubs for `apps/mobile`, `apps/api`, `packages` and `infra`, and `.claude/settings.json` deny rules — *Done when:* Thomas approves the PR.
   - The root file stays short. It points to this spec and the current `docs/plans/phase-N.md` rather than copying them.
@@ -1896,7 +1891,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 - 0.15 **[Claude · Haiku]** Create the backlog with `gh`: a milestone per phase, issues for Phases 0 and 1 only, and a Project board (Backlog → Ready → In progress → In review → Done) — *Done when:* the Phase 0 and 1 issues match their steps.
   - Later phases get their issues when their plans are approved, because each plan re-splits its steps.
 
-**Exit criteria:** spec and research committed; Apple membership active; iPhone registered with Dictation on; CI runs on every PR and `main` is protected; the church has the letter and the D-U-N-S is requested.
+**Exit criteria:** spec and research committed; Apple membership active; iPhone registered with Dictation on; CI runs on every PR and `main` is protected; the pastor has the note.
 
 **Thomas checkpoint (≈1 h):** review the CLAUDE.md and decisions PRs and confirm gates 0.1 and 0.6.
 
@@ -2081,7 +2076,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 **Goal:** Everything a church member needs in the beta works on one phone and suits older, less tech-savvy users. Other translations, pasted text, the widget and the remaining articles wait for Phase 9 (public-launch scope). The phase ends with a go/no-go for the church beta.
 
-**Prerequisites:** Phases 2–4; the church's answers from 0.9.
+**Prerequisites:** Phases 2–4.
 
 - 5.1 **[Thomas + church]** **Gate: content defaults.** Claude prepares a one-page options memo — *Done when:* recorded.
   - Ten Commandments numbering tradition, and the Farewell Discourse boundary (13:31 or 14:1).
@@ -2123,7 +2118,6 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 - 5.19 **[Thomas]** **Gate: beta go/no-go** — *Done when:* "go" is recorded.
   - Thomas has studied daily for at least 6 weeks since Phase 2 (Proposed), including 30+ days on one long passage.
   - No crash or data-loss bug for 2 weeks; findings from 5.17 fixed or deliberately deferred.
-  - The church's Apple Organization team is active (0.10).
 
 **Exit criteria:** the starter shelf, custom passages, study helps, the five articles and rhythm all work offline; the accessibility checklist passes; the beta is a "go".
 
@@ -2139,7 +2133,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 - 6.1 **[Thomas]** **Gate: accounts and cloud** — *Done when:* recorded.
   - Sign-in: Apple + Google are decided (R3). Add email-link sign-in for less tech-savvy testers?
-  - GCP billing: Thomas's card or a church billing account?
+  - GCP billing: Thomas's card (decision 13); confirm the billing account exists.
   - A hosted dev backend (+≈$9.50/month) or laptop-only dev? Laptop-only is enough for simulator work; testing sync on the iPhone away from home needs the hosted one.
   - Trails: sync inside review events (Proposed), or keep them on the device?
   - Pasted text: kept out of Seedling's account backup (Proposed; the user's own iCloud backup and the 8.12 export file still carry it), or backed up end-to-end encrypted?
@@ -2209,19 +2203,18 @@ Every open decision in this spec is answered at one of these gates. Other sectio
   - Proposed default (R11's opt-in): counting toward the group's anonymous total is an explicit yes/no on the join screen, with neither preselected; showing a name is off by default. Should members be able to opt in to show their name and what they're learning?
   - Should the blossom threshold scale with group size? Is there a church-wide default rest day?
   - Who receives reports, and what response time do the community guidelines promise?
-  - The domain for join links: a church-site subdomain if its web host can serve Apple's link file, or a cheap separate domain.
 - 7.2 **[Claude · Opus]** Plan, using the two per-member columns in App Architecture §9: `count_in_total` (the join screen's explicit yes/no) and `show_name` (default false) — *Done when:* Thomas approves.
 - 7.3 **[Claude · Sonnet, Opus review]** The groups API: `POST /v1/groups`, `POST /v1/groups/join` (6-character codes), owner/leader/member roles checked on the server, `POST /v1/groups/:id/passages` (title, references and headings only, never text), and a word filter on every user-authored field — *Done when:* integration tests prove a member can't do leader actions and no route accepts verse text.
 - 7.4 **[Claude · Sonnet, Opus review]** Mastery sharing: the client sends its 31,086-bit rooted-verse bitset (`PUT /v1/mastery`) only while `count_in_total` is true for some group; `GET /v1/groups/:id/tree` returns per-chapter counts and birds, never a ranking, and per-person detail only where `show_name` is true — *Done when:* tests show a non-counting member's bits never reach the tree.
 - 7.5 **[Claude · Sonnet]** The Groups tab and join links — *Done when:* a Maestro flow joins a group by code, and a link opens the app at the join screen.
   - It asks to sign in first (13+); create; join by typed code, or by scanning the leader's QR with the iPhone's own Camera app (the QR is a join link, so Seedling needs no camera permission); a share-sheet link; leader passages appear on members' shelves.
-  - Join links, on the domain chosen at gate 7.1: host its `apple-app-site-association` and `assetlinks.json` files (small JSON files that tell iOS and Android a domain's links may open the app), add the Associated Domains entitlement, and publish a fallback web page for people without the app ("Get Seedling, then enter code ABC123"). Fall back to a custom scheme (`seedling://join/CODE`).
+  - Join links, on Seedling's domain (gate 0.1): host its `apple-app-site-association` and `assetlinks.json` files (small JSON files that tell iOS and Android a domain's links may open the app), add the Associated Domains entitlement, and publish a fallback web page for people without the app ("Get Seedling, then enter code ABC123"). Fall back to a custom scheme (`seedling://join/CODE`).
 - 7.6 **[Claude · Sonnet]** The group tree in `packages/plant`: 10 genre limbs → 66 books (length by the square root of verse count) → 1,189 chapter twigs; leaf density; blossoms at the 7.1 threshold; birds; "Together we know 1,240 verses by heart"; a VoiceOver summary — *Done when:* determinism tests pass and the screenshots pass the checklist.
 - 7.7 **[Claude → Thomas · Sonnet]** Report and block (Apple guideline 1.2): Report on group names and group passages, block, a leader removes a member. Each report writes a structured log entry, and a Cloud Logging log-based alert emails Thomas and the church contact (no third-party mail service). Claude drafts the community guidelines — *Done when:* a test report triggers the email, and Thomas and the church contact approve the guidelines.
 - 7.8 **[Claude · Sonnet]** "Help someone set up", end to end: a leader takes a friend from install to joined in one sitting (text size, voice permission, first passage, QR) — *Done when:* the Maestro flow passes.
 - 7.9 **[Thomas]** A test group on the iPhone (his own sign-in) and a simulator (test sign-in): create, join by QR, publish a passage, report it, block — *Done when:* the device script passes.
 - 7.10 **[Claude → Thomas · Sonnet]** Upgrade to SDK 58 once it has been stable for 2–4 weeks (skip if 2.3 started on 58): `npx expo install expo@^58.0.0 --fix` moves every Expo-managed package to its SDK 58 pin (React Native 0.88, Skia 2.13.1, Reanimated 4.7.0, worklets 0.13.0); native tabs move to `expo-router/native-tabs`; jest-expo 58 with Jest 30. TypeScript stays ~6.0.3. SDK 58 makes the UIKit scene lifecycle (iOS's newer model for app windows) the default, which iOS 27 SDK builds need — *Done when:* all tests, Maestro flows and **[Thomas]**'s full device script pass.
-  - It lands here, before any church signing or store upload, so a Phase 8a failure has one fewer possible cause.
+  - It lands here, before any store upload, so a Phase 8a failure has one fewer possible cause.
 - 7.11 **[Claude · Opus]** Phase review plus `/security-review` (authorization, user content); fixes; the Status update — *Done when:* no high findings remain open.
 
 **Exit criteria:** groups work end to end on the dev backend; no route accepts or returns verse text or individual progress without consent; the app runs on SDK 58.
@@ -2232,30 +2225,30 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 **Status:** Not started · **Thomas time:** 15–25 h, about 3 h of it PR review
 
-**Goal:** Church members install the app through TestFlight, published by the church's Apple team, with every store requirement met. Android follows in 8b; one Android blocker never delays the iOS beta.
+**Goal:** Church members install the app through TestFlight, published by Thomas's Apple team, with every store requirement met. Android follows in 8b; one Android blocker never delays the iOS beta.
 
-**Prerequisites:** Phases 6–7 (including 7.10); the church's Apple Organization team with Thomas as Admin (0.10); the church's giving URL.
+**Prerequisites:** Phases 6–7 (including 7.10); the church's giving URL (0.9) if Give is in the beta.
 
 - 8.1 **[Thomas]** **Gate: beta scope** — *Done when:* recorded.
   - Give in the beta, or wait for launch?
   - The tester list and size; whether any testers are in Texas (6.1).
   - One always-warm API instance (+≈$9.86/month), or accept 1–3 s cold starts at sign-in?
 - 8.2 **[Claude · Opus]** Plan, with the release checklist, EAS profiles and tester onboarding — *Done when:* Thomas approves.
-- 8.3 **[Thomas]** In the church team, as Admin: create the production bundle ID `org.<church>.seedling` with the Sign in with Apple and Declared Age Range capabilities, and its App Store Connect record (which reserves the name); create its Services ID and key and paste the key into `seedling-prod`'s Apple provider; set up the Google OAuth clients in `seedling-prod` and switch its OAuth consent screen from "Testing" to "In production" — *Done when:* the record exists in the church team.
-  - **Foot-gun (the part people get wrong):** once any build is uploaded under a bundle ID, that ID can never be reused, and an app can't be transferred until a version has been released (R1). Never upload a production-ID build from Thomas's own team.
+- 8.3 **[Thomas]** In his own team: create the production bundle ID `com.<thomas>.seedling` with the Sign in with Apple and Declared Age Range capabilities, and its App Store Connect record (which reserves the name); create its Services ID and key and paste the key into `seedling-prod`'s Apple provider; set up the Google OAuth clients in `seedling-prod` and switch its OAuth consent screen from "Testing" to "In production" — *Done when:* the record exists in Thomas's team.
+  - **Foot-gun (the part people get wrong):** once any build is uploaded under a bundle ID, that ID can never be reused, and an app can't be transferred until a version has been released. Create this ID only after gate 0.1 has settled it, and never upload a dev or demo build under it.
   - **Foot-gun:** while the consent screen says "Testing", only listed test users can sign in with Google.
-- 8.4 **[Thomas + church]** Release credentials — *Done when:* `eas credentials` shows the church team's distribution certificate, provisioning profile and API key.
-  - The Account Holder enables App Store Connect API access. Thomas (Admin) creates a team API key (App Manager role) and uploads it with `eas credentials`, so `eas submit` can upload without an interactive Apple login.
-  - Thomas runs the first `eas build -p ios --profile beta` himself, so EAS can sign in to Apple and create the church's distribution certificate and provisioning profile. Claude can't do this interactive login.
-- 8.5 **[Claude · Sonnet]** Release config in `app.config.ts` (Apple Developer Setup step 13) and a pre-submission check script — *Done when:* the script passes on a `beta` build.
+- 8.4 **[Thomas]** Release credentials — *Done when:* `eas credentials` shows Thomas's distribution certificate, provisioning profile and API key.
+  - Thomas, as Account Holder, enables App Store Connect API access and creates a team API key (App Manager role) and uploads it with `eas credentials`, so `eas submit` can upload without an interactive Apple login.
+  - Thomas runs the first `eas build -p ios --profile beta` himself, so EAS can sign in to Apple and create the distribution certificate and provisioning profile. Claude can't do this interactive login.
+- 8.5 **[Claude · Sonnet]** Release config in `app.config.ts` (Apple Developer Setup step 9) and a pre-submission check script — *Done when:* the script passes on a `beta` build.
   - `ios.config.usesNonExemptEncryption: false`; privacy manifests copied from each native dependency's `PrivacyInfo.xcprivacy` (Apple emails about missing reasons within minutes of an upload); the approved permission strings.
-  - EAS profiles: `development` (dev bundle ID, Thomas's team), and `beta` and `production` (both the church's production bundle ID, on update channels `beta` and `production`). `APP_VARIANT` also switches the App Group and widget IDs, which derive from the bundle ID.
+  - EAS profiles: `development` (dev bundle ID, Thomas's team), and `beta` and `production` (both the production bundle ID, on update channels `beta` and `production`). `APP_VARIANT` also switches the App Group and widget IDs, which derive from the bundle ID.
   - `runtimeVersion: { policy: 'fingerprint' }`, so an OTA update only reaches builds whose native code matches.
   - Per-profile values that aren't secret (Firebase config, API URL, Google client IDs) go in with `eas env:create`. `eas.yml` (the manual EAS workflow) uses an `EXPO_TOKEN` GitHub secret that **[Thomas]** adds.
   - The script checks Info.plist keys and manifest reasons in the build output.
-- 8.6 **[Claude → Thomas · Opus]** The church-site pages as HTML (Google rejects PDFs): privacy policy (including that Firebase Auth and Cloud Run logs record IP addresses), terms and community guidelines, support with contact info, and an account-deletion page, all under the same legal entity name as the store listing, and linked from the app (5.11) — *Done when:* **[Thomas + church]** have published them and every link resolves.
+- 8.6 **[Claude → Thomas · Opus]** The pages on Seedling's own site as HTML (Google rejects PDFs): privacy policy (including that Firebase Auth and Cloud Run logs record IP addresses), terms and community guidelines, support with contact info, and an account-deletion page, all under Thomas's legal name to match the store listing, and linked from the app (5.11) — *Done when:* **[Thomas]** has published them and every link resolves.
 - 8.7 **[Claude · Sonnet]** Give (if 8.1 said beta): one button in More → Give, About and the "Why is it free?" article, opening the church's page with `Linking.openURL` (Safari, not an in-app browser), with the approved wording and nothing unlocked — *Done when:* the church has approved the wording in writing (Thomas obtains it).
-- 8.8 **[Thomas]** App Store Connect App Information from Claude's answer sheets (Apple Developer Setup step 12): US-only availability, DSA "not a trader", the age-rating questionnaire (honest for Scripture; expect 9+ or 13+), the App Privacy label from 6.13, privacy and support URLs, content rights; TestFlight's Beta App Description, feedback email and review contact — *Done when:* every section shows complete.
+- 8.8 **[Thomas]** App Store Connect App Information from Claude's answer sheets (Apple Developer Setup step 8): US-only availability, DSA "not a trader", the age-rating questionnaire (honest for Scripture; expect 9+ or 13+), the App Privacy label from 6.13, privacy and support URLs, content rights; TestFlight's Beta App Description, feedback email and review contact — *Done when:* every section shows complete.
 - 8.9 **[Thomas]** In the admin user, `terraform -chdir=infra/envs/prod apply` (prod costs begin, about $10/month), then approve the first prod deploy in GitHub — *Done when:* prod `/v1/health` answers.
 - 8.10 **[Thomas]** Run the 6.15 restore drill once in prod, before any tester data exists — *Done when:* the clone answers a query and has been deleted.
 - 8.11 **[Claude → Thomas · Sonnet]** Build and ship: Claude runs `eas build --profile beta --platform ios` (or `--local`); Thomas runs `eas submit`; TestFlight internal (Thomas), then an external group. The first external build goes through Beta App Review (Apple's light check before outside testers get a build); Claude drafts the review notes (works without an account; how to reach groups) — *Done when:* the external group is approved.
@@ -2265,11 +2258,11 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 - 8.13 **[Claude → Thomas · Sonnet]** Tester onboarding and feedback — *Done when:* Thomas and one co-leader complete onboarding from the guide alone.
   - A one-page guide with the TestFlight public link as a QR code (no tester emails needed), and a setup-session plan built on "Help someone set up". In the session, turn on Automatic Updates in TestFlight.
   - The app shows its own plain banner, "A new version is ready. Open TestFlight to update.", from 2 weeks before its build expires (the build date is stamped in at build time). An expired build otherwise just says "expired".
-  - More → "Send feedback": a mail draft to the church support address with the app version and device filled in. If no mail app can open it (`Linking.canOpenURL('mailto:')` is false), show the address with a Copy button. TestFlight's screenshot feedback also works.
+  - More → "Send feedback": a mail draft to Seedling's support address with the app version and device filled in. If no mail app can open it (`Linking.canOpenURL('mailto:')` is false), show the address with a Copy button. TestFlight's screenshot feedback also works.
   - An opt-in R&D export: review events with auto and final ratings, step kinds and timings; no text, and no trails unless chosen; plain consent wording.
 - 8.14 **[Claude · Opus]** Phase review plus `/security-review` of the release config; fixes; the Status update — *Done when:* no high findings remain open.
 
-**Exit criteria:** the external TestFlight group is approved and testers have installed; the church pages are published; the prod restore drill passed; Thomas's data has moved.
+**Exit criteria:** the external TestFlight group is approved and testers have installed; the policy pages are published; the prod restore drill passed; Thomas's data has moved.
 
 **Thomas checkpoint (≈2–3 h):** the first in-person setup session at church.
 
@@ -2277,7 +2270,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 **Status:** Not started · **Thomas time:** 8–15 h, about 2 h of it PR review
 
-**Goal:** Android testers install through Play closed testing from the church's Play account, with the same privacy gate as iOS. Decision 4 stands; this half of the beta just starts later.
+**Goal:** Android testers install through Play closed testing from Thomas's personal Play account, with the same privacy gate as iOS. Decision 4 stands; this half of the beta just starts later.
 
 **Prerequisites:** gate 8.15. Runs alongside Phase 9.
 
@@ -2285,8 +2278,8 @@ Every open decision in this spec is answered at one of these gates. Other sectio
   - 8a has run about 4 weeks without a data-loss bug, and an Android 13+ phone (ideally a Pixel) is in hand, borrowed or bought.
   - Android voice floor: on-device recognition on Android 13+ only, with typing below (Proposed), or sherpa-onnx early for the roughly 30% of Android phones on 12 or older?
 - 8.16 **[Thomas]** Install Android Studio with an arm64-v8a Google Play emulator image — *Done when:* the emulator boots and Claude can run a Maestro flow on it.
-- 8.17 **[Thomas + church]** The church signer creates the Organization Play Console account ($25 once; D-U-N-S, website and org phone; no prepaid cards; no refund if verification fails) and invites Thomas — *Done when:* Play internal testing is available.
-  - Confirm on creation that the 12-testers-for-14-days rule doesn't apply to organizations (medium confidence).
+- 8.17 **[Thomas]** Create a personal Play Console account ($25 once; identity verification; proof of access to a physical Android 10+ phone; no prepaid cards; no refund if verification fails) — *Done when:* Play internal testing is available.
+  - **Foot-gun:** a new personal account needs a closed test with at least 12 testers opted in for 14 days straight before it can apply for production access (10.8). Recruit at least 12 church members with Android phones and start the closed test as soon as 8.20 allows.
 - 8.18 **[Thomas]** Play forms: Data safety, the IARC rating questionnaire (the shared international age-rating system), target audience 13+, app access (test credentials), ads (none) and the deletion URL — *Done when:* every form shows complete.
 - 8.19 **[Claude · Sonnet, Opus review]** The `android-ondevice` adapter in `apps/mobile/src/stt/` — *Done when:* unit tests mirror 3.5's refusal test, and the borrowed-phone script recognizes speech in airplane mode.
   - `probe()` requires API ≥ 33, on-device recognition available and the language model installed; otherwise it offers the model download or falls back to typing. `start()` refuses otherwise. No audio persistence. A Seedling rationale screen comes before the `RECORD_AUDIO` prompt.
@@ -2345,7 +2338,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 **Status:** Not started · **Thomas time:** 10–20 h, about 2 h of it PR review
 
-**Goal:** Seedling is live on the US App Store (and Google Play, if 10.1 says so) under the church's name.
+**Goal:** Seedling is live on the US App Store (and Google Play, if 10.1 says so) under Thomas's name.
 
 **Prerequisites:** the 9.16 "go".
 
@@ -2355,12 +2348,12 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 - 10.2 **[Claude · Opus]** The launch plan and checklist, including a re-check of rules that may have moved: state age-signal laws taking effect in 2027 (California AB 1043 on Jan 1, Utah on May 6, Louisiana on July 1; research: policy.md, medium confidence) and any posted iOS 27 SDK deadline — *Done when:* Thomas approves.
 - 10.3 **[Claude → Thomas · Sonnet]** Store listings: name, a subtitle such as "Bible Memory", description, keywords, and screenshots captured on the simulator with test data at the required sizes. Avoid child-appealing imagery: it can trigger Google's Families review and make the app look child-directed under COPPA (the US children's online privacy law, covering under-13s) — *Done when:* Thomas approves.
 - 10.4 **[Claude → Thomas · Sonnet]** Review notes and refreshed answer sheets: the app works without an account; a test account for groups; on-device speech; the Give framing; BSB in the public domain; US-only availability; the age rating, App Privacy label and Data safety form re-checked against the final build (and any crash SDK) — *Done when:* Thomas has entered them in both consoles.
-- 10.5 **[Thomas + church]** Final legal review of the privacy policy, terms, the pasted-text feature, the credits page, the COPPA posture and the state age laws. An attorney is optional, but recommended before teen accounts exist in Texas — *Done when:* the church signs off in writing.
+- 10.5 **[Thomas]** Final legal review of the privacy policy, terms, the pasted-text feature, the credits page, the COPPA posture and the state age laws. An attorney is optional, but recommended before teen accounts exist in Texas — *Done when:* Thomas signs off, with the attorney's notes if he used one.
 - 10.6 **[Claude · Sonnet, Opus review]** Age signals for everyone: integrate expo-age-range (Apple's Declared Age Range and Google's Play Age Signals) unconditionally. A US-wide launch has Texas users, so SB2420's duties apply (use store age signals, flag significant changes such as an age-rating change), and California AB 1043 starts Jan 1, 2027. A store signal of under 13 means local-only — *Done when:* device and emulator tests cover the adult, teen and declined responses.
 - 10.7 **[Claude · Sonnet]** Launch build: turn pasted text on if 10.5 approved it; the `production` update channel; runbooks in `docs/runbooks/` for deletion requests, reports and releases. Past 1,000 monthly users, OTA updates need EAS Starter ($19/month) or go through the stores — *Done when:* a `production` build passes the pre-submission script and every device script.
-- 10.8 **[Thomas]** Google Play production access: apply (running the 12-tester closed test first if it turned out to apply), read the pre-launch report, and rerun the Android phone script — *Done when:* production access is granted.
+- 10.8 **[Thomas]** Google Play production access: apply once the 12-tester, 14-day closed test (8.17) is done, read the pre-launch report, and rerun the Android phone script — *Done when:* production access is granted.
 - 10.9 **[Thomas]** Submit for App Review with a phased release (Apple rolls the update out to automatic-update users over 7 days and lets you pause), and answer review messages (Claude drafts the replies) — *Done when:* approved and released.
-- 10.10 **[Thomas + church]** Announce to the church, and cover support (reports, deletion requests, email) for the first two weeks — *Done when:* the announcement is out.
+- 10.10 **[Thomas + church]** Announce to the church; **[Thomas]** covers support (reports, deletion requests, email), most heavily in the first two weeks — *Done when:* the announcement is out.
 - 10.11 **[Claude · Opus]** Final review and the Status update — *Done when:* no high findings remain open.
 
 **Exit criteria:** live in the US store(s); age signals handled; support, deletion and report handling run from the runbooks.
@@ -2382,9 +2375,10 @@ Candidates after launch. Each starts with an Opus plan and a Thomas gate, like a
 | Kids or family mode | The church asks for it | Parental consent, the amended COPPA rule (voiceprints count as personal information), counsel review | Thomas + church |
 | Android widgets | After SDK 58 | expo-widgets for Android runs its own JS runtime | Claude |
 | AI questions about a verse | Gate 5.2 said yes | A server endpoint (API keys can't live in the app), a hard budget cap, public-domain commentaries only (never Tyndale), pastor review of prompt and tone, a privacy-label change | Thomas gate; Claude builds |
-| Licensed translations | The church wants ESV, NIV, NLT, NASB or CSB | The church applies (Crossway licenses only organizations). ESV's free terms cap local storage at 500 verses | Thomas + church |
+| Licensed translations | The church wants ESV, NIV, NLT, NASB or CSB | Needs an organization as licensee (Crossway licenses only organizations), so likely the transfer below first. ESV's free terms cap local storage at 500 verses | Thomas + church |
 | Web version | Gate 0.6 is reversed | expo-sqlite's web support is alpha; exclusive transactions are native-only | Claude · Opus memo |
 | Localization | Demand outside English | UI strings, translations, STT locales (SpeechAnalyzer reserves only a few per app) | Claude |
 | Half-verse parts | Poetry outlines need them | `12a`/`12b` boundaries at line breaks; mastery stays per verse | Claude |
-| In-app Apple Pay giving | The church earns a Candid seal | Apple-approved nonprofits only; needs a payment provider | Thomas + church |
+| In-app Apple Pay giving | The church earns a Candid seal | Apple-approved nonprofits only (they may fundraise in third-party apps); needs a payment provider | Thomas + church |
+| Transfer the app to the church | The church wants to own it | Apple's transfer tool needs a released version; Sign in with Apple users need a migration step; Play transfers go through Play support | Thomas + church |
 | Smaller items | When a need shows up | App Check and Crashlytics (need native Firebase modules), Siri shortcuts, Live Activities, Apple sign-in on Android, art packs (a new `renderVersion` with an opt-in "new look") | Claude |
