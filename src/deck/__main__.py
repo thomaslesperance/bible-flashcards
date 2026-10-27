@@ -130,7 +130,7 @@ def main() -> None:
     placed = Planner(root, CardBuilder(root, text, credit), args.per_day).plan()
 
     args.out.mkdir(parents=True, exist_ok=True)
-    description = (f"Card sequence v2 (notes/sequence_v2_draft.md). Set new cards/day to "
+    description = (f"Card sequence v2 (docs/method/sequence-v2.md). Set new cards/day to "
                    f"{args.per_day} and new card order to 'Order gathered'.<br><br>{escape(credit)}")
     write_package(placed, args.name, description, args.out / "deck.apkg")
     write_csvs(args.out, placed, root)

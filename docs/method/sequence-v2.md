@@ -1,11 +1,11 @@
 # Card Sequence v2 (draft for review)
 
-A response to [trial 1 observations](../output/som_trial_1/trial_1_observations.md). The numbers come from a throwaway prototype run on `data/outlines/sermon_on_the_mount.yml` with the BSB text.
+Revised after trial 1, a personal Anki trial of the Sermon on the Mount. The numbers come from a throwaway prototype run on `data/outlines/sermon_on_the_mount.yml` with the BSB text.
 
 ## Summary
 
 - **Two phases.** Phase 1 learns the whole outline before any verse is drilled. Phase 2 learns the text unit by unit, from leaves to trunk.
-- **Your nine-step sequence is the core.** v2 keeps it. It adds a few cards that present new material before testing it. It also adds timing and size rules, so the sequence works on any outline.
+- **Trial 1's nine-step sequence is the core.** v2 keeps it. It adds a few cards that present new material before testing it. It also adds timing and size rules, so the sequence works on any outline.
 - **Every card shows where you are.** A map of the outline sits on the front and back of every card, except where your position is the answer.
 - **The text keeps its shape.** Hidden words are blanked or blurred where they stand, so a passage looks the same on every card. The back reveals the answer in place.
 - **Built for FSRS.** No card asks for something you haven't seen yet. "Again" on a new card therefore means a step is too steep. Each card carries a rating rubric, and there is one 10-minute learning step.
@@ -20,7 +20,7 @@ A response to [trial 1 observations](../output/som_trial_1/trial_1_observations.
 
 ## 1. What changed, and why
 
-| Your observation | v2 response |
+| Trial 1 finding | v2 response |
 |---|---|
 | More work on the whole outline first, maybe not total recall | Phase 1 covers the full outline up front when it has 40 headers or fewer (the SOM has 34). It ends with whole-outline recall. Bigger outlines learn their top levels first and the rest just before each branch's text. |
 | More surrounding lines in outline and sub-unit clozes | Outline cards show the **map**: the path from the top down to the item, every sibling at each level, and other branches collapsed to one line. Text clozes also show, dimmed, the verse just before and just after the unit. |
@@ -229,7 +229,7 @@ If you press Again the first time you see a card, that card's step is too steep.
 
 On scaffold cards (Missing words, First letters), press **Easy** whenever it felt effortless. That pushes them weeks and then months out, which is how the scaffolding retires.
 
-**FSRS treats cards as independent.** In this deck a verse appears on six or more cards. Every review quietly strengthens that verse's other cards, and FSRS can't see that, so expect some redundant reviews. The Easy rule above is the main counterweight. In your own app, this is the first thing to design differently (§9).
+**FSRS treats cards as independent.** In this deck a verse appears on six or more cards. Every review quietly strengthens that verse's other cards, and FSRS can't see that, so expect some redundant reviews. The Easy rule above is the main counterweight. In the app, this is the first thing to design differently (§9).
 
 ## 7. Output: speaking and typing
 
@@ -329,7 +329,7 @@ Trial 2 text: **Isaiah 40–44** (BSB).
 
 ## 11. Trial 2 build
 
-The generator is `src/deck/`, and its output is in `output/isa_trial_2/`; see that folder's README for setup. Build and simulate:
+The generator is `src/deck/`. It writes to `output/isa_trial_2/`, which is git-ignored, so rebuild it to get the deck. Build and simulate:
 
 ```
 venv/bin/python -m src.deck data/outlines/isaiah_40_44.yml --name "Isaiah 40–44 (trial 2)" --out output/isa_trial_2

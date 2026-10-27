@@ -1,4 +1,6 @@
-# Proposed Deck Ordering & Difficulty System (TODO 2)
+# Trial 1 Deck Ordering & Difficulty System
+
+Superseded by [sequence v2](sequence-v2.md). Kept as the design trial 1 was built from.
 
 Diagrams use Mermaid. They render on GitHub, and in VS Code with a Mermaid preview extension (e.g. "Markdown Preview Mermaid Support").
 
@@ -15,7 +17,7 @@ Difficulty levels are **attached to positions in the outline tree**, not to abso
 
 ## 1. Card types
 
-| Code | Applies to | Card | Your level |
+| Code | Applies to | Card | Level |
 |---|---|---|---|
 | **V** | leaf | Scaffolded verse cloze: one card per verse, other verses visible | L3 |
 | **A** | leaf, ≥ 4 verses | Anchored: first & last verse visible, middle hidden | L3→L4 |

@@ -1,6 +1,6 @@
 # Decisions
 
-The durable record of Seedling's decisions: one dated entry per decision, newest gate answers at the bottom. The spec, [`.claude/app-requirements/CLAUDE.md`](../.claude/app-requirements/CLAUDE.md), explains the reasoning; each entry names the spec section to read.
+The durable record of Seedling's decisions: one dated entry per decision, newest gate answers at the bottom. The spec, [`docs/spec/app-spec.md`](spec/app-spec.md), explains the reasoning; each entry names the spec section to read.
 
 - **Numbered decisions (1–13)** are Thomas's.
 - **R-decisions (R1–R16)** are Claude's research resolutions. They stand unless Thomas overrides them.

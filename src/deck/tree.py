@@ -1,5 +1,5 @@
 """
-The outline as a tree, and its leaves split into units (notes/sequence_v2_draft.md §4).
+The outline as a tree, and its leaves split into units (docs/method/sequence-v2.md §4).
 
 Terms:
 - leaf: a header with no sub-headers; it holds verses directly.

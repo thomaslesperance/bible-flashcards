@@ -20,7 +20,7 @@ It uses open-source Bible text and study material at this time with limited supp
 **Seedling** is a free iPhone app (Android later) for memorizing whole passages of the Bible, such as the Sermon on the Mount, not just single verses. It teaches a passage's outline first, then the words in small steps that each remove a few cues. Then the user says the passage aloud while the phone listens on the device and grades the attempt. It is built for the least confident, least tech-savvy member of a congregation: large text, one obvious next step, a growing plant instead of points, and no streak guilt. Churches can form groups that grow a shared "tree of the whole Bible."
 
 Voice scoring and "free" don't set Seedling apart on their own: Bread, ReciteWell, Recite, Versify and Remember Me already offer one or both. None of the roughly 10 apps surveyed teaches the outline first or is built for long passages (research: product.md). Seedling's edge is:
-1. the outline-first method tested in trials 1 and 2 (`notes/sequence_v2_draft.md`, called "sequence v2" below);
+1. the outline-first method tested in trials 1 and 2 (`docs/method/sequence-v2.md`, called "sequence v2" below);
 2. gentle design for older and non-tech users;
 3. church groups;
 4. the public-domain BSB, with no ads and no tracking.
@@ -144,7 +144,7 @@ How each feature serves that loop:
 - **Core passages and intro articles** remove a beginner's two hardest choices: what to learn, and why bother.
 - **Custom passages, groups and study helps** extend the loop for people who outgrow the starter shelf.
 
-**Time per day.** The button's estimate is due steps × average time per step. At the trial pace of 12 new steps a day, trial 2's FSRS simulation estimates 24 min/day on average while new text arrives (peak 35), then 11 min/day through day 90 and 6 after (`notes/sequence_v2_draft.md` §11). That's too much for many beginners, so the default pace is Gentle (Robust Learning Algorithm).
+**Time per day.** The button's estimate is due steps × average time per step. At the trial pace of 12 new steps a day, trial 2's FSRS simulation estimates 24 min/day on average while new text arrives (peak 35), then 11 min/day through day 90 and 6 after (`docs/method/sequence-v2.md` §11). That's too much for many beginners, so the default pace is Gentle (Robust Learning Algorithm).
 
 **Scope by release stage** (Proposed). Each feature is listed at the stage where people first get it. Build Phases is authoritative for timing: the personal alpha is Phases 1–4, the church beta Phases 5–8, public launch Phases 9–10, and Later is Phase 11.
 
@@ -328,7 +328,7 @@ The five **bold** articles ship in the church beta; the rest by public launch.
 - Built from the BSB section headings inside the range (from `Chapter.json`), with BSB's book outlines above them where they exist. Those cover only 6 books, so most custom passages get headings only.
 - A range that starts mid-section uses that section's heading. Back-to-back headings are merged, and a child heading that repeats its parent is renamed from its text (trial 2's rules).
 - **No headings at all** (a single psalm, a short epistle passage): the passage is split into parts of about 80 words at paragraph breaks, each labeled by its first words ("Blessed is the man…"), so the outline steps still work. The user can rename them.
-- This follows Thomas's principle in `notes/concept.md`: start from the publisher's outline, and change it once you understand the passage better.
+- This follows a principle from Thomas's early concept notes: start from the publisher's outline, and change it once you understand the passage better.
 
 ### ➕ Outline editor (Church beta)
 
@@ -338,7 +338,7 @@ The five **bold** articles ship in the church beta; the rest by public launch.
 
 ### ➕ Half-verse parts (Later)
 
-`notes/concept.md` proposes references like Matt 4:12a. This matters for poetry, where a stanza or parallel line can begin mid-verse. Proposal: a boundary may fall at a poetry line break (from `Chapter.json`) or a word index, written `12a`/`12b`. Mastery stays per verse: a split verse is rooted only when both its parts are.
+Thomas's early concept notes propose references like Matt 4:12a. This matters for poetry, where a stanza or parallel line can begin mid-verse. Proposal: a boundary may fall at a poetry line break (from `Chapter.json`) or a word index, written `12a`/`12b`. Mastery stays per verse: a split verse is rooted only when both its parts are.
 
 ### ➕ Other translations and your own text
 
@@ -465,7 +465,7 @@ Genre-adaptive, but generally applied to any selection of material.
 
 ### ➕ What changes from Anki
 
-- **Automatic grading** (R7). Every recall step produces an Attempt (input mode; words matched, close and missed; hints; peeks; hesitations; duration) and the app turns it into a grade. **App Architecture §4 is the source of truth; this is a summary.** The rule ports trial 2's type mode (`notes/sequence_v2_draft.md` §11, `src/deck/assets/card.js`):
+- **Automatic grading** (R7). Every recall step produces an Attempt (input mode; words matched, close and missed; hints; peeks; hesitations; duration) and the app turns it into a grade. **App Architecture §4 is the source of truth; this is a summary.** The rule ports trial 2's type mode (`docs/method/sequence-v2.md` §11, `src/deck/assets/card.js`):
 
 | Grade | When | Result line |
 |---|---|---|
@@ -509,7 +509,7 @@ R12 in practice (research: product.md). The point is to keep people coming back 
 | Prose (discourses, epistles) | Defaults above |
 | Poetry (Psalms, prophets) | Units are stanzas; the outline is hand-written stanza titles; one line per poetry line, using `Chapter.json` indents. Psalms average about 2.5 steps per verse because their verses are short |
 | Lists and genealogies (the Twelve, the table of nations) | Mark a section `style: list` in the outline: extra First letters steps in waves 2–3 and items grouped in fives for "Name the parts" (concept.md's first-letter idea against interference) |
-| Long narrative (Genesis, Kings) | **Learn the outline only**: Phase 1 plus "Read it aloud" per section, no verse drills. Thomas's `notes/ideas.md` calls outline mastery the realistic goal for large OT books. On the plant, branches grow without leaves |
+| Long narrative (Genesis, Kings) | **Learn the outline only**: Phase 1 plus "Read it aloud" per section, no verse drills. Thomas's early notes call outline mastery the realistic goal for large OT books. On the plant, branches grow without leaves |
 | Very short passages | One-verse units skip wave 2; a passage with a single section skips the outline phase (fixes today's generator crash) |
 
 ### ➕ R&D agenda (after the church beta)
@@ -1232,7 +1232,9 @@ bible-flashcards/
 │   └── content/            NEW exporter: passage bundles, bsb.sqlite, goldens
 ├── scripts/  tests/        existing Python tools (simulate_fsrs.py …) and unittest
 ├── data/                   outlines/ (trials), passages/ (NEW curated passages), bible.eng.db, README.md
-└── notes/  output/  docs/  design notes, trial output; docs/ holds decisions.md, plans/, runbooks/
+├── output/               generated decks and simulations (git-ignored; regenerate with src/deck)
+├── local/                private notes and exports (git-ignored)
+└── docs/                 spec/ (this spec + research/), method/ (sequence v2 and earlier designs), decisions.md, plans/, runbooks/
 ```
 
 `data/bible.eng.db` (2.6 GB) stays git-ignored. CI can't run the Python exporter, so its outputs (bundles, `bsb.sqlite`, goldens) are committed and CI tests against them. This is the part people get wrong: change Python, then forget to re-export and commit (§12's freshness check catches it).
@@ -1287,7 +1289,7 @@ Rating ─ts-fsrs─► review_event ─► card states ─mastery─► verse_m
 - **session** (Proposed). Due reviews first, lowest retrievability first, then today's new groups in plan order. A 10-minute learning step re-queues an Again within the session. After 3+ days away, a catch-up session is capped at 10 minutes, waters the thirstiest leaves first and adds no new groups (R12). Time estimates start from `simulate_fsrs.py`'s seconds per card kind, then use the user's own durations.
 - **mastery** (Decided: R8, R11). The **governing card** for a verse is its unit's Header→text card; scaffold cards never move a leaf, so leaves don't flicker as scaffolds fall due. Stages: bud (any card for the verse introduced), leaf (Header→text graduated), full leaf (stability ≥ 7 days), rooted (stability ≥ 21 days). **Stability** is the number of days until recall odds fall to 90%; **retrievability** (R) is today's recall odds. A verse in two passages takes the higher stability.
 
-**The grading rule** (Decided: R7; thresholds from trial 2's type mode, `notes/sequence_v2_draft.md` and `src/deck/assets/card.js`). This table is the single source of truth: Features' "How this was graded" footer and Build 1.12's table-driven tests both cite it. Every recall card yields an `Attempt` {mode: voice | type | selfcheck, wordsTotal, matched, close, missed, longestMissedRun, hintsUsed, peeks, hesitations, durationMs}.
+**The grading rule** (Decided: R7; thresholds from trial 2's type mode, `docs/method/sequence-v2.md` and `src/deck/assets/card.js`). This table is the single source of truth: Features' "How this was graded" footer and Build 1.12's table-driven tests both cite it. Every recall card yields an `Attempt` {mode: voice | type | selfcheck, wordsTotal, matched, close, missed, longestMissedRun, hintsUsed, peeks, hesitations, durationMs}.
 
 | Suggested grade | When |
 |---|---|
@@ -1778,7 +1780,7 @@ The check: from Claude's shell, `gcloud auth list` shows only the agent login, A
 | C | Chores, tests, docs | Nothing; approves on green CI at the weekly check-in | ~1 min |
 
 **How a phase runs**
-1. **Plan (Opus).** A fresh session greps this spec (`.claude/app-requirements/CLAUDE.md`) for its `Phase N —` heading and the App Architecture § headings the phase names, and reads only those line ranges, plus the research files its steps cite. It writes `docs/plans/phase-N.md`: the steps split into PR-sized tasks, done-when checklists, gate options and risks. Thomas approves it; Haiku then creates the phase's issues.
+1. **Plan (Opus).** A fresh session greps this spec (`docs/spec/app-spec.md`) for its `Phase N —` heading and the App Architecture § headings the phase names, and reads only those line ranges, plus the research files its steps cite. It writes `docs/plans/phase-N.md`: the steps split into PR-sized tasks, done-when checklists, gate options and risks. Thomas approves it; Haiku then creates the phase's issues.
 2. **Build (Sonnet).** One issue, one branch, one small PR, with tests in the same PR. Each issue gets a fresh session, pointed at the exact plan step and files.
 3. **Self-verify.** The cheap checks run first: typecheck, lint, Vitest and jest-expo, golden parity, Maestro and screenshots, then CI. The stop rules in Optimize Claude cost → Self-check loops apply: after 3 UI rounds or 2 failed fixes, Claude stops and asks.
 4. **Review (Opus).** At phase end, `/code-review high` runs over the phase's merged changes. Phases 3, 6, 7, 8a and 8b also get `/security-review`. Findings become issues, and Sonnet fixes them.
@@ -1843,7 +1845,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
 
 **Prerequisites:** None. Do 0.0 first; then Tracks A, B and C run in parallel.
 
-- 0.0 **[Claude · Haiku]** Commit `.claude/app-requirements/` (this spec, its sibling files and `research/`) in one PR — *Done when:* `git ls-files .claude/app-requirements` lists CLAUDE.md and all six research files.
+- 0.0 **[Claude · Haiku]** Commit `docs/spec/` (this spec and `research/`) in one PR — *Done when:* `git ls-files docs/spec` lists app-spec.md and all six research files. Done 2026-10-27 (moved here from `.claude/app-requirements/`).
   - The research files are 2026-10-14 snapshots, cited throughout as "(research: X.md)". If `research/` is missing, stop and ask Thomas: the copies Claude worked from were temporary.
 
 **Track A: Thomas's setup**
@@ -1942,7 +1944,7 @@ Every open decision in this spec is answered at one of these gates. Other sectio
   - Mastery: the governing card is the unit's Header→text; bud, leaf, full leaf at 7 days, rooted at 21 days of stability; a verse in two families takes the higher stability.
   - Session: thirstiest due cards first, then today's new groups; Again returns within the session; a catch-up after 3+ days away is capped at 10 minutes and adds no new groups.
 - 1.13 **[Claude · Sonnet]** Simulation parity: a TS script ports the simulated learner in `scripts/simulate_fsrs.py` (same rating odds and seconds per step kind, averaged over runs) — *Done when:* fed the Python card order, it matches the Python run's daily totals within the plan's tolerance, and run on the TS planner at paces 6, 12 and 18 (Gentle, Steady, Ambitious) it writes a per-pace minutes table to `docs/` (replacing the extrapolated minutes in Robust Learning Algorithm's pace table).
-- 1.14 **[Thomas]** When trial 2 ends, export the Isaiah 40–44 deck from Anki with scheduling information included, into `output/isa_trial_2/` — *Done when:* the file is there. It feeds the import decision (2.1) and grading calibration (5.14, 9.4).
+- 1.14 **[Thomas]** When trial 2 ends, export the Isaiah 40–44 deck from Anki with scheduling information included, into `local/` (git-ignored, because it holds his review history) — *Done when:* the file is there. It feeds the import decision (2.1) and grading calibration (5.14, 9.4).
 - 1.15 **[Claude · Opus]** Phase review (`/code-review high`), fixes and the Status update — *Done when:* no high findings remain open.
 
 **Exit criteria:** `pnpm parity` is green in CI; the bundles, `bsb.sqlite`, goldens and attribution table are committed; each generator gap has a test; the card-key namespace is decided and tested.

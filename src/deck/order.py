@@ -1,5 +1,5 @@
 """
-Deck order: when each card is introduced (notes/sequence_v2_draft.md §4 "Timing"
+Deck order: when each card is introduced (docs/method/sequence-v2.md §4 "Timing"
 and the Appendix).
 
 Anki introduces exactly N new cards a day in deck order, so "a day later" is

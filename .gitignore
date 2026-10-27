@@ -1,7 +1,15 @@
 /venv
 __pycache__/
+.DS_Store
+
+# Large Bible databases and raw Bible source data (scripts read them locally)
 bible.db
 data/bible.eng.db
+data/raw/
 
-.DS_Store
-notes/bible_project_som_outline.png
+# Generated decks and simulations; rebuild with src/deck and scripts/
+output/*
+!output/.gitkeep
+
+# Private notes, trial observations and personal exports
+local/

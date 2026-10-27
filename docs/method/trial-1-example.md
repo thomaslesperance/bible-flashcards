@@ -1,6 +1,6 @@
 # Worked Example: The Sermon on the Mount (BSB)
 
-Applies the system in [concept_claude.md](concept_claude.md) to all of Matthew 5–7 (111 verses).
+Superseded by [sequence v2](sequence-v2.md). Applies the system in [trial-1-design.md](trial-1-design.md) to all of Matthew 5–7 (111 verses).
 
 ## Outline (BSB headers)
 
@@ -38,7 +38,7 @@ Running the system on a real passage turned up four problems. These changes fix 
 1. **The BSB outline is flat.** The root has 20 named sections, far over the 7-line outline cap. Fixes:
    - **O** cards show only the 2 previous headers ("… Adultery → Divorce → ___?"). Each O card is introduced as soon as its section is learned, not at the very end.
    - **H** for the root is split into blocks of 7 headers (sections 1–7, 8–14, 15–20).
-   - An intermediate grouping you supply yourself (e.g. "Greater righteousness" for 5:17-48) would fix this more naturally. This is exactly the "corrected outline" case from concept.md.
+   - An intermediate grouping you supply yourself (e.g. "Greater righteousness" for 5:17-48) would fix this more naturally. This is exactly the "corrected outline" case: start from the publisher's outline and change it once you understand the passage better.
 2. **Duplicate full-recall cards.**
    - For a named section ≤ cap, a parent **S** ("recite the hidden section") is the same card as the section's own **F**, so only **F** is generated.
    - For an unnamed ¶, there's no header to prompt **F** with. The parent's **S** (other ¶s visible) serves as its full-recall card instead.

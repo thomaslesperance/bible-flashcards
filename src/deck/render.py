@@ -1,5 +1,5 @@
 """
-HTML building blocks for v2 cards (notes/sequence_v2_draft.md §8). Styles live in
+HTML building blocks for v2 cards (docs/method/sequence-v2.md §8). Styles live in
 assets/card.css, the type-mode script in assets/card.js.
 
 Words come from chapter.Line.words, whose offsets leave quotes, commas and dashes

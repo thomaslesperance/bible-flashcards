@@ -1,4 +1,4 @@
-/* Type mode for Header -> text (notes/sequence_v2_draft.md §7).
+/* Type mode for Header -> text (docs/method/sequence-v2.md §7).
    Type the first letter of each word; the word appears when the letter is right.
    Two wrong letters on one word reveal it in red and count it as missed.
    At the end the card suggests a button; you still tap it yourself. */

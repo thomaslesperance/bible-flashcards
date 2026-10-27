@@ -12,7 +12,7 @@ The BSB is in the public domain. It was dedicated on 2023-04-30, and berean.bibl
 - **[high]** The Free Use Bible API (bible.helloao.org) is MIT-licensed, needs no key or sign-up, and publishes no usage limit. Caching, storing and offline copies are explicitly allowed. AO Lab adds no restrictions of its own: each text keeps its own notice.
   - The docs comparison table says 'Yes. MIT licensed', 'No usage limits' and 'Nothing to sign up for'. A footnote allows copying content to your own hardware, servers or devices for offline use. 'Bundling' isn't named, but that footnote plus BSB's public-domain status covers bundling BSB. The Downloads page lists bible.db (11 GB), bible.eng.db (1.5 GB) and api.zip (1.5 GB), with no versioning or dates. (The local bible.eng.db is 2.6 GB on disk.)
   - sources: https://bible.helloao.org/docs/, https://bible.helloao.org/docs/guide/downloads.html
-- **[high]** In the local data/bible.eng.db, licenseNotice and licenseNotes are empty strings for all 51 translations. This contradicts notes/web_docs_and_src.md, which says to show `licenseNotice`. The live API instead has a structured `license` object per translation.
+- **[high]** In the local data/bible.eng.db, licenseNotice and licenseNotes are empty strings for all 51 translations. This contradicts docs/method/bible-api-and-parser.md, which says to show `licenseNotice`. The live API instead has a structured `license` object per translation.
   - Query result: `SELECT count(*), sum(licenseNotice='') ... FROM Translation` returned 51 and 51. The live /api/available_translations.json gives each translation a nested `license` object {attribution, commercialUse, derivatives, copyleft, publicDomain} plus a top-level licenseUrl. Among the English entries only eng_net (NET Bible) has a licenseNotice. Side effect: src/deck/__main__.py credit_line() therefore prints only 'Scripture: Berean Standard Bible (BSB).' The app should keep its own attribution table, built from the live API's `license` flags plus a hand-written credit line per translation.
   - sources: data/bible.eng.db (Translation table), https://bible.helloao.org/api/available_translations.json
 - **[medium]** The 51 English translations, grouped by the live API's license flags.
@@ -134,7 +134,7 @@ Quirk: Heb 11:30 has two consecutive heading blocks ('The Faith of Many' + '(Jos
 - Isaiah 40–44, trial 2: 141 / 3,713 / 436 / 37
 
 Prose averages about 2.9–3.3 cards per verse. Psalms run lower (about 2.5) because their verses are short (13–16 words). The task's '111 verses' is Matt 5–7 in full (2,332 words). The tested deck covers 5:3–7:27, which is 107 verses.
-  - sources: src/deck (run on scratch outlines in the session scratchpad), notes/sequence_v2_draft.md
+  - sources: src/deck (run on scratch outlines in the session scratchpad), docs/method/sequence-v2.md
 - **[medium]** Estimated sizes for journeys the generator can't build yet: multi-passage collections and very large sets.
   - Text-only generator runs on single psalms: Ps 1 = 11 cards, Ps 16 = 24, Ps 23 = 11, Ps 27 = 37, Ps 46 = 24, Ps 51 = 45, Ps 91 = 39, Ps 103 = 53, Ps 121 = 13, Ps 130 = 13, Ps 139 = 50, Ps 145 = 46, Ps 150 = 11. Collection estimates add about 3 outline cards per psalm.
 - Psalms of Trust (1, 16, 23, 27, 46, 91, 121): 72 verses / 1,290 words, about 180 cards, about 15 days.

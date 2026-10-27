@@ -1,6 +1,6 @@
 """
 Simulate a v2 deck's daily workload under FSRS (py-fsrs), replacing trial 1's
-SM-2 simulator for planning (notes/sequence_v2_draft.md §5).
+SM-2 simulator for planning (docs/method/sequence-v2.md §5).
 
     venv/bin/python scripts/simulate_fsrs.py output/isa_trial_2 [--days 120] [--runs 30]
 

@@ -1,4 +1,4 @@
-/* v2 card styles (notes/sequence_v2_draft.md §8). Anki adds .nightMode in night mode. */
+/* v2 card styles (docs/method/sequence-v2.md §8). Anki adds .nightMode in night mode. */
 .card {
   --bg: #fbfaf7; --fg: #1d1d1f; --muted: #6b6b70; --line: #dddad2;
   --hl: #fff1c2; --rv: #0b6e4f; --rv-bg: #e3f4ec; --blur: rgba(20, 20, 30, .62);

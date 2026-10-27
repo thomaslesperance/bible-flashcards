@@ -1,5 +1,5 @@
 """
-One builder per card type of the v2 sequence (notes/sequence_v2_draft.md §2–4).
+One builder per card type of the v2 sequence (docs/method/sequence-v2.md §2–4).
 Each returns a Card with its front and back HTML; order.py decides when it's introduced.
 """
 

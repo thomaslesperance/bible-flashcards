@@ -1,1 +1,1 @@
-"""Card sequence v2 deck generator (notes/sequence_v2_draft.md). Run with `python -m src.deck`."""
+"""Card sequence v2 deck generator (docs/method/sequence-v2.md). Run with `python -m src.deck`."""
